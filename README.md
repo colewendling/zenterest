@@ -3,11 +3,11 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 
 ![](zenterest.gif)
 
-### Zenterest Design Documents
+### Zenterest Wiki:
 * [Zenterest Design Documents](https://github.com/colewendling/zenterest/wiki)
 
-### MVP List
+### MVP List:
 * [MVP List](https://github.com/colewendling/zenterest/wiki/MVP-List)
 
-### Schema
+### Schema:
 * [Schema](https://github.com/colewendling/zenterest/wiki/Schema)
