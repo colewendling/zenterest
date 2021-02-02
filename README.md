@@ -11,3 +11,5 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 
 ### Schema:
 * [Schema](https://github.com/colewendling/zenterest/wiki/Schema)
+
+<a href="https://google.com" class="button">Go to Google</a>
