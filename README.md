@@ -11,7 +11,3 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 
 ### Schema:
 * [Schema](https://github.com/colewendling/zenterest/wiki/Schema)
-
-<button onclick="window.location.href='https://w3docs.com';">
-      Click Here
-    </button>
