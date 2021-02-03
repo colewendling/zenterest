@@ -9,5 +9,8 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 ### MVP List:
 * [MVP List](https://github.com/colewendling/zenterest/wiki/MVP-List)
 
+### Sample State:
+* [Sample State](https://github.com/colewendling/zenterest/wiki/Sample-State)
+
 ### Schema:
 * [Schema](https://github.com/colewendling/zenterest/wiki/Schema)
