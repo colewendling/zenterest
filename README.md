@@ -15,5 +15,8 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 ### Schema:
 * [Schema](https://github.com/colewendling/zenterest/wiki/Schema)
 
+### Frontend Routes:
+* [Frontend Routes](https://github.com/colewendling/zenterest/wiki/Frontend-Routes)
+
 ### Backend Routes:
 * [Backend Routes](https://github.com/colewendling/zenterest/wiki/Backend-Routes)
