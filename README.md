@@ -12,8 +12,8 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 ### Sample State:
 * [Sample State](https://github.com/colewendling/zenterest/wiki/Sample-State)
 
-### Schema:
-* [Schema](https://github.com/colewendling/zenterest/wiki/Schema)
+### Database Schema:
+* [Database Schema](https://github.com/colewendling/zenterest/wiki/Database-Schema)
 
 ### Frontend Routes:
 * [Frontend Routes](https://github.com/colewendling/zenterest/wiki/Frontend-Routes)
