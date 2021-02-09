@@ -1,0 +1,15 @@
+Started GET "/" for ::1 at 2021-02-08 20:28:03 -0600
+
+ActiveRecord::NoDatabaseError - FATAL:  database "zenterest_development" does not exist:
+
+Started POST "/__better_errors/79cbdf49f9486073/variables" for ::1 at 2021-02-08 20:28:03 -0600
+Started GET "/" for ::1 at 2021-02-08 20:28:07 -0600
+
+ActiveRecord::NoDatabaseError - FATAL:  database "zenterest_development" does not exist:
+
+Started POST "/__better_errors/f8d5ea6af8ba4a34/variables" for ::1 at 2021-02-08 20:28:07 -0600
+Started GET "/" for ::1 at 2021-02-08 20:28:08 -0600
+
+ActiveRecord::NoDatabaseError - FATAL:  database "zenterest_development" does not exist:
+
+Started POST "/__better_errors/ce1f54671a4437c9/variables" for ::1 at 2021-02-08 20:28:08 -0600
