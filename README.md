@@ -4,7 +4,7 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 ![](zenterest.gif)
 
 ### Zenterest Diagram:
-![](zenterest.diagram.png)
+![](zenterest_diagram.png)
 
 ### Zenterest Wiki:
 * [Zenterest Design Documents](https://github.com/colewendling/zenterest/wiki)
