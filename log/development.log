@@ -13,3 +13,14 @@ Started GET "/" for ::1 at 2021-02-08 20:28:08 -0600
 ActiveRecord::NoDatabaseError - FATAL:  database "zenterest_development" does not exist:
 
 Started POST "/__better_errors/ce1f54671a4437c9/variables" for ::1 at 2021-02-08 20:28:08 -0600
+  [1m[35m (1780.0ms)[0m  [1m[35mCREATE DATABASE "zenterest_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (260.8ms)[0m  [1m[35mCREATE DATABASE "zenterest_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2021-02-08 20:34:20 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 782ms (Views: 780.9ms | ActiveRecord: 0.0ms)
+
+
