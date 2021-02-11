@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    
+
     const store = configureStore(preloadedState);
 
     //testing
     window.login = login;
     window.logout = logout;
-    window.getState = store.getState;
+    window.state = store.getState();
     window.dispatch = store.dispatch; 
     
     ReactDOM.render(<Root store={store} />, root);

@@ -8,8 +8,9 @@ class NavBar extends React.Component {
    return (
       <div>
          <nav>
-            <button onClick={() => openModal('login')}>Login</button>
-            <button onClick={() => openModal('signup')}>Signup</button>
+            <h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>
+            <button className="grey-button" Link to="">Home</button>
+            <button className="oarnge-button" onClick={this.props.logout}>Logout</button>
          </nav>
       </div>
    );

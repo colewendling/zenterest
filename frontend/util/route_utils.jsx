@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Route, withRouter } from 'react-router-dom';
 
-const msp = state => ({
+const mapStateToProps = state => ({
     loggedIn: Boolean(state.session.currentUser)
 });
 
@@ -25,5 +25,5 @@ const Protected = ({ loggedIn, path, exact, component: Component }) => (
     />
 );
 
-export const AuthRoute = withRouter(connect(msp)(Auth));
-export const ProtectedRoute = withRouter(connect(msp)(Protected));
+export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
+export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));

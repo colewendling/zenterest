@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Greeting from "../greeting/greeting";
+
 
 
 class SignUpForm extends React.Component {
@@ -24,20 +24,18 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.signup(this.state)
-            .then(null, (error) => {
-                this.setState({errors:this.renderErrors})
-            })
+        this.props.signup(this.state).then(this.props.closeModal).then(history.push);
     }
+    
 
     renderErrors() {
         let error = [];
 
         function emailIsValid(email) {
-            return /\S+@\S+\.\S+/.test(email); // must have @ - . email
+            return /\S+@\S+\.\S+/.test(email); 
         }
 
-        //error descriptions to return to user
+        
         if (this.props.errors.includes('Invalid email or Password')) {
             if (this.state.email === '') {
                 error.push('Email is blank.');
@@ -82,7 +80,15 @@ class SignUpForm extends React.Component {
               <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
-                                className="login-input"
+                               
+                            />
+                        </label>
+                        <br />
+                        <label>Email:
+              <input type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                                
                             />
                         </label>
                         <br />
@@ -90,11 +96,11 @@ class SignUpForm extends React.Component {
               <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
-                                className="login-input"
+                            
                             />
                         </label>
                         <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+                        <button className="blue-button" type="submit">Continue</button>
                     </div>
                 </form>
             </div>

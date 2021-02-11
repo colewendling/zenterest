@@ -1,14 +1,9 @@
 import React from "react";
-import { AuthRoute, ProtectedRoute } from '../util/route_utils';
-import { Link } from 'react-router-dom';
-
-import LoginFormContainer from "./session/login_form_container";
-import SignupFormContainer from "./session/signup_form_container";
-import NavBar from "./navbar/nav_bar_container"
 import Greeting from './greeting/greeting_container';
 import Modal from './modal/modal';
-
-
+import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_utils';
+import NavBarContainer from "./navbar/nav_bar_container";
 
 
 const App = () => (
@@ -17,6 +12,9 @@ const App = () => (
             <h1>Welcome to Zenterest!</h1>
             <Greeting />
         </header>
+      <Switch>
+          <AuthRoute exact path='/home' component={NavBarContainer} />
+      </Switch>
         <Modal />
     </div>
 );
