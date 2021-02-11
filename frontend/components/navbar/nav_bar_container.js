@@ -3,6 +3,7 @@ import Navbar from './nav_bar';
 import { logout } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
+
 const mapStateToProps = state => ({
     currentUser: state.session.currentUser,
 });

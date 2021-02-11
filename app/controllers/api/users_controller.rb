@@ -10,6 +10,16 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def show
+        @user = User.find_by(id: params[:id])
+        render "api/users/show"
+  end
+
+  def index
+        @users = User.all
+        render "api/users/index"
+  end
+
   private
 
   def user_params

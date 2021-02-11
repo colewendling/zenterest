@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Landing from "../landing/landing";
+import Greeting from "../greeting/greeting";
 
 
 class SignUpForm extends React.Component {
@@ -68,13 +68,14 @@ class SignUpForm extends React.Component {
 
     render() {
         return (
-            <div className="login-form-container">
+            <div className="modal-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to BenchBnB!
-          <br />
-          Please {this.props.formType} or {this.props.otherForm}
-                    <div onClick={this.props.closeModal} className="close-x">X</div>
-                    {this.renderErrors()}
+                <Greeting />
+                   
+                <br />
+      
+                    <div onClick={this.props.closeModal} className="close-x" />
+                   
                     <div className="login-form">
                         <br />
                         <label>Username:
