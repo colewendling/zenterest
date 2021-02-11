@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
 import Navbar from "./navbar/nav_bar_container"
-import GreetingContainer from './greeting/greeting_container';
+import Greeting from './greeting/greeting_container';
 import Modal from './modal/modal';
 
 
@@ -13,17 +13,18 @@ import Modal from './modal/modal';
 
 const App = () => (
     <div>
-        <Modal />
-        <AuthRoute path='/login' component={LoginFormContainer} />
-        <AuthRoute path='/signup' component={SignupFormContainer} />
-        <ProtectedRoute path='/' component={NavBarContainer} />
-        
         <header>
             <Navbar />
             <h1>Welcome to Zenterest!</h1>
+            <AuthRoute path='/' component={Greeting} />
+            <AuthRoute path='/login' component={LoginFormContainer} />
+            <AuthRoute path='/signup' component={SignupFormContainer} />
         </header>
         
-        <GreetingContainer />
+        <Modal />
+       
+
+ 
     </div>
 );
 

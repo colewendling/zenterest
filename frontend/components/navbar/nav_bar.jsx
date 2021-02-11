@@ -6,7 +6,16 @@ const NavBar = ({currentUser, logout}) => {
 
    return (
       <div>
-         {navVersion}
+         <Link to="/login">
+            <button>
+               <div>Log in</div>
+            </button>
+         </Link>
+         <Link to="/signup">
+            <button>
+               <div>Sign Up</div>
+            </button>
+         </Link>
       </div>
    )
 };
