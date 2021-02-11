@@ -1,23 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const NavBar = ({currentUser, logout}) => {
+
+class NavBar extends React.Component {
     
-
+   render() {
+   const { openModal } = this.props;
    return (
       <div>
-         <Link to="/login">
-            <button>
-               <div>Log in</div>
-            </button>
-         </Link>
-         <Link to="/signup">
-            <button>
-               <div>Sign Up</div>
-            </button>
-         </Link>
+         <nav>
+            <button onClick={() => openModal('login')}>Login</button>
+            <button onClick={() => openModal('signup')}>Signup</button>
+         </nav>
       </div>
-   )
+   );
+   }
 };
 export default NavBar;
 

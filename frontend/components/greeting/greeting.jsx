@@ -10,8 +10,8 @@ class Greeting extends React.Component {
     return (
         <div>
             <nav>
-            <button onClick={() => openModal('login')}>Login</button>
-            <button onClick={() => openModal('signup')}>Signup</button>
+            <button className="green-button" onClick={() => openModal('login')}>Login</button>
+                <button className="red-button" onClick={() => openModal('signup')}>Signup</button>
             </nav>
         </div>
     );

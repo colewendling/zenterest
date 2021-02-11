@@ -24,7 +24,7 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.login(this.state)
+        this.props.signup(this.state)
             .then(null, (error) => {
                 this.setState({errors:this.renderErrors})
             })
@@ -70,7 +70,7 @@ class SignUpForm extends React.Component {
         return (
             <div className="modal-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                <Greeting />
+                
                    
                 <br />
       
