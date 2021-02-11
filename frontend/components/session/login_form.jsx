@@ -1,7 +1,7 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,11 +38,11 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to BenchBnB!
-          <br />
+                <form onSubmit={this.handleSubmit}>
+                  
+       
           Please {this.props.formType} or {this.props.otherForm}
-                    <div onClick={this.props.closeModal} className="close-x">X</div>
+                    <div onClick={this.props.closeModal} />
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
@@ -70,4 +70,4 @@ class SessionForm extends React.Component {
     }
 }
 
-export default withRouter(SessionForm);
+export default LoginForm;
