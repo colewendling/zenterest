@@ -5,7 +5,7 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 * [Live Site](http://zenterest-app.herokuapp.com/#/)
 
 ### Zenterest Diagram:
-![](zenterest_diagram.png)
+![](./app/assets/images/zenterest_diagram.png)
 
 ### Zenterest Wiki:
 * [Zenterest Design Documents](https://github.com/colewendling/zenterest/wiki)
