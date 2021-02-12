@@ -47,9 +47,16 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
+                <button onClick={this.props.closeModal} className="x-button">X</button>
                 <form onSubmit={this.handleSubmit}>
                     <div onClick={this.props.closeModal} />
-                    <h2 className="modal-text">Login to an existing account</h2> 
+
+
+                    <img className="favicon-medium" src={window.logoURL} alt="favicon"/>
+
+                    <h1>Welcome to Zenterest</h1>
+                    <h2 className="modal-text-1">Login to an existing account</h2> 
+
                     <div className="login-form">
                         <br />
                         <label>Username
@@ -71,7 +78,7 @@ class LoginForm extends React.Component {
                         </label>
 
                         <br />
-                        <button className="green-button" type="submit">Login</button>
+                        <button className="red-button" type="submit">Login</button>
 
                         
                         {/* <input className="session-submit" type="submit" value={this.props.formType} /> */}

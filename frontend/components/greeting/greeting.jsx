@@ -8,12 +8,15 @@ class Greeting extends React.Component {
    render() {
     const { openModal } = this.props;
     return (
-        <div>
-            <header>
-                <h1>Welcome to Zenterest!</h1>
-                <button className="green-button" onClick={() => openModal('login')}>Login</button>
-                <button className="red-button" onClick={() => openModal('signup')}>Signup</button>
-            </header>
+        <div className="header-container">
+                <div className="header-icon">
+                <img className="favicon-medium" src={window.logoURL} alt="favicon" />
+                </div>
+               
+                <div className="header-buttons">
+                    <button className="red-button" onClick={() => openModal('login')}>Login</button>
+                    <button className="grey-button" onClick={() => openModal('signup')}>Signup</button>
+                </div>
         </div>
     );
    }

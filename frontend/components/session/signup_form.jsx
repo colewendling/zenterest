@@ -71,10 +71,14 @@ class SignUpForm extends React.Component {
         
         return (
             <div className="modal-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <img className="icon" href="../../../app/assets/images/favicon.png"/>
                     <button onClick={this.props.closeModal} className="x-button">X</button>
+                <form onSubmit={this.handleSubmit} className="login-form-box">
+
+                    <img className="favicon-medium" src={window.logoURL} alt="favicon" />
+
                     <h1>Welcome to Zenterest</h1>
+                    <h2 className="modal-text-1">Find your inspiration without the stress!</h2>
+                    <h2 className="modal-text-1">Create a new account</h2> 
                     {this.renderErrors()}
                     <br/>
                   
@@ -106,10 +110,10 @@ class SignUpForm extends React.Component {
                                 className="modal-text"
                             />
                         </label>
+                        <a className="modal-text" onClick={() => this.props.closeModal.then(this.props.openModal('login'))}>Already a member? Log in</a>
                         <br />
                        
-                        <button className="blue-button" type="submit">Continue</button>
-                        
+                        <button className="red-button" type="submit">Continue</button>
                     </div>
                 </form>
             </div>
