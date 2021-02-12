@@ -8,7 +8,7 @@ import NavBarContainer from "./navbar/nav_bar_container";
 
 const App = () => (
     <div>
-        <header className="header">
+        <header>
           <AuthRoute exact path='/' component={Greeting} />
         </header>
       <Switch>

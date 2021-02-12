@@ -71,8 +71,8 @@ class SignUpForm extends React.Component {
         
         return (
             <div className="modal-form-container">
-                    <button onClick={this.props.closeModal} className="x-button">X</button>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
+                    <button onClick={this.props.closeModal} className="x-button">X</button>
 
                     <img className="favicon-medium" src={window.logoURL} alt="favicon" />
 
@@ -110,6 +110,7 @@ class SignUpForm extends React.Component {
                                 className="modal-text"
                             />
                         </label>
+                        <hr className="solid"/>
                         <a className="modal-text" onClick={() => this.props.closeModal.then(this.props.openModal('login'))}>Already a member? Log in</a>
                         <br />
                        

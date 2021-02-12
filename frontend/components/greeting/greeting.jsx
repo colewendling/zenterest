@@ -8,7 +8,10 @@ class Greeting extends React.Component {
    render() {
     const { openModal } = this.props;
     return (
-        <div className="header-container">
+
+
+        <div className="nav-bar">
+            
                 <div className="header-icon">
                 <img className="favicon-medium" src={window.logoURL} alt="favicon" />
                 </div>
@@ -18,6 +21,10 @@ class Greeting extends React.Component {
                     <button className="grey-button" onClick={() => openModal('signup')}>Signup</button>
                 </div>
         </div>
+
+
+
+
     );
    }
  };

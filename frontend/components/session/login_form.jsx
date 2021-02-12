@@ -47,10 +47,10 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.props.closeModal} className="x-button">X</button>
                 <form onSubmit={this.handleSubmit}>
                     <div onClick={this.props.closeModal} />
 
+                <button onClick={this.props.closeModal} className="x-button">X</button>
 
                     <img className="favicon-medium" src={window.logoURL} alt="favicon"/>
 
