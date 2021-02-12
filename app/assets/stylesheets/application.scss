@@ -13,20 +13,15 @@
  *= require_tree .
  *= require_self
  */
-* {
-	box-sizing: border-box;
-}
+
 
 body {
 	background: #f6f5f7;
 	display: flex;
-	justify-content: center;
-	
 	flex-direction: space-between;
 	font-family: 'Montserrat', sans-serif;
 	height: 10vh;
-  
-	margin: 20px 10px 50px;
+	
 }
 
 h1 {
