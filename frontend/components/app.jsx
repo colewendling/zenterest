@@ -9,11 +9,10 @@ import NavBarContainer from "./navbar/nav_bar_container";
 const App = () => (
     <div>
         <header className="header">
-            <h1>Welcome to Zenterest!</h1>
-            <Greeting />
+          <AuthRoute exact path='/' component={Greeting} />
         </header>
       <Switch>
-          <AuthRoute exact path='/home' component={NavBarContainer} />
+          <ProtectedRoute exact path='/home' component={NavBarContainer} />
       </Switch>
         <Modal />
     </div>

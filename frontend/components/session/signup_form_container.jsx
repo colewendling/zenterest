@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { signup } from '../../actions/session_actions';
 import SignupForm from './signup_form.jsx';
 import { closeModal } from '../../actions/modal_actions';
+import { withRouter} from 'react-router-dom';
 
 const mapStateToProps = ({ errors }) => {
     return {

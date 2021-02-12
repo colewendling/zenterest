@@ -22,9 +22,9 @@ class LoginForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.props.login(this.state).then(null, 
-            (error) => {this.setState({ errors: this.renderErrors()})}
-        )
+        this.props.login(this.state)
+        .then(this.props.closeModal)
+        // .then(this.props.history.push('/home'))
     }
 
     demoLogin(event) {
@@ -49,10 +49,10 @@ class LoginForm extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <div onClick={this.props.closeModal} />
-                 
+                    <h2 className="modal-text">Login to an existing account</h2> 
                     <div className="login-form">
                         <br />
-                        <label>Username:
+                        <label>Username
                             <input 
                                 type="text"
                                 value={this.state.username}
@@ -61,7 +61,7 @@ class LoginForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <label>Password:
+                        <label>Password
                             <input 
                                 type="password"
                                 value={this.state.password}
@@ -71,7 +71,7 @@ class LoginForm extends React.Component {
                         </label>
 
                         <br />
-                        <button className="blue-button" type="submit">Continue</button>
+                        <button className="green-button" type="submit">Login</button>
 
                         
                         {/* <input className="session-submit" type="submit" value={this.props.formType} /> */}

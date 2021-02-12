@@ -9,10 +9,11 @@ class Greeting extends React.Component {
     const { openModal } = this.props;
     return (
         <div>
-            <nav>
+            <header>
+                <h1>Welcome to Zenterest!</h1>
                 <button className="green-button" onClick={() => openModal('login')}>Login</button>
                 <button className="red-button" onClick={() => openModal('signup')}>Signup</button>
-            </nav>
+            </header>
         </div>
     );
    }

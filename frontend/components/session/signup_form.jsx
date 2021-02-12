@@ -24,7 +24,10 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.signup(this.state).then(this.props.closeModal).then(history.push);
+        this.props.signup(this.state)
+        .then(this.props.closeModal)
+        // .then(this.props.history.push('/home'))
+            
     }
     
 
@@ -65,42 +68,48 @@ class SignUpForm extends React.Component {
     
 
     render() {
+        
         return (
             <div className="modal-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                
-                   
-                <br />
-      
-                    <div onClick={this.props.closeModal} className="close-x" />
-                   
+                    <img className="icon" href="../../../app/assets/images/favicon.png"/>
+                    <button onClick={this.props.closeModal} className="x-button">X</button>
+                    <h1>Welcome to Zenterest</h1>
+                    {this.renderErrors()}
+                    <br/>
+                  
+
                     <div className="login-form">
                         <br />
-                        <label>Username:
-              <input type="text"
+                        <label>Username
+                        <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
-                               
-                            />
+                                className="modal-text"
+                        />
                         </label>
-                        <br />
-                        <label>Email:
-              <input type="text"
+                        <br/>
+                        <label>Email
+                        <input 
+                                type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
-                                
-                            />
+                                className="modal-text"
+                        />
                         </label>
                         <br />
-                        <label>Password:
-              <input type="password"
+                        <label>Password
+              <input 
+                                type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
-                            
+                                className="modal-text"
                             />
                         </label>
                         <br />
+                       
                         <button className="blue-button" type="submit">Continue</button>
+                        
                     </div>
                 </form>
             </div>

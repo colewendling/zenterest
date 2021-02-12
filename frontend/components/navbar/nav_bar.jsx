@@ -4,7 +4,7 @@ import React from 'react';
 class NavBar extends React.Component {
     
    render() {
-   const { openModal } = this.props;
+  
    return (
       <div>
          <nav>
