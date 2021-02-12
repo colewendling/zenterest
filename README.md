@@ -1,7 +1,8 @@
 # Zenterest
 Find your inspiration without the stress. Introducing Zenterest, a Pinterest inspired web application that allows users to create and share calming content through personalized user zen boards.
 
-![](zenterest.gif)
+### Live Site:
+* [Live Site](http://zenterest-app.herokuapp.com/#/)
 
 ### Zenterest Diagram:
 ![](zenterest_diagram.png)
