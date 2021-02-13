@@ -1,11 +1,10 @@
 # Zenterest
 Find your inspiration without the stress. Introducing Zenterest, a Pinterest inspired web application that allows users to create and share calming content through personalized user zen boards.
 
-### Live Site:
-* [Live Site](http://zenterest-app.herokuapp.com/#/)
+<div style="text-align:center"><img src="./app/assets/images/zenterest-black.png" width="40%" height="40%"/></div>
 
-### Zenterest Diagram:
-![](./app/assets/images/zenterest_diagram.png)
+### Live Site:
+* [Zenterest](http://zenterest-app.herokuapp.com/#/)
 
 ### Zenterest Wiki:
 * [Zenterest Design Documents](https://github.com/colewendling/zenterest/wiki)
@@ -24,3 +23,6 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 
 ### Backend Routes:
 * [Backend Routes](https://github.com/colewendling/zenterest/wiki/Backend-Routes)
+
+### Zenterest Diagram:
+![](./app/assets/images/reference/zenterest_diagram.png)
