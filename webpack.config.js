@@ -1,4 +1,5 @@
 const path = require('path');
+// const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
     context: __dirname,
@@ -22,6 +23,13 @@ module.exports = {
         ]
     },
     devtool: 'source-map',
+    // plugins: [
+    //     new BrowserSyncPlugin({
+    //             host: 'localhost',
+    //             port: 3000,
+    //             files: ['./app/assets/stylesheets/components/*.scss']
+    //         })
+    // ],
     resolve: {
         extensions: [".js", ".jsx", "*"]
     }

@@ -1,9 +1,26 @@
-button:active {
-  transform: scale(0.80);
+element.style {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 32px 0px;
+    position: relative;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    // box-shadow: rgb(0 0 0 / 45%) 0px 2px 10px;
 }
 
 button:focus {
   outline: none;
+}
+
+button:active {
+  transform: scale(0.94);
+  transform-origin: 35px 20px;
+  transition-delay: 0s;
+  transition-duration: 0.085s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  vertical-align: middle;
 }
 
 button.ghost {
@@ -18,13 +35,13 @@ button.ghost {
 .modal-text-1 {
  color: grey;
 }
- .modal-background {
+ .modal-container {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba (0, 0, 0, 0.7);
   z-index: 10;
 }
 

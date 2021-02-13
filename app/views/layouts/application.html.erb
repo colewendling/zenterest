@@ -4,16 +4,20 @@
     <title>Zenterest</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag 'favicon.png' %>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+
+
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap'>
+
+
+
+
     <script type="text/javascript">
         window.logoURL = "<%= image_url('favicon.png')  %>";
-
         window.znRedURL = "<%= image_url('zn-red.png')  %>";
         window.znWhiteURL = "<%= image_url('zn-white.png')  %>";
         window.znBlackURL = "<%= image_url('zn-black.png')  %>";
