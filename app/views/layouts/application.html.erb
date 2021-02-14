@@ -8,26 +8,17 @@
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag 'favicon.png' %>
 
-
-
- <link rel="preconnect" href="https://fonts.gstatic.com">
- <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap'>
-
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap'>
 
     <script type="text/javascript">
         window.logoURL = "<%= image_url('favicon.png')  %>";
-        window.znRedURL = "<%= image_url('zn-red.png')  %>";
         window.znWhiteURL = "<%= image_url('zn-white.png')  %>";
-        window.znBlackURL = "<%= image_url('zn-black.png')  %>";
         window.zenterestRedURL = "<%= image_url('zenterest-red.png')  %>";
         window.zenterestWhiteURL = "<%= image_url('zenterest-white.png')  %>";
         window.zenterestBlackURL = "<%= image_url('zenterest-black.png')  %>";
-        
     </script>
   </head>
-
   <body>
     <%= yield %>
   </body>

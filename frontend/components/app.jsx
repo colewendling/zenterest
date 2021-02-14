@@ -7,15 +7,15 @@ import NavBarContainer from "./navbar/nav_bar_container";
 
 
 const App = () => (
-    <div>
-        <header>
-          <AuthRoute exact path='/' component={Greeting} />
-        </header>
-      <Switch>
-          <ProtectedRoute exact path='/home' component={NavBarContainer} />
-      </Switch>
-        <Modal />
-    </div>
+  <div>
+    <header>
+      <AuthRoute exact path='/' component={Greeting} />
+    </header>
+    <Switch>
+      <ProtectedRoute exact path='/home' component={NavBarContainer} />
+    </Switch>
+    <Modal />
+  </div>
 );
            
 export default App;
