@@ -18,7 +18,7 @@ render() {
             <button className="link">About</button>
           </div>
           <div className="text-link">
-            <button className="link">Buisness</button>
+            <button className="link">Business</button>
           </div>
           <div className="text-link">
             <button className="link">Contact</button>
