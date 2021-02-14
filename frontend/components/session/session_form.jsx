@@ -54,13 +54,6 @@ class SessionForm extends React.Component {
 
         <div className="form-container">
           <form onSubmit={this.handleSubmit} className="modal-form">
-            <input 
-              className="modal-input"
-              type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              placeholder="Username" required
-            />
             {form === 'signup' ? 
             <input 
               className="modal-input"
@@ -73,6 +66,13 @@ class SessionForm extends React.Component {
             : ''}
             <input 
               className="modal-input"
+              type="text"
+              value={this.state.username}
+              onChange={this.update('username')}
+              placeholder="Username" required
+            />
+            <input 
+              className="modal-input"
               type="password"
               value={this.state.password}
               onChange={this.update('password')}
@@ -81,7 +81,12 @@ class SessionForm extends React.Component {
             />
    
             <button className="modal-button" type="submit">{form === 'signup' ? "Continue" : "Log in"}</button>
-            
+            {form === 'login' ? <h5>OR</h5> : ''}
+            {form === 'login' ? <button className="demo-button" type="submit">Demo Log in</button> : ''}
+            <hr />
+            <h6>By continuing, you agree to Zenterest’s <a className='tos' href="">Terms of Service</a>, <a className='tos' href="#">Privacy policy</a></h6>
+            <div className="modal-form">{this.props.switchForm}</div>
+          
           </form>
         </div>
       </div>
