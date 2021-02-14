@@ -47,45 +47,44 @@ class SessionForm extends React.Component {
   render() {
     const { form } = this.props;
     return (
-      <div className="login-container">
-        <div className="modal-icon">
-          <img src={window.logoURL} />
-        </div>
-        <div className="modal-welcome">
-           <h1>Welcome to Zenterest</h1>
-           <h2>{form === 'signup' ? "Find new ideas to try" : ""}</h2>
-        </div>
-        <form>
-          <div className="login-form">
-          <label>Username
-          <input 
-          type="text"
-          value={this.state.username}
-          onChange={this.update('username')}
-          className="login-input"
-          />
-          </label>
-          <label>Email
-          <input 
-          type="text"
-          value={this.state.email}
-          onChange={this.update('email')}
-          className="login-input"
-          />
-          </label>
-          <label>Password
-          <input 
-          type="password"
-          value={this.state.password}
-          onChange={this.update('password')}
-          className="login-input"
-          />
-          </label>
-          <button className="red-button" type="submit">Log in</button>
-          </div>
+      <div className="modal-container">
+        <img src={window.logoURL}/>
+        <h1>Welcome to Zenterest</h1>
+        <h2>{form === 'signup' ? "Find new ideas to try" : ""}</h2>
+
+        <div className="form-container">
+          <form onSubmit={this.handleSubmit} className="modal-form">
+            <input 
+              className="modal-input"
+              type="text"
+              value={this.state.username}
+              onChange={this.update('username')}
+              placeholder="Username" required
+            />
+            {form === 'signup' ? 
+            <input 
+              className="modal-input"
+              type="text"
+              value={this.state.email}
+              onChange={this.update('email')}
+              className="modal-input"
+              placeholder="Email" required
+            /> 
+            : ''}
+            <input 
+              className="modal-input"
+              type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="modal-input"
+              placeholder="Password" required
+            />
+   
+            <button className="modal-button" type="submit">{form === 'signup' ? "Continue" : "Log in"}</button>
+            
           </form>
         </div>
-     
+      </div>
     );
   }
 }
