@@ -52,7 +52,7 @@ class SessionForm extends React.Component {
           <img src={window.logoURL} />
         </div>
         <div className="modal-welcome">
-           <h1>{form === 'signup' ? "Welcome to Zenterest" : "Welcome Back to Zenterest"}</h1>
+           <h1>Welcome to Zenterest</h1>
            <h2>{form === 'signup' ? "Find new ideas to try" : ""}</h2>
         </div>
         <form>
