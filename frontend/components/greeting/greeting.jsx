@@ -9,7 +9,7 @@ render() {
       <div className="nav-left-logo">
         <Link to='/'><img src={window.logoURL} className="nav-icon" /></Link> 
         <div className="nav-title-box">
-          <h3 className="nav-title">Zenterest</h3>
+          <Link to='/'><h3 className="nav-title">Zenterest</h3></Link>
         </div>
       </div>
       <div className="nav-right">
