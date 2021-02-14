@@ -87,6 +87,8 @@ button {
   // width: 70.25px;
   word-spacing: 0px;
   writing-mode: horizontal-tb;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 button:focus {

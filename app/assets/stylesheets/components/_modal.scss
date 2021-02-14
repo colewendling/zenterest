@@ -115,7 +115,6 @@
   background-color: #e60023;
   color: rgb(255, 255, 255);
   width: 100%;
-  
   margin-top: 8px;
 }
 
@@ -137,6 +136,10 @@
   margin-bottom: 16px;
 }
 
+.modal-form div:hover{
+   text-decoration: underline;
+}
+
 .modal-form h6 .tos{
   color: rgb(51, 51, 51);
   font-weight: 500;
@@ -156,7 +159,11 @@
 }
 
 .modal-button:hover {
-   filter: brightness(90%);
+   filter: brightness(85%);
+}
+
+.demo-button:hover {
+   filter: brightness(85%);
 }
 
 .modal-form h1 {
