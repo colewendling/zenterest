@@ -60,7 +60,7 @@ button {
   font-variant-east-asian: normal;
   font-variant-ligatures: normal;
   font-variant-numeric: normal;
-  font-weight: 400;
+  font-weight: 500;
   height: 40px;
   letter-spacing: normal;
   line-height: normal;
@@ -80,11 +80,30 @@ button {
   text-shadow: none;
   text-size-adjust: 100%;
   text-transform: none;
-  transition-delay: 0s;
-  transition-duration: 0.085s;
+  // transition-delay: 0s;
+  // transition-duration: 0.085s;
   transition-property: transform;
   transition-timing-function: ease-out;
   // width: 70.25px;
   word-spacing: 0px;
   writing-mode: horizontal-tb;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.94);
+  // transform-origin: 35px 20px;
+  transition-delay: 0s;
+  transition-duration: 0.085s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  vertical-align: middle;
+}
+
+button.ghost {
+  background-color: transparent;
+	border-color: #FFFFFF;
 }
