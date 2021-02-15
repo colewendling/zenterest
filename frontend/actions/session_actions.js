@@ -18,12 +18,12 @@ export const receiveSessionErrors = errors => ({
     errors
 });
 
-export const signup = user => dispatch => (
-    SessionApiUtil.signup(user).then(
-        user => (dispatch(receiveCurrentUser(user))),
-        error => (dispatch(receiveSessionErrors(error.responseJSON)))
-    )
-);
+export const signup = (user) => dispatch => (
+    SessionApiUtil.signup(user)
+    .then((user) => dispatch(receiveCurrentUser(user)),
+    errors => (dispatch(receiveSessionErrors(errors.responseJSON)))
+  ));
+
 
 export const login = user => dispatch => (
     SessionApiUtil.login(user).then(
