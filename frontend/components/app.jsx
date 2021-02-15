@@ -1,9 +1,9 @@
 import React from "react";
-import GreetingContainer from './greeting/greeting_container';
+import NavSplashContainer from './navbars/nav_splash_container';
 import Modal from './modal/modal';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_utils';
-import NavBarContainer from "./navbar/nav_bar_container";
+import NavBarContainer from "./navbars/nav_internal_container";
 
 
 const App = () => (
@@ -13,7 +13,7 @@ const App = () => (
     <header>
     </header>
   </div>
-  <AuthRoute exact path='/' component={GreetingContainer} />
+  <AuthRoute exact path='/' component={NavSplashContainer} />
   <ProtectedRoute exact path='/home' component={NavBarContainer} />
   <Switch>
   </Switch>
