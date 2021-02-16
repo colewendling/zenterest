@@ -103,9 +103,6 @@ button:active {
   transition-property: transform;
   transition-timing-function: ease-out;
   vertical-align: middle;
+  cursor: pointer;
 }
 
-button.ghost {
-  background-color: transparent;
-	border-color: #FFFFFF;
-}
