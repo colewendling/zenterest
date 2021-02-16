@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
     demoLogin(e) {
       e.preventDefault()
       
-      this.props.demoLogin({ username: 'zen', password: '123456' })
+      this.props.demoLogin({ email: 'zen@zenterest.net', username:'zen', password: '123456' })
         .then(() => this.props.history.push('/home'))
         .then(this.props.closeModal)
     }
