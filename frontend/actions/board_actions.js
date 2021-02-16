@@ -28,10 +28,15 @@ export const receiveBoardErrors = errors => {
   }
 }
 
-export const receiveUserBoards = boards => {
+const receiveAllBoards = boards => ({
+  type: RECEIVE_ALL_BOARDS,
+  boards
+})
+
+export const receiveAllUserBoards = userBoards => {
   return {
     type: RECEIVE_ALL_USER_BOARDS,
-    boards
+    userBoards
   }
 }
 

@@ -8,11 +8,12 @@ const boardsReducer = (state = {}, action) => {
       let newState = Object.assign({}, state);
       return action.boards;
     case RECEIVE_ALL_USER_BOARDS:
-    
-    case RECEIVE_BOARD:
       let newState = Object.assign({}, state);
-      newState[action.boardId] = action.board;
+      action.userBoards.boards.forEach((board) => 
+      {newState[board.id] = board });
       return newState;
+    case RECEIVE_BOARD:
+      return Object.assign({}, { [action.board.id]: action.board });
     case REMOVE_BOARD:
       delete newState[action.boardId];
       return newState;
