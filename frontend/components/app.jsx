@@ -6,7 +6,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import NavBar from "./navbars/nav_internal_container";
 import NavSplash from './navbars/nav_splash_container';
 
-// import Profile from '../components/profiles/profile_container';
+import Profile from '../components/profile/profile_container';
 // import ProfilePins from './profile/profile_container';
 
 // import PinIndex from './pin/pin_index_container';
@@ -25,13 +25,13 @@ const App = () => (
   </header>
 
   <AuthRoute exact path='/' component={NavSplash} /> 
-  <ProtectedRoute exact path='/home' component={NavBar} /> 
+  <ProtectedRoute path='/' component={NavBar} /> 
 
   <Switch>
-    {/* <ProtectedRoute exact path='/home' component={PinIndex} />
-    <ProtectedRoute exact path='/users/:userId' component={Profile} />
-    <ProtectedRoute exact path='/users/:userId/boards' component={BoardIndex} />
-    <ProtectedRoute exact path='/users/:userId/boards/:boardId' component={BoardShow} />
+    {/* <ProtectedRoute exact path='/home' component={PinIndex} /> */}
+    {/* <ProtectedRoute exact path='/users/:userId' component={Profile} /> */}
+    <ProtectedRoute exact path='/users/:userId/boards' component={Profile} />
+    {/* <ProtectedRoute exact path='/users/:userId/boards/:boardId' component={BoardShow} />
     <ProtectedRoute exact path='/users/:userId/pins' component={ProfilePins} />
     <ProtectedRoute exact path='/pins/:pinId' component={PinShow} /> */}
   </Switch>
