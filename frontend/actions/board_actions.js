@@ -2,6 +2,7 @@ import * as BoardAPIUtil from '../util/board_api_util'
 
 export const RECEIVE_BOARD = 'RECEIVE_BOARD';
 export const RECEIVE_ALL_BOARDS = 'RECEIVE_ALL_BOARDS';
+export const RECEIVE_ALL_USER_BOARDS = 'RECEIVE_ALL_BOARDS';
 export const RECEIVE_BOARD_ERRORS = 'RECEIVE_BOARD_ERRORS';
 export const REMOVE_BOARD = 'REMOVE_BOARD';
 
@@ -27,10 +28,10 @@ export const receiveBoardErrors = errors => {
   }
 }
 
-export const receiveUserBoards = userProfile => {
+export const receiveUserBoards = boards => {
   return {
-    type: RECEIVE_PROFILE,
-    userProfile
+    type: RECEIVE_ALL_USER_BOARDS,
+    boards
   }
 }
 
