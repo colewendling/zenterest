@@ -13,11 +13,9 @@ const App = () => (
     <header>
     </header>
   </div>
-  <AuthRoute exact path='/' component={NavSplashContainer} />
+  <AuthRoute exact path='/' 
+  component={NavSplashContainer} />
   <ProtectedRoute exact path='/home' component={NavBarContainer} />
-  <div>
-      <img src={window.animation} className="animation" />
-  </div>
   <Switch>
   </Switch>
 </div>

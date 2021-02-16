@@ -7,6 +7,7 @@ render() {
   const { openModal } = this.props;
 
   return (
+    <div className="splash">
       <div className="nav-box">
         <div className="nav-left">
           <Link to='/'><img src={window.logoURL} className="nav-icon" /></Link> 
@@ -34,8 +35,9 @@ render() {
           </div>
         </div>
       </div>
+      <img src={window.animation} className="animation" />
+    </div>
     );
-
   }
 };
 
