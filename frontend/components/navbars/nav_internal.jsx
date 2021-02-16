@@ -11,7 +11,10 @@ class NavInternal extends React.Component {
     event.preventDefault();
     this.props.logout();
   }
-
+  
+  capitalize(string) {
+  return string[0].toUpperCase() + string.slice(1)
+}
 
   render() {
     return (
@@ -23,18 +26,20 @@ class NavInternal extends React.Component {
         <button className="black-button" href='/home'>Home</button>
       </div>
 
-      <div className="nav-right">
-        <div className="dropdown">
+      <div className="internal-nav-right">
+          
+            <div className="internal-text-link">
+               <button className="profile-link">Welcome {this.capitalize(this.props.currentUser.username)}!</button>
+            </div>
+            <div className="dropdown">
           <button className="dropbtn"><i className="fa fa-bars"></i></button>
           <div className="dropdown-content">
             <a onClick={this.handleLogout}>Log out</a>
           </div>
         </div>
-          {/* <div className="user-icon">
-            <p onClick={() => this.props.history.push(`/users/${this.props.currentUser}`)}>{this.props.user.username[0]}</p>
-          </div> */}
       </div>
-    </div >
+    </div>
+    
     );
   }
 };
