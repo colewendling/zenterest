@@ -12,6 +12,7 @@ class NavInternal extends React.Component {
     this.props.logout();
   }
 
+
   render() {
     return (
       
@@ -29,6 +30,9 @@ class NavInternal extends React.Component {
             <a onClick={this.handleLogout}>Log out</a>
           </div>
         </div>
+          {/* <div className="user-icon">
+            <p onClick={() => this.props.history.push(`/users/${this.props.currentUser}`)}>{this.props.user.username[0]}</p>
+          </div> */}
       </div>
     </div >
     );

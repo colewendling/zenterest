@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
 
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this)
     }
 
     
@@ -29,10 +30,13 @@ class SessionForm extends React.Component {
           });
       }
       
-  // demoLogin(event) {
-  //       event.preventDefault();
-  //       this.props.login({ email: 'cole@zenterest.com', password: 'password' })
-  //   }
+    demoLogin(e) {
+      e.preventDefault()
+      
+      this.props.demoLogin({ username: 'zen', password: '123456' })
+        .then(() => this.props.history.push('/home'))
+        .then(this.props.closeModal)
+    }
 
   // renderErrors() {
   //       return (
@@ -84,7 +88,7 @@ class SessionForm extends React.Component {
    
             <button className="modal-button" type="submit">{form === 'signup' ? "Continue" : "Log in"}</button>
             {form === 'login' ? <h5>OR</h5> : ''}
-            {form === 'login' ? <button className="demo-button" type="submit">Demo Log in</button> : ''}
+            {form === 'login' ? <button className="demo-button" type="submit" onClick={this.demoLogin}>Demo Log in</button> : ''}
             <hr />
             <h6>By continuing, you agree to Zenterest’s <a className='tos' href="">Terms of Service</a>, <a className='tos' href="#">Privacy policy</a></h6>
             <div className="modal-form">{this.props.switchForm}</div>
