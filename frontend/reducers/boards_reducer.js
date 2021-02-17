@@ -2,13 +2,12 @@ import { RECEIVE_ALL_USER_BOARDS, RECEIVE_ALL_BOARDS, RECEIVE_BOARD, REMOVE_BOAR
 
 const boardsReducer = (state = {}, action) => {
   Object.freeze(state)
+  let newState = Object.assign({}, state);
   
   switch (action.type) {
     case RECEIVE_ALL_BOARDS:
-      let newState = Object.assign({}, state);
       return action.boards;
     case RECEIVE_ALL_USER_BOARDS:
-      let newState = Object.assign({}, state);
       action.userBoards.boards.forEach((board) => 
       {newState[board.id] = board });
       return newState;
