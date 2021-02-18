@@ -3,9 +3,8 @@ class CreateBoards < ActiveRecord::Migration[5.2]
     create_table :boards do |t|
       t.string :title, null: false, unique: true
       t.string :description
-      t.integer :author_id, null: false
+      t.integer :author_id, null: false, index: true, foreign_key: true
       t.timestamps
     end
-      t.index :author_id
   end
 end

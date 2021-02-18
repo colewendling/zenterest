@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_09_024345) do
+ActiveRecord::Schema.define(version: 2021_02_18_171530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "board_pins", force: :cascade do |t|
+    t.integer "board_id", null: false
+    t.integer "pin_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_board_pins_on_board_id"
+    t.index ["pin_id"], name: "index_board_pins_on_pin_id"
+  end
+
+  create_table "boards", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "description"
+    t.integer "author_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_boards_on_author_id"
+  end
+
+  create_table "pins", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "description", null: false
+    t.string "url", null: false
+    t.integer "author_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_pins_on_author_id"
+    t.index ["description"], name: "index_pins_on_description"
+    t.index ["title"], name: "index_pins_on_title"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
