@@ -22653,3 +22653,2112 @@ Processing by Api::SessionsController#create as JSON
 Completed 200 OK in 319ms (Views: 4.6ms | ActiveRecord: 3.5ms)
 
 
+Started GET "/" for ::1 at 2021-02-18 14:50:08 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 385ms (Views: 383.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 14:50:11 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QZn2u6lpmh3p0DVWGVEMow"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QZn2u6lpmh3p0DVWGVEMow"], ["updated_at", "2021-02-18 20:50:12.162506"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 334ms (Views: 3.6ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 14:50:36 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 294ms (Views: 290.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 14:50:38 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "c4ICuIAVf2JOOkGM-w4oyQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "c4ICuIAVf2JOOkGM-w4oyQ"], ["updated_at", "2021-02-18 20:50:39.169662"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 325ms (Views: 4.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 14:58:41 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 321ms (Views: 317.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 14:58:43 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WGN7Pec_vwtNCoNVupwnZQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "WGN7Pec_vwtNCoNVupwnZQ"], ["updated_at", "2021-02-18 20:58:44.266667"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 323ms (Views: 4.6ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:01:57 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 286ms (Views: 282.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:01:59 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "6MA3CPnGU-sw52AjUJ9RYg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "6MA3CPnGU-sw52AjUJ9RYg"], ["updated_at", "2021-02-18 21:02:00.222080"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 311ms (Views: 4.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:02:15 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:02:17 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7MlP9sAvay7YoRYlLIGf-g"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7MlP9sAvay7YoRYlLIGf-g"], ["updated_at", "2021-02-18 21:02:17.768577"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 313ms (Views: 4.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:02:35 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 288ms (Views: 285.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:02:37 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mscv7mieI6R-mabd4VTyMg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "mscv7mieI6R-mabd4VTyMg"], ["updated_at", "2021-02-18 21:02:37.508303"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 285ms (Views: 4.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:04:14 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 109ms (Views: 105.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:04:16 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "e_0Wep-xTWKeD3PSNlTY6w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (4.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "e_0Wep-xTWKeD3PSNlTY6w"], ["updated_at", "2021-02-18 21:04:16.962849"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 324ms (Views: 3.8ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:07:53 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 352ms (Views: 348.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:07:55 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KHXSjmFCzo6pn8-XwxTOzg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (3.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "KHXSjmFCzo6pn8-XwxTOzg"], ["updated_at", "2021-02-18 21:07:55.475793"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 323ms (Views: 4.7ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:09:12 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 104ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:09:14 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "oxtosmceZ6CMgOVEXsCBMg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "oxtosmceZ6CMgOVEXsCBMg"], ["updated_at", "2021-02-18 21:09:14.721694"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 293ms (Views: 4.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:09:52 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 111ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:09:55 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tgj1R_RPgpVzW2mmSoTNJg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "tgj1R_RPgpVzW2mmSoTNJg"], ["updated_at", "2021-02-18 21:09:55.562614"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 315ms (Views: 4.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:13:36 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 351ms (Views: 347.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:13:39 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ibwLBEOeOUuWiKcXon-DAw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ibwLBEOeOUuWiKcXon-DAw"], ["updated_at", "2021-02-18 21:13:39.603858"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 323ms (Views: 5.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:14:07 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 113ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:14:09 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3pultVenH3ZMUT8Dz1wsEw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "3pultVenH3ZMUT8Dz1wsEw"], ["updated_at", "2021-02-18 21:14:09.870998"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 324ms (Views: 3.6ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:15:21 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:15:24 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "py1IYMi_3y7eb0aJAKVP1g"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (3.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "py1IYMi_3y7eb0aJAKVP1g"], ["updated_at", "2021-02-18 21:15:24.482200"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 318ms (Views: 5.2ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:15:38 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 102ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:15:40 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wumDXiqtKiLJF8geawPh8g"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (3.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "wumDXiqtKiLJF8geawPh8g"], ["updated_at", "2021-02-18 21:15:40.498050"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 318ms (Views: 3.8ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:15:47 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 110ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:15:50 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QKDHydoBkcSYg6UPgYBd5w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QKDHydoBkcSYg6UPgYBd5w"], ["updated_at", "2021-02-18 21:15:51.306475"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 315ms (Views: 4.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:16:46 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 120ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:16:47 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "NBBmpuuMYS0mc9zp4sLYOg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "NBBmpuuMYS0mc9zp4sLYOg"], ["updated_at", "2021-02-18 21:16:47.886765"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 313ms (Views: 3.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:17:06 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 121ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:17:09 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "h_-VhNwArkqi4d9AjXqDaQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "h_-VhNwArkqi4d9AjXqDaQ"], ["updated_at", "2021-02-18 21:17:09.613852"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 318ms (Views: 4.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:18:14 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 113ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:18:17 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iksFdNtrh4Xe4JrE7aOBdw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "iksFdNtrh4Xe4JrE7aOBdw"], ["updated_at", "2021-02-18 21:18:18.116905"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 297ms (Views: 5.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:18:54 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 101ms (Views: 98.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:18:56 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YuaWaiO23YU2HinTyePYpA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "YuaWaiO23YU2HinTyePYpA"], ["updated_at", "2021-02-18 21:18:56.837748"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 303ms (Views: 4.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:19:55 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 101ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:19:57 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2_cTQg2SJDOsHUbqFqKsfQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2_cTQg2SJDOsHUbqFqKsfQ"], ["updated_at", "2021-02-18 21:19:58.135944"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 316ms (Views: 3.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:21:03 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 294ms (Views: 290.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:21:05 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vDLCUgLxcW_mfc3eBxsV1w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "vDLCUgLxcW_mfc3eBxsV1w"], ["updated_at", "2021-02-18 21:21:05.990709"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 325ms (Views: 4.0ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:21:23 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 283ms (Views: 279.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:21:26 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wm96NjxMS0Qp7WpJZ7VM1A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "wm96NjxMS0Qp7WpJZ7VM1A"], ["updated_at", "2021-02-18 21:21:26.984837"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 316ms (Views: 3.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:23:54 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 342ms (Views: 338.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:23:57 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "uSjjywpkLH-UmpngYEg0iw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "uSjjywpkLH-UmpngYEg0iw"], ["updated_at", "2021-02-18 21:23:57.962986"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 321ms (Views: 4.0ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:25:39 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 307ms (Views: 304.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:25:47 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "oCncmZpah_FeozAfrJaJGw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (6.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "oCncmZpah_FeozAfrJaJGw"], ["updated_at", "2021-02-18 21:25:47.610592"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 319ms (Views: 3.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:28:08 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 114ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:28:10 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MvswSbV_CN7n1OhSKQ_D-A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (4.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "MvswSbV_CN7n1OhSKQ_D-A"], ["updated_at", "2021-02-18 21:28:11.196753"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 316ms (Views: 4.0ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:28:51 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 117ms (Views: 112.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:28:53 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "794COH6P6CWTzSZhOpPEZg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "794COH6P6CWTzSZhOpPEZg"], ["updated_at", "2021-02-18 21:28:53.685151"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 315ms (Views: 3.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:29:28 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 110ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:29:29 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kxr_otfVsxbHoDhm-V6q7Q"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "kxr_otfVsxbHoDhm-V6q7Q"], ["updated_at", "2021-02-18 21:29:30.186902"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 319ms (Views: 4.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:30:02 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 108ms (Views: 104.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:30:04 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "U0DL7BT2F6cKx4w18fSFLg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "U0DL7BT2F6cKx4w18fSFLg"], ["updated_at", "2021-02-18 21:30:04.922538"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 313ms (Views: 4.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:30:38 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 104ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:30:40 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "oF3Q8dY3fRHPJKGep_9AMw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "oF3Q8dY3fRHPJKGep_9AMw"], ["updated_at", "2021-02-18 21:30:40.562776"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 317ms (Views: 4.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:31:24 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 94ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:31:26 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "uvSKdSrQi3iGn2caCWyBXg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "uvSKdSrQi3iGn2caCWyBXg"], ["updated_at", "2021-02-18 21:31:26.958868"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 314ms (Views: 4.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:32:22 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 119ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:32:25 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lWMry4SRn0IM0gde4o6Gqg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (5.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lWMry4SRn0IM0gde4o6Gqg"], ["updated_at", "2021-02-18 21:32:25.555059"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 320ms (Views: 3.8ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:32:49 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 110ms (Views: 105.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:32:50 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-_pHnaWi-8i2E8CgsHISRA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "-_pHnaWi-8i2E8CgsHISRA"], ["updated_at", "2021-02-18 21:32:50.799213"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 317ms (Views: 3.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:33:45 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 107ms (Views: 104.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:33:48 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "M1g9f2X4QPaWd9CdIqY04A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "M1g9f2X4QPaWd9CdIqY04A"], ["updated_at", "2021-02-18 21:33:49.127166"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 311ms (Views: 3.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:34:10 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 110ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:34:12 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gWEKyqoYMna71fTZ8sbJuA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "gWEKyqoYMna71fTZ8sbJuA"], ["updated_at", "2021-02-18 21:34:12.919265"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 314ms (Views: 4.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:37:53 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 110ms (Views: 105.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:37:55 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JWuBnSn2IlokmKQMIWBcAg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "JWuBnSn2IlokmKQMIWBcAg"], ["updated_at", "2021-02-18 21:37:56.070705"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 313ms (Views: 4.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:38:36 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 286ms (Views: 283.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:38:38 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hYZCjDvF8RLOGHsHa__MHg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "hYZCjDvF8RLOGHsHa__MHg"], ["updated_at", "2021-02-18 21:38:38.598121"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 318ms (Views: 4.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:39:03 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 119ms (Views: 116.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:39:05 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kgZczYnwoDcn4Rm722PENA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (6.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "kgZczYnwoDcn4Rm722PENA"], ["updated_at", "2021-02-18 21:39:05.418089"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 316ms (Views: 3.9ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:39:14 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:39:17 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "GwqGAZZJ2CuH-Ti0NXX4lg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "GwqGAZZJ2CuH-Ti0NXX4lg"], ["updated_at", "2021-02-18 21:39:17.929894"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 312ms (Views: 4.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:39:29 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:39:32 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yE7t74cLYXd79Rr2OIwUrw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "yE7t74cLYXd79Rr2OIwUrw"], ["updated_at", "2021-02-18 21:39:32.721879"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.2ms)
+Completed 200 OK in 323ms (Views: 3.7ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:40:08 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 108ms (Views: 104.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:40:10 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "6-BcwBhv8qjcuQclJs-ekg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "6-BcwBhv8qjcuQclJs-ekg"], ["updated_at", "2021-02-18 21:40:10.324108"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 323ms (Views: 3.9ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:40:35 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 111ms (Views: 107.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:40:37 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-wLUTineoEWMqs_KZe-ISQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "-wLUTineoEWMqs_KZe-ISQ"], ["updated_at", "2021-02-18 21:40:37.568019"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 295ms (Views: 4.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:40:39 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:40:42 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WwYhMRi_3M0DJmnhKtMCTw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "WwYhMRi_3M0DJmnhKtMCTw"], ["updated_at", "2021-02-18 21:40:43.181618"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 316ms (Views: 3.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:41:07 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 111ms (Views: 107.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:41:09 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "woF7QNQYe-X5Pneu-Kj37g"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "woF7QNQYe-X5Pneu-Kj37g"], ["updated_at", "2021-02-18 21:41:10.092429"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 317ms (Views: 4.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:41:34 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 119ms (Views: 115.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:41:36 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZxWjiEmiUfT4F7OBWESU1A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ZxWjiEmiUfT4F7OBWESU1A"], ["updated_at", "2021-02-18 21:41:36.368952"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 316ms (Views: 3.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:41:47 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 105ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:41:48 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:41:48 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:41:50 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5_DPeg42czfDynzEn3v4jA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "5_DPeg42czfDynzEn3v4jA"], ["updated_at", "2021-02-18 21:41:50.978541"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 320ms (Views: 4.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:43:21 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 128ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:43:21 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 45ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:43:25 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lspwUQ_auFWvmww4YPZhqg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lspwUQ_auFWvmww4YPZhqg"], ["updated_at", "2021-02-18 21:43:25.450570"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 314ms (Views: 4.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:43:35 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 106ms (Views: 103.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:43:37 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AtEMi7PGDX_b1m4baBtC6w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "AtEMi7PGDX_b1m4baBtC6w"], ["updated_at", "2021-02-18 21:43:37.628812"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 314ms (Views: 4.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:44:04 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 88ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:44:06 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tRfFKIDmR4sX9NvGyhwiHw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "tRfFKIDmR4sX9NvGyhwiHw"], ["updated_at", "2021-02-18 21:44:06.365037"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 326ms (Views: 8.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:44:21 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 113ms (Views: 110.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:44:23 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "nuV9k-yJ81kEQ3-eQoZwgA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "nuV9k-yJ81kEQ3-eQoZwgA"], ["updated_at", "2021-02-18 21:44:23.594298"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 315ms (Views: 3.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:44:44 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 129ms (Views: 126.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:44:46 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7but7KQsuj1TgKyGjdhg2g"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7but7KQsuj1TgKyGjdhg2g"], ["updated_at", "2021-02-18 21:44:46.547815"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 321ms (Views: 3.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:44:58 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 87ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:45:00 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "y2ABHsl2-eP6nVZJ5j-a-A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "y2ABHsl2-eP6nVZJ5j-a-A"], ["updated_at", "2021-02-18 21:45:00.944915"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 314ms (Views: 4.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:45:25 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 112ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:45:28 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YEJeFxoPP4ncBERJsEl-Zg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "YEJeFxoPP4ncBERJsEl-Zg"], ["updated_at", "2021-02-18 21:45:29.116697"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 331ms (Views: 5.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:45:47 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 105ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:45:49 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UmukylBwuwJcbExKRFdsrg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (3.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "UmukylBwuwJcbExKRFdsrg"], ["updated_at", "2021-02-18 21:45:49.965514"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 323ms (Views: 4.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:46:28 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 140ms (Views: 136.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:46:30 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "t3xFIqG4TzPYRn6yzYySkQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "t3xFIqG4TzPYRn6yzYySkQ"], ["updated_at", "2021-02-18 21:46:30.577364"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 321ms (Views: 4.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:46:56 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 290ms (Views: 287.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:46:58 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "oXh0zS495oghI4BMt-GcRg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "oXh0zS495oghI4BMt-GcRg"], ["updated_at", "2021-02-18 21:46:58.724078"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 320ms (Views: 5.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:47:17 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 286ms (Views: 282.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:47:21 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bP62lTcU5DbOBOmF-1OLIA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "bP62lTcU5DbOBOmF-1OLIA"], ["updated_at", "2021-02-18 21:47:21.448068"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 316ms (Views: 4.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:47:33 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 279ms (Views: 275.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:47:36 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DpiTHmV8KWSKm0NimypwyA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "DpiTHmV8KWSKm0NimypwyA"], ["updated_at", "2021-02-18 21:47:37.244042"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 317ms (Views: 3.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:48:37 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 293ms (Views: 290.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:48:39 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "AE41CCceubMG06cf5p5W5Q"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "AE41CCceubMG06cf5p5W5Q"], ["updated_at", "2021-02-18 21:48:39.774132"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 301ms (Views: 4.4ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:50:58 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 327ms (Views: 324.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:51:00 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WNOwi1LyKjAseoDNzcFNrg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "WNOwi1LyKjAseoDNzcFNrg"], ["updated_at", "2021-02-18 21:51:00.374235"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 317ms (Views: 3.7ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:51:14 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 61ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:51:17 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "k3TmKtQDaJ_rFxEWnaFZoA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "k3TmKtQDaJ_rFxEWnaFZoA"], ["updated_at", "2021-02-18 21:51:17.582124"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 327ms (Views: 3.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:52:02 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 97ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:52:05 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vt5XNV9EVvpjHT3mMaWCTA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "vt5XNV9EVvpjHT3mMaWCTA"], ["updated_at", "2021-02-18 21:52:06.037073"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 315ms (Views: 4.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:52:26 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 111ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:52:29 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "seG8Qk0M-1yuCxSlDzVoxw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "seG8Qk0M-1yuCxSlDzVoxw"], ["updated_at", "2021-02-18 21:52:29.751772"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 320ms (Views: 3.6ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:52:39 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:52:40 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "HPl326oiw9WRBs81HcL6Gg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "HPl326oiw9WRBs81HcL6Gg"], ["updated_at", "2021-02-18 21:52:40.902884"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.4ms)
+Completed 200 OK in 313ms (Views: 4.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:53:48 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 107ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:53:51 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Y73eXQDfhHgRstW5EVJ9yg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Y73eXQDfhHgRstW5EVJ9yg"], ["updated_at", "2021-02-18 21:53:51.460643"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 324ms (Views: 3.7ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:54:00 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 101ms (Views: 98.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:54:02 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1T8gwRbHjefmqv1LzBdY2g"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1T8gwRbHjefmqv1LzBdY2g"], ["updated_at", "2021-02-18 21:54:02.621384"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 312ms (Views: 3.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:54:21 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:54:23 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7JNZ3ave0iIc-868NwcAxg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7JNZ3ave0iIc-868NwcAxg"], ["updated_at", "2021-02-18 21:54:24.086207"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 315ms (Views: 3.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:54:31 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:54:33 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mmh9yDA-6nGv9t8y8eYFWQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Mmh9yDA-6nGv9t8y8eYFWQ"], ["updated_at", "2021-02-18 21:54:33.661474"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 307ms (Views: 3.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:55:06 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 297ms (Views: 293.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:55:08 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9DfJ5uCvIOcHKVPKr1KcjA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "9DfJ5uCvIOcHKVPKr1KcjA"], ["updated_at", "2021-02-18 21:55:08.461800"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 300ms (Views: 4.1ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:56:12 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 113ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:56:14 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "uoMm3fDqU9j0TiPXdWP83w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "uoMm3fDqU9j0TiPXdWP83w"], ["updated_at", "2021-02-18 21:56:14.613433"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 324ms (Views: 6.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:58:13 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 332ms (Views: 328.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:58:16 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "K0bFbweS7nNgcZ_vwLIRlg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "K0bFbweS7nNgcZ_vwLIRlg"], ["updated_at", "2021-02-18 21:58:16.568294"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 339ms (Views: 4.8ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:58:56 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 335ms (Views: 332.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:59:00 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OksQ3sgmDFGUCibgr8A1cg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "OksQ3sgmDFGUCibgr8A1cg"], ["updated_at", "2021-02-18 21:59:01.241348"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 326ms (Views: 4.1ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-18 15:59:27 -0600
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 107ms (Views: 103.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-18 15:59:29 -0600
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ft761rsoj_ePKYOPvAYJow"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ft761rsoj_ePKYOPvAYJow"], ["updated_at", "2021-02-18 21:59:29.373206"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 319ms (Views: 3.6ms | ActiveRecord: 12.6ms)
+
+

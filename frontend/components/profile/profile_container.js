@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     userId: Number(ownProps.match.params.userId),
     currentUser: state.session.currentUser,
-    user: state.entities.users[Number(ownProps.match.params.userId)]
+    // user: state.entities.users[Number(ownProps.match.params.userId)]
   }
 }
 

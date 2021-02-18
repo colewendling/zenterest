@@ -1,0 +1,68 @@
+.profile-container {
+ align-items: center;
+ display: flex;
+ flex-direction: column;
+}
+
+.user-name-container {
+  color: rgb(33, 25, 34);
+  margin-right: 0px;
+  height: 120px;
+  width: 120px;
+  display: flex;
+}
+
+
+.user-name {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(17, 17, 17);
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+
+.user-circle {
+  height: 120px;
+  width: 120px;
+  display: flex;
+  background-color: #efefef;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  
+}
+
+.user-handle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: rgb(17, 17, 17);
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.user-follows {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: rgb(17, 17, 17);
+  font-size: 16px;
+  padding: 2px;
+}
+
+.user-follows-container span{
+  font-family: 'Roboto', sans-serif;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-weight: 300;
+  color: rgb(17, 17, 17);
+  font-size: 16px;
+}
