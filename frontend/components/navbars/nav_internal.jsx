@@ -22,7 +22,7 @@ class NavInternal extends React.Component {
     <div className="nav-box">
 
       <div className="nav-left">
-        <Link to='/'><img src={window.logoURL} className="nav-icon" /></Link>
+        <Link to='/home'><img src={window.logoURL} className="nav-icon" /></Link>
         <button className="black-button" href='/home'>Home</button>
       </div>
 

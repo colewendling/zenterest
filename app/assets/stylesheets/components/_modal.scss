@@ -167,13 +167,17 @@
 }
 
 .modal-form h1 {
-
   font-weight: 500;
-  // margin-top: 12px;
   font-size: 11px;
   color: rgb(51, 51, 51);
   letter-spacing: 0;
   cursor: pointer;    
 }
 
+.error-text {
+   color: #e60023;
+   font-weight: 400;
+   font-size: 15px;
+   text-align: center;
+}
 
