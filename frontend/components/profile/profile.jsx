@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -24,6 +24,10 @@ class Profile extends React.Component {
         <div className="user-follows-container">
           <h4 className="user-follows">0 followers · 0 following</h4>
         </div>
+        <div className="profile-link-buttons-container">
+          <Link to={`/users/${this.props.currentUser.id}/boards`}><button>Boards</button></Link>
+          <Link to={`/users/${this.props.currentUser.id}/pins`}><button>Pins</button></Link>
+        </div>
       </div>
 
         <div className="plus-button-container">
@@ -36,10 +40,6 @@ class Profile extends React.Component {
             </div>
         </div>
 
-        <div className="profile-link-buttons-container">
-            <div className="plus-profile-link" />
-            <div className="plus-profile-link" />
-        </div>
 
         <div className="profile-bottom">
           <div className="board-container">
