@@ -25,12 +25,12 @@ const receivePinErrors = errors => ({
   errors
 })
 
-export const requestAllPins = () => dispatch => {
+export const fetchAllPins = () => dispatch => {
   return PinUtil.fetchAllPins()
     .then((pins) => dispatch(receiveAllPins(pins)))
 }
 
-export const requestPin = (pinId) => dispatch => {
+export const fetchPin = (pinId) => dispatch => {
   return PinUtil.fetchPin(pinId)
     .then((pin) => dispatch(receiveAllPins(pin)))
 }

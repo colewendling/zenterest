@@ -29,7 +29,9 @@ class NavInternal extends React.Component {
       <div className="internal-nav-right">
           
             <div className="internal-text-link">
-               <button className="profile-link">Welcome {this.capitalize(this.props.currentUser.username)}!</button>
+            <button onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}/boards`)} className="profile-link">
+                Welcome {this.capitalize(this.props.currentUser.username)}!
+              </button>
             </div>
             <div className="dropdown">
           <button className="dropbtn"><i className="fa fa-bars"></i></button>

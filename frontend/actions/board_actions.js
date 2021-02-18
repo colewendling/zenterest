@@ -28,7 +28,7 @@ export const receiveBoardErrors = errors => {
   }
 }
 
-const receiveAllBoards = boards => ({
+export const receiveAllBoards = boards => ({
   type: RECEIVE_ALL_BOARDS,
   boards
 })
@@ -40,15 +40,15 @@ export const receiveAllUserBoards = userBoards => {
   }
 }
 
-export const requestBoard = boardId => dispatch => BoardApiUtil.fetchBoard(boardId)
+export const fetchBoard = boardId => dispatch => BoardApiUtil.fetchBoard(boardId)
   .then(board => dispatch(receiveBoard(board)),
     errors => dispatch(receiveBoardErrors(errors.responseJSON)));
 
-export const requestAllUsersBoards = (userId) => dispatch => BoardApiUtil.fetchAllUsersBoards(userId)
+export const fetchAllUserBoards = (userId) => dispatch => BoardApiUtil.fetchAllUserBoards(userId)
   .then(boards => dispatch(receiveAllBoards(boards)),
     errors => dispatch(receiveBoardErrors(errors.responseJSON)));
     
-export const requestAllBoards = () => dispatch => BoardApiUtil.fetchAllBoards()
+export const fetchAllBoards = () => dispatch => BoardApiUtil.fetchAllBoards()
   .then(boards => dispatch(receiveAllBoards(boards)),
     errors => dispatch(receiveBoardErrors(errors.responseJSON)));
     
