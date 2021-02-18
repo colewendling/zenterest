@@ -33,11 +33,11 @@ class NavInternal extends React.Component {
                 Welcome {this.capitalize(this.props.currentUser.username)}!
               </button>
             </div>
-            <div className="dropdown">
-          <button className="dropbtn"><i className="fa fa-bars"></i></button>
-          <div className="dropdown-content">
-            <a onClick={this.handleLogout}>Log out</a>
-          </div>
+          <div className="dropdown">
+            <button className="dropbtn"><i className="fa fa-bars"></i></button>
+            <div className="dropdown-content">
+              <a onClick={this.handleLogout}>Log out</a>
+            </div>
         </div>
       </div>
     </div>
