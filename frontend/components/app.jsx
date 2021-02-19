@@ -14,6 +14,7 @@ import Profile from '../components/profile/profile_container';
 
 import BoardIndex from './board/board_index';
 import BoardShow from './board/board_show';
+import ProfilePins from '../components/pin/profile_pins_container';
 
 
 
@@ -30,8 +31,8 @@ const App = () => (
     {/* <ProtectedRoute exact path='/users/:userId' component={Profile} /> */}
     <ProtectedRoute exact path='/users/:userId/boards' component={Profile} />
     <ProtectedRoute exact path='/users/:userId/boards/:boardId' component={BoardShow} />
-    {/* <ProtectedRoute exact path='/users/:userId/pins' component={ProfilePins} />
-    <ProtectedRoute exact path='/pins/:pinId' component={PinShow} /> */}
+    <ProtectedRoute exact path='/users/:userId/pins' component={ProfilePins} />
+    {/* <ProtectedRoute exact path='/pins/:pinId' component={PinShow} /> */ }
   </Switch>
 
 </div>

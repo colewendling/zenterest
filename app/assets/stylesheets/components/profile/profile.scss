@@ -45,6 +45,7 @@
   text-transform: capitalize;
   font-size: 84px;
   color: white;
+  
   text-align: center;
   justify-content: center;
 }
@@ -84,18 +85,24 @@
   writing-mode: horizontal-tb;
   white-space: nowrap;
   align-content: center;
-  background-color: none;
+  background-color: white;
 }
 .plus-button-container {
-float:right;
    background-color: white;
    margin-right: 28px;
+  
+  align-items: center;
 }
 
 .plus-profile-link {
   background-color: white;
   color: none;
+ 
+  
+  
 }
+
+
 
 .profile-btn-container {
     display: flex;
@@ -112,6 +119,7 @@ float:right;
   outline: none;
   font-size: 16px;
   font-weight: 700;
+  
 }
 
 .profile-btn-container button:hover {
@@ -130,4 +138,22 @@ float:right;
   font-size: 16px;
 
   padding: 4px;
+}
+
+.plus-button-container {
+  display: flex;
+  align-items: right;
+}
+.dropdown {
+  float: right;
+}
+
+.a-button {
+   color: rgb(51, 51, 51);
+   background-color:rgb(255, 255, 255);
+}
+
+.b-button button {
+   color: rgb(255, 255, 255);
+   background-color: rgb(51, 51, 51);
 }

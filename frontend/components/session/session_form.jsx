@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
       const user = Object.assign({}, this.state);
       this.props.processForm(user)
       .then(this.props.closeModal)
-      .then(() => this.props.history.push('/home'));
+        .then(() => this.props.history.push('/users/:userId/pins'));
     }
     
     update(field) {
@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
       e.preventDefault()
       
       this.props.demoLogin({ email: 'zen@zenterest.net', username:'zen', password: '123456' })
-        .then(() => this.props.history.push('/home'))
+        .then(() => this.props.history.push('/users/:userId/pins'))
         .then(this.props.closeModal)
     }
 
