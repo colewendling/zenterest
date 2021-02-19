@@ -28,7 +28,7 @@ const App = () => (
   <Switch>
     {/* <ProtectedRoute exact path='/home' component={PinIndex} /> */}
     {/* <ProtectedRoute exact path='/users/:userId' component={Profile} /> */}
-    <ProtectedRoute exact path='/profile' component={Profile} />
+    <ProtectedRoute exact path='/users/:userId/boards' component={Profile} />
     <ProtectedRoute exact path='/users/:userId/boards/:boardId' component={BoardShow} />
     {/* <ProtectedRoute exact path='/users/:userId/pins' component={ProfilePins} />
     <ProtectedRoute exact path='/pins/:pinId' component={PinShow} /> */}

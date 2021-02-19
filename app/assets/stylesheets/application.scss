@@ -18,10 +18,18 @@
 @import 'base/reset.scss';
 
 //Core
-@import 'base/*';
+@import 'base/colors.scss';
+@import 'base/fonts.scss';
+// @import 'base/reset.scss';
+
 
 //Components
-@import 'components/*';
+@import 'components/profile/profile.scss';
+@import 'components/boards/create-edit-boards';
+@import 'components/pins/create-edit-pins';
+@import 'components/_modal.scss';
+@import 'components/_navbar.scss';
+@import 'components/_session.scss';
 
 button {
   font-family: 'Roboto', sans-serif;
