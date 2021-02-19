@@ -97,14 +97,14 @@ float:right;
   color: none;
 }
 
-.profile-link-buttons-container  {
+.profile-btn-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.profile-link-buttons-container button {
+.profile-btn-container button {
   padding: 12px 12px;
   border-radius: 24px;
   background-color: white;
@@ -114,12 +114,12 @@ float:right;
   font-weight: 700;
 }
 
-.profile-link-buttons-container button:hover {
+.profile-btn-container button:hover {
   filter: brightness(90%);
   cursor: pointer;
 }
 
-.profile-link-buttons-container button:focus {
+.profile-btn-container button:focus {
   color: rgb(17, 17, 17);
   color: white;
 }

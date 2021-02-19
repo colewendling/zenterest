@@ -10,11 +10,16 @@ class Profile extends React.Component {
     return string[0].toUpperCase() + string.slice(1)
   }
 
+  editBoard(event) {
+    eventpreventDefault();
+    this.props.history.push('/profile/edit');
+  }
+
   render() {
     
     return (
     <div className="profile-container">
-
+      <div className="profile-nav">
       <div className="profile-header">
         <div className="user-circle">
           <h1 className="user-letter">{(this.props.currentUser.username)[0]}</h1>
@@ -24,7 +29,7 @@ class Profile extends React.Component {
         <div className="user-follows-container">
           <h4 className="user-follows">0 followers · 0 following</h4>
         </div>
-        <div className="profile-link-buttons-container">
+        <div className="profile-btn-container">
           <Link to={`/users/${this.props.currentUser.id}/boards`}><button>Boards</button></Link>
           <Link to={`/users/${this.props.currentUser.id}/pins`}><button>Pins</button></Link>
         </div>
@@ -39,7 +44,7 @@ class Profile extends React.Component {
             </div>
             </div>
         </div>
-
+        </div>
 
         <div className="profile-bottom">
           <div className="board-container">

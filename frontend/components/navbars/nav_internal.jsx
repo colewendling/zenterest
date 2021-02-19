@@ -29,7 +29,9 @@ class NavInternal extends React.Component {
       <div className="internal-nav-right">
           
             <div className="internal-text-link">
-            <button onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}/boards`)} className="profile-link">
+            <button onClick={() => this.props.history.push(`/profile`)} className="profile-link">
+
+            {/* <button onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}/boards`)} className="profile-link"> */}
                 Welcome {this.capitalize(this.props.currentUser.username)}!
               </button>
             </div>
@@ -37,8 +39,8 @@ class NavInternal extends React.Component {
             <button className="dropbtn"><i className="fa fa-bars"></i></button>
             <div className="dropdown-content">
               <a onClick={this.handleLogout}>Log out</a>
-              <a onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}/boards`)}>{this.capitalize(this.props.currentUser.username)}'s Boards</a>
-              <a onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}/pins`)}>{this.capitalize(this.props.currentUser.username)}'s Pins</a>
+              <a onClick={() => this.props.history.push(`/profile`)}>{this.capitalize(this.props.currentUser.username)}'s Boards</a>
+              <a onClick={() => this.props.history.push(`/profile/pins`)}>{this.capitalize(this.props.currentUser.username)}'s Pins</a>
             </div>
         </div>
       </div>
