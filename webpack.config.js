@@ -23,13 +23,6 @@ module.exports = {
         ]
     },
     devtool: 'source-map',
-    // plugins: [
-    //     new BrowserSyncPlugin({
-    //             host: 'localhost',
-    //             port: 3000,
-    //             files: ['./app/assets/stylesheets/components/*.scss']
-    //         })
-    // ],
     resolve: {
         extensions: [".js", ".jsx", "*"]
     }
