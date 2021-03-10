@@ -41689,3 +41689,31 @@ Processing by Api::SessionsController#create as JSON
 Completed 200 OK in 332ms (Views: 3.5ms | ActiveRecord: 16.9ms)
 
 
+Started GET "/" for ::1 at 2021-02-25 11:11:01 -0600
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?:
+
+Started POST "/__better_errors/3da5030a76527c36/variables" for ::1 at 2021-02-25 11:11:01 -0600
+Started GET "/" for ::1 at 2021-02-25 11:11:02 -0600
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?:
+
+Started POST "/__better_errors/262dd7b16accecca/variables" for ::1 at 2021-02-25 11:11:02 -0600
+Started GET "/" for ::1 at 2021-02-25 11:14:10 -0600
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?:
+
+Started POST "/__better_errors/4939b1f64ed865b8/variables" for ::1 at 2021-02-25 11:14:10 -0600
+Started GET "/" for ::1 at 2021-02-25 11:14:11 -0600
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?:
+
+Started POST "/__better_errors/dc3dda93ff0b2004/variables" for ::1 at 2021-02-25 11:14:11 -0600
