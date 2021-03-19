@@ -51,8 +51,9 @@ class CreatePinForm extends React.Component {
     
     this.props.createPin(formData)
       .then((action) => {
-        this.props.history.push(`/users/${action.pin.author_id}/pins/${action.pin.id}`);
-        this.props.closeModal();
+        // this.props.history.push(`/users/${action.pin.author_id}/pins/${action.pin.id}`);
+        location.reload();
+        // this.props.closeModal();
       })
   }
 
