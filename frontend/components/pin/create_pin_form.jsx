@@ -17,6 +17,7 @@ class CreatePinForm extends React.Component {
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
+    
   }
 
 
@@ -34,6 +35,7 @@ class CreatePinForm extends React.Component {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
     }
       if (file) {
+      document.getElementsByClassName("input-button")[0].style.background = "green";
       fileReader.readAsDataURL(file);
     }
   }
@@ -58,7 +60,11 @@ class CreatePinForm extends React.Component {
   }
 
 
+
+
+
   render() {
+
 
     return (
       <div className="create-modal-container">
@@ -87,20 +93,28 @@ class CreatePinForm extends React.Component {
             />
           </label>
 
-          <h2 className="input-label">Insert Image:</h2>
-          <label className='upload-image'>
+          {/* <h2 className="input-label">Insert Image:</h2> */}
+          {/* <label className='upload-image'> */}
+            <div className='file-input'>
             <input
-              className='upload-zone'
-              placeholder="Drag files or click here"
+              
+              className='file'
+              // placeholder="Drag files or click here"
               type="file"
-              onChange={this.handleFile}              
+              id='file'
+              onChange={this.handleFile}  
+              // required="required"
             />
+            <label className='input-button' htmlFor='file'>
+              Select file
+              <p className='file-name'></p>
+            </label>
             {/* <p>Drag files or click here</p> */}
-          </label>
+          </div>
           
           
-           <div className='create-submit'>
-              <button className='grey-button'>Create</button>
+           <div className='create-button-container'>
+              <button className='create-button'>Create</button>
            </div>
         
           
