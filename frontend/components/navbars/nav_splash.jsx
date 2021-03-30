@@ -17,16 +17,15 @@ render() {
         </div>
         <div className="nav-right">
           <div className="text-links-box">
-            <div className="text-link">
-              <button className="link">About</button>
-            </div>
-            <div className="text-link">
-              <button className="link">Business</button>
-            </div>
-            <div className="text-link">
-              <button className="link">Contact</button>
-            </div>
-          </div>
+            <form action='https://wendling.io/' className="text-link">
+                <button className="link" type='submit'>Work</button>
+            </form>
+            <form action='https://github.com/colewendling' className="text-link">
+                <button className="link" type='submit'>Github</button>
+            </form>
+            <form action='https://www.linkedin.com/in/colewendling/' className="text-link">
+                <button className="link" type='submit'>Linkedin</button>
+            </form>
           <div className="nav-button-box">
             <button className="red-button" onClick={() => openModal('login')}>Log in</button>
           </div>

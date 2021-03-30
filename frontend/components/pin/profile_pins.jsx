@@ -28,7 +28,6 @@ class ProfilePins extends React.Component {
     // const userPins = user.pins.map((pin, idx) => {
     //   return <PinIndexItem key={idx} pin={Object.values(pin)[0]} />
     // })
-    debugger
     return (
       <div className="profile-container">
 

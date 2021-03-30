@@ -37,47 +37,16 @@ class Profile extends React.Component {
 
         </div>
 
-        <div className="plus-button-container">
-            <div className="dropdown">
-            </div>
-        </div>
-  <div className="b-row">
-      <div className="b-column">
-            <div className='b-container'>
-              <div className='b-img'>
-                <img src="https://media0.giphy.com/media/f9SgDMEBslfqTPWoIM/giphy.gif" className="b-img" />
-                <div></div>
-                <div>
-                <div></div>
+            <div className="plus-button-container">
+                <div className="dropdown">
+                    <button className='dropbtn'><i className="fa fa-plus"></i></button>
+                    <div className="dropdown-content">
+                        <a onClick={() => this.props.openModal('createPin')}>CreatePin</a>
+                        <a onClick={() => this.props.openModal('createBoard')}>Create Board</a>
+                    </div>
                 </div>
-              </div>
-              <div className="b-title">Zen Delight</div>
-              <div className="pin-count">Pins</div>
             </div>
-      </div>
-      <div className="b-column">
-            <div className='b-container'>
-              <div className='b-img'>
-                <img src="https://i.pinimg.com/564x/b1/5b/48/b15b48a21546a2520f033a148f70294a.jpg" className="b-img" />
-                <div>
-                </div>
-              </div>
-              <div className="b-title">Zen Ideas</div>
-              <div className="pin-count">Pins</div>
-            </div>
-      </div>
-      <div className="b-column">
-            <div className='b-container'>
-              <div className='b-img'>
-                <div></div>
-                <div>
-                </div>
-              </div>
-              <div className="b-title">Zen Inspiration</div>
-              <div className="pin-count">Pins</div>
-            </div>
-      </div>
-</div>
+
     </div>
     )
   }
