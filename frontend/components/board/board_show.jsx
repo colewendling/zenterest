@@ -3,25 +3,27 @@ import React from 'react';
 class BoardShow extends React.Component {
   constructor(props) {
     super(props);
-    // this.update = this.update.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
-  // update(field) {
-  //   return e => this.setState({
-  //     [field]: e.currentTarget.value
-  //   });
-  // }
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
 
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   this.props.deleteBoard(this.props.boards[this.props.id]).then(this.props.closeModal())
-  //     .then(() => this.props.fetchAllBoards())
-  // }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.deleteBoard(this.props.board.id).then(this.props.closeModal)
+      .then(() => this.props.fetchAllBoards())
+  }
+
 
   render() {
-    const board = this.props.boards[this.props.id]
+    const board = this.props.board
     return (
       <div className='board-show'>
         <h1 className='board-show-title'>{board.title}</h1>
@@ -37,12 +39,7 @@ class BoardShow extends React.Component {
           )}
       </div>
         <div className='board-delete-button-container'>
-          <button className="board-delete-button" onClick={() => {
-            this.props.deleteBoard(board.id)
-            this.props.closeModal()
-            window.location.reload();
-          }}>Delete
-          </button>
+          <button className="board-delete-button" onClick={this.handleSubmit}>Delete</button>
         </div>
 
 {/* 
