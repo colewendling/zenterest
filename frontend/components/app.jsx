@@ -17,9 +17,10 @@ const App = () => (
   <Modal />
 
   <Switch>
-    <ProtectedRoute exact path='/users/:userId' component={Profile} />
+    {/* <ProtectedRoute exact path='/users/:userId' component={Profile} /> */}
     <ProtectedRoute exact path='/users/:userId/boards' component={ProfileBoards} />
     <ProtectedRoute exact path='/users/:userId/pins' component={ProfilePins} />
+    {/* <ProtectedRoute exact path='/' component={Profile} /> */}
   </Switch>
 </div>
 );

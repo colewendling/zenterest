@@ -5,22 +5,34 @@ import Root from './components/root'
 import { login, logout } from './actions/session_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("root");
-  let store;
+  // const root = document.getElementById("root");
+  // let store;
 
+  // if (window.currentUser) {
+  //   const preloadedState = {
+  //     entities: {
+  //       users: { [window.currentUser.id]: window.currentUser } 
+  //     },
+  //     session: { currentUser: window.currentUser }
+  //   };
+  //   store = configureStore(preloadedState)
+  //   delete window.currentUser;
+  //   } 
+  // else {
+  //   store = configureStore();
+  // }
+
+
+  const root = document.getElementById('root');
+  let preloadedState = undefined;
   if (window.currentUser) {
-    const preloadedState = {
-      entities: {
-        users: { [window.currentUser.id]: window.currentUser } 
-      },
-      session: { currentUser: window.currentUser }
+    preloadedState = {
+      session: {
+        currentUser: window.currentUser
+      }
     };
-    store = configureStore(preloadedState)
-    delete window.currentUser;
-    } 
-  else {
-    store = configureStore();
   }
+  const store = configureStore(preloadedState);
   
   window.login = login;
   window.logout = logout;
