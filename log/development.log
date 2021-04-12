@@ -48357,3 +48357,96 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 321ms (Views: 317.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-07-13 19:36:15 -0500
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/colewendling/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 1094ms (Views: 1093.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-07-13 19:36:33 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"zen@zenterest.net", "username"=>"zen", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qabHFp4Vz4NatmLtKL3fuA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "zen"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "zen@zenterest.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (3.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qabHFp4Vz4NatmLtKL3fuA"], ["updated_at", "2021-07-14 00:36:33.353249"], ["id", 1]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.2ms)
+Completed 200 OK in 344ms (Views: 3.7ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-07-13 19:36:33 -0500
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (2.2ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:2
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qabHFp4Vz4NatmLtKL3fuA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/pins/_pin.json.jbuilder (0.2ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.0ms)
+  Rendered api/pins/index.json.jbuilder (26.6ms)
+Completed 200 OK in 40ms (Views: 16.8ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/api/pins" for ::1 at 2021-07-13 19:36:38 -0500
+Processing by Api::PinsController#index as JSON
+  Rendering api/pins/index.json.jbuilder
+  [1m[36mPin Load (0.9ms)[0m  [1m[34mSELECT "pins".* FROM "pins"[0m
+  ↳ app/views/api/pins/index.json.jbuilder:2
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qabHFp4Vz4NatmLtKL3fuA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/pins/_pin.json.jbuilder (1.0ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/_pin.json.jbuilder (0.1ms)
+  Rendered api/pins/index.json.jbuilder (33.1ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 1.6ms)
+
+
