@@ -144,3 +144,19 @@
   color:red;
 }
 
+
+.modal-close-x {
+  position: absolute;
+  background: transparent;
+  box-shadow: none;
+  font-weight: 600;
+  color: rgba(91, 91, 91, 0.3);
+  cursor: pointer;
+  right: 0px;
+  transform: scaleX(120%);
+}
+
+.modal-close-x:hover {
+  color: #e60023;
+  transform: scale(1.1);
+}

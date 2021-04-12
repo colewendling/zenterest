@@ -9,6 +9,7 @@ class PinShow extends React.Component {
     const pin = this.props.pins[this.props.id]
     return (
       <div className='pin-show'>
+        <button className='modal-close-x' onClick={() => {this.props.closeModal()}}>X</button>
         <div className='pin-show-left'>
           <img src={pin.imageUrl} alt={pin.title} />
         </div>
