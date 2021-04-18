@@ -23,11 +23,12 @@ class ProfilePins extends React.Component {
   render() {
     
     const user  = this.props.currentUser;
-    
     if (!user) return <div>Current User is Null</div>;
-    // const userPins = user.pins.map((pin, idx) => {
-    //   return <PinIndexItem key={idx} pin={Object.values(pin)[0]} />
-    // })
+    const {pins}  = this.props;
+    const allPins = pins.map(pin => (
+        <PinIndexItem key={pin.id} pin={pin} />
+    ))
+ 
     return (
       <div className="profile-container">
 
@@ -59,7 +60,7 @@ class ProfilePins extends React.Component {
         </div>
 
         <div className='pin-index-container'>
-          {/* {userPins} */}
+            {allPins}
         </div>
       </div>
     )
