@@ -24,6 +24,7 @@ class BoardShow extends React.Component {
     const board = this.props.board
     return (
       <div className='board-show'>
+        <button className='modal-close-x' onClick={() => { this.props.closeModal() }}>X</button>
         <h1 className='board-show-title'>{board.title}</h1>
         <p className='board-show-description'>{board.description}</p>
         <hr />

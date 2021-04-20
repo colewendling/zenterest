@@ -156,7 +156,24 @@
   transform: scaleX(120%);
 }
 
+.form-modal-close-x {
+  position: absolute;
+  background: transparent;
+  box-shadow: none;
+  font-weight: 600;
+  color: rgba(91, 91, 91, 0.3);
+  cursor: pointer;
+  transform: scaleX(120%);
+  top: 20px;
+  right: 0px;
+}
+
 .modal-close-x:hover {
   color: #e60023;
-  transform: scale(1.1);
+   transform: scaleX(130%) scaleY(110%);
+}
+
+.form-modal-close-x:hover {
+  color: #e60023;
+   transform: scaleX(130%) scaleY(110%);
 }

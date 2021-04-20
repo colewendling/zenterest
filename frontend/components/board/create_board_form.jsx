@@ -28,6 +28,7 @@ class CreateBoardForm extends React.Component {
   render() {
     return (
       <div className="create-modal-container">
+        <button className='form-modal-close-x' onClick={() => { this.props.closeModal() }}>X</button>
         <div className="loader-container">
           <div className="loader"></div>
         </div>
