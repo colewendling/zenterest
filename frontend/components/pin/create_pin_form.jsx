@@ -11,16 +11,21 @@ class CreatePinForm extends React.Component {
     this.state = {
       title: '',
       description: '',
-      url:'fakeurl',
-      author_id: 1,
-      board_id: 1,
-      imageFile: null
+      url:'',
+      author_id: '',
+      board_id: '',
+      imageFile: null,
+      imageUrl: null
     };
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
   }
+
+    componentDidMount() {
+        this.props.fetchUser(this.props.currentUser.id)
+    }
 
   update(field) {
     return event => this.setState({
@@ -30,7 +35,15 @@ class CreatePinForm extends React.Component {
 
   
   handleFile(e) {
-    this.setState({ imageFile: e.target.files[0] });
+    // this.setState({ imageFile: e.target.files[0] });
+      const file = e.currentTarget.files[0];
+      const fileReader = new FileReader();
+      fileReader.onloadend = () => {
+          this.setState({ imageFile: file, imageUrl: fileReader.result });
+      }
+      if (file) {
+          fileReader.readAsDataURL(file);
+      }
   }
 
   handleSubmit(event) {
@@ -39,13 +52,10 @@ class CreatePinForm extends React.Component {
 
     formData.append('pin[title]', this.state.title);
     formData.append('pin[description]', this.state.description);
-    formData.append('pin[url]', this.state.url);
     formData.append('pin[author_id]', this.state.author_id);
     formData.append('pin[board_id]', this.state.board_id);
     formData.append('pin[image]', this.state.imageFile);
     
- 
- 
     this.props.createPin(formData)
       .then((action) => {
         this.props.history.push(`/users/${action.pin.author_id}/pins/${action.pin.id}`);
@@ -54,8 +64,8 @@ class CreatePinForm extends React.Component {
   }
 
 
-
   render() {
+
     return (
 
 
@@ -112,13 +122,5 @@ class CreatePinForm extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  author_id: state.session.currentUser.id
-});
 
-const mapDispatchToProps = dispatch => ({
-  closeModal: () => dispatch(closeModal()),
-  createPin: (pin) => dispatch(createPin(pin)),
-});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CreatePinForm));
+export default withRouter(CreatePinForm);
