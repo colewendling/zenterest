@@ -23,9 +23,6 @@ class CreatePinForm extends React.Component {
     this.handleFile = this.handleFile.bind(this);
   }
 
-    componentDidMount() {
-        this.props.fetchUser(this.props.currentUser.id)
-    }
 
   update(field) {
     return event => this.setState({
@@ -123,4 +120,4 @@ class CreatePinForm extends React.Component {
 }
 
 
-export default withRouter(CreatePinForm);
+export default CreatePinForm;

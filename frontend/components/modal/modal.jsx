@@ -5,7 +5,7 @@ import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 import CreateBoardForm from '../board/create_board_form';
 import EditBoardForm from '../board/edit_board_form';
-import CreatePinForm from '../pin/create_pin_form';
+import CreatePinForm from '../pin/create_pin_form_container';
 import PinShowContainer from '../pin/pin_show_container';
 
 function Modal({ modal, closeModal }) {
