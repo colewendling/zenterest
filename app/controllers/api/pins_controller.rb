@@ -51,9 +51,7 @@ class Api::PinsController < ApplicationController
     render 'api/pins/show'
   end
 
-
   private
-
   def pin_params
     params.require(:pin).permit(:title, :description, :url, :author_id, :board_id, :image)
   end

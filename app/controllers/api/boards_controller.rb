@@ -1,5 +1,4 @@
 class Api::BoardsController < ApplicationController
-
   def new
   @board = Board.new
   render :new
@@ -39,7 +38,6 @@ class Api::BoardsController < ApplicationController
   end
 
   private
-
   def board_params
     params.require(:board).permit(:title, :description, :author_id)
   end

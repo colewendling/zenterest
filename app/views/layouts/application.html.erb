@@ -7,31 +7,25 @@
   <head>
     <title>Zenterest</title>
   </head>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= favicon_link_tag 'favicon.png' %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= favicon_link_tag 'favicon.png' %>
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <script type="text/javascript">
+    window.logoURL = "<%= image_url('favicon.png')  %>";
+    window.animation = "<%= image_url('pinterest.gif')  %>";
+  </script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-
-
-  
-
-    <script type="text/javascript">
-        window.logoURL = "<%= image_url('favicon.png')  %>";
-        window.dropdownURL = "<%= image_url('dropdown.png')  %>";
-        window.animation = "<%= image_url('pinterest.gif')  %>";
-    </script>
-
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    
   <body>
-    <%= yield %>
+  <%= yield %>
   </body>
 </html>

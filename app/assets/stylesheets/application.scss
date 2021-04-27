@@ -1,7 +1,7 @@
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
- *
+
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
  * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
@@ -20,7 +20,6 @@
 //Core
 @import 'base/colors.scss';
 @import 'base/fonts.scss';
-// @import 'base/reset.scss';
 
 //Components
 @import 'components/boards/_create-board.scss';
@@ -37,9 +36,6 @@
 
 button {
   font-family: 'Roboto', sans-serif;
-  // align-items: flex-start;
-  // appearance: none;
-  // background-color: rgb(230, 0, 35);
   font-size: 16px;
   border-bottom-color: rgb(0, 0, 0);
   border-bottom-left-radius: 24px;
@@ -76,10 +72,6 @@ button {
   height: 40px;
   letter-spacing: normal;
   line-height: normal;
-  // margin-bottom: 0px;
-  // margin-left: 0px;
-  // margin-right: 0px;
-  // margin-top: 0px;
   min-height: 40px;
   min-width: 60px;
   padding-bottom: 8px;
@@ -92,11 +84,8 @@ button {
   text-shadow: none;
   text-size-adjust: 100%;
   text-transform: none;
-  // transition-delay: 0s;
-  // transition-duration: 0.085s;
   transition-property: transform;
   transition-timing-function: ease-out;
-  // width: 70.25px;
   word-spacing: 0px;
   writing-mode: horizontal-tb;
   white-space: nowrap;
@@ -109,7 +98,6 @@ button:focus {
 
 button:active {
   transform: scale(0.94);
-  // transform-origin: 35px 20px;
   transition-delay: 0s;
   transition-duration: 0.085s;
   transition-property: transform;

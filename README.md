@@ -23,4 +23,4 @@ Find your inspiration without the stress. Introducing Zenterest, a Pinterest ins
 * [Backend Routes](https://github.com/colewendling/zenterest/wiki/Backend-Routes)
 
 ### Zenterest Diagram:
-![](./app/assets/images/zenterest_diagram.png)
+![](./app/assets/images/diagram.png)
