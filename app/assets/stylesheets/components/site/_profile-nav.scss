@@ -86,6 +86,14 @@
   background-color: white;
 }
 
+
+// .internal-nav-right .dropdown-content {
+//   writing-mode: horizontal-tb;
+//   white-space: nowrap;
+//   align-content: right;
+//   background-color: white;
+// }
+
 .plus-button-container {
   background-color: white;
   margin-right: 28px;
@@ -136,9 +144,16 @@
   display: flex;
   align-items: right;
 }
-.dropdown {
-  float: right;
-}
+
+// .dropdown {
+//   float: right;
+//     align-items: left;
+
+// }
+
+// .internal-nav-right .dropdown-content{
+// text-align: right;
+// }
 
 .a-button {
    color: rgb(51, 51, 51);
