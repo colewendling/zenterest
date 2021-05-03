@@ -7,7 +7,7 @@ const PinIndexItem = ({ pin }) => {
     <Link to={`/pins/${pin.id}`}>
       <div className='pin-index-item-container'>
         <div className='pin-index-item-image'>
-          <img src={pin.imageFile} alt={pin.title} />
+          <img src={pin.imageUrl} alt={pin.title} />
         </div>
         <div className='pin-index-item-title'>{pin.title}</div>
       </div>

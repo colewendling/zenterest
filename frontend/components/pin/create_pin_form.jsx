@@ -11,11 +11,12 @@ class CreatePinForm extends React.Component {
     this.state = {
       title: '',
       description: '',
-      url:'',
-      author_id: '',
-      board_id: '',
+      url:'url',
+      author_id: 1,
+      board_id: 1,
       imageFile: null,
       imageUrl: null
+      
     };
 
     this.update = this.update.bind(this);
@@ -49,6 +50,7 @@ class CreatePinForm extends React.Component {
 
     formData.append('pin[title]', this.state.title);
     formData.append('pin[description]', this.state.description);
+    formData.append('pin[url]', this.state.url);
     formData.append('pin[author_id]', this.state.author_id);
     formData.append('pin[board_id]', this.state.board_id);
     formData.append('pin[image]', this.state.imageFile);
