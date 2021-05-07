@@ -81,6 +81,10 @@
   box-shadow: none;
 }
 
+.text-link button:hover{
+  color: #e60023;
+}
+
 @media screen and (max-width:700px){
  .text-link { 
    margin: 0px;
@@ -450,4 +454,35 @@ button:active {
 .demo-arrow path.a1{	animation-delay:-1s; }
 .demo-arrow path.a2{	animation-delay:-.5s; }
 .demo-arrow path.a3{	animation-delay:0s; }
+
+.board-list-arrow {
+  padding:30px;
+  border-radius: 100px;
+  transform: scale(.4);
+  width: 60px;
+  height: 82px;
+  position:absolute;
+  right: 0px;
+  top: 302px;
+  margin-top: 100;
+  margin-left: 0px;
+  z-index:999;
+}
+
+.board-list-arrow path {
+  stroke: rgb(190, 190, 190);
+  stroke-width: 3px;
+  fill: transparent;	
+  animation: down 3s 2;
+}
+@keyframes down{
+  0% { opacity:0 }
+  25% { opacity:1 }
+  75% { opacity:0 }
+  100% { opacity:0 }
+}
+
+.board-list-arrow path.a1{	animation-delay:-1s; }
+.board-list-arrow path.a2{	animation-delay:-.5s; }
+.board-list-arrow path.a3{	animation-delay:0s; }
 

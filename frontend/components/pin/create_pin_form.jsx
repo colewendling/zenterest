@@ -81,6 +81,11 @@ class CreatePinForm extends React.Component {
   render() {
     return (
       <div className="create-modal-container">
+        <svg className="board-list-arrow">
+          <path class="a1" d="M0 0 L30 22 L60 0"></path>
+          <path class="a2" d="M0 20 L30 42 L60 20"></path>
+          <path class="a3" d="M0 40 L30 62 L60 40"></path>
+        </svg>
         <div className="loader-container">
           <div className="loader"></div>
         </div>
@@ -127,7 +132,7 @@ class CreatePinForm extends React.Component {
             </div>
 
             <div className='create-right'>
-              <h2 className="input-label">Board:</h2>
+              <h2 className="input-label">Select Board:</h2>
               <div className='board-select-list'>
                 {this.props.boards.map(board => 
                 <div
