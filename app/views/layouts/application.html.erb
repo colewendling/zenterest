@@ -4,9 +4,11 @@
     name="viewport"
     content="minimum-scale=1, initial-scale=1, width=device-width"
   />
+
   <head>
     <title>Zenterest</title>
   </head>
+
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -23,8 +25,9 @@
     window.logoURL = "<%= image_url('favicon.png')  %>";
     window.animation = "<%= image_url('pinterest.gif')  %>";
   </script>
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
   <body>
   <%= yield %>
   </body>
