@@ -1,7 +1,7 @@
-import { RECEIVE_ALL_BOARDS, RECEIVE_ALL_BOARDS, RECEIVE_BOARD, REMOVE_BOARD } from '../actions/board_actions'
+import { RECEIVE_ALL_BOARDS, RECEIVE_BOARD, REMOVE_BOARD } from '../actions/board_actions'
 
 const boardsReducer = (state = {}, action) => {
-  Object.freeze(state)
+  Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ALL_BOARDS:
       return action.boards;
