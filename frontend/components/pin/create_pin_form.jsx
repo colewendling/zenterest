@@ -94,7 +94,6 @@ class CreatePinForm extends React.Component {
         </div>
         <h1 className='create-text'>Create Pin</h1>
         <form onSubmit={this.handleSubmit} className="create-form">
-
           <h2 className="input-label">Title:</h2>
           <label className="create-input-item">
             <input
@@ -105,7 +104,6 @@ class CreatePinForm extends React.Component {
             onChange={this.update('title')}
             />
           </label>
-
           <h2 className="input-label">Description:</h2>
           <label className="create-input-item">
             <textarea
@@ -116,7 +114,6 @@ class CreatePinForm extends React.Component {
             onChange={this.update('description')}
             />
           </label>
-
           <div className='create-bottom'>
             <div className='create-right'>
               <h2 className="input-label">Select Board:</h2>
@@ -133,7 +130,6 @@ class CreatePinForm extends React.Component {
               </div>
             </div>
             <div className='create-left'>
-              
                 <input
                   className='file'
                   type="file"
@@ -144,7 +140,6 @@ class CreatePinForm extends React.Component {
                   Select file
                   <p className='file-name'></p>
                 </label>
-              
               <button className='create-button'>Create</button>
             </div>
           </div>

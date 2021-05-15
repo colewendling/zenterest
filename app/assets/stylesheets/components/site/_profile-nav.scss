@@ -10,6 +10,7 @@
   height: 120px;
   width: 120px;
   display: flex;
+  margin-top: 6px;
 }
 
 .user-name {
@@ -20,7 +21,7 @@
   text-align: center;
   display: flex;
   margin-top: 4px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .user-circle {
@@ -44,6 +45,7 @@
   inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 6px;
 }
 
 .neumorphic {
@@ -124,7 +126,7 @@
   text-align: center;
   display: flex;
   margin-top: 4px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .user-follows {

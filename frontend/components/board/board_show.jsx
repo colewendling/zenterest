@@ -19,7 +19,6 @@ class BoardShow extends React.Component {
       .then(() => this.props.fetchAllBoards())
   }
 
-
   render() {
     const board = this.props.board
     return (

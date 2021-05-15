@@ -8,7 +8,6 @@ class CreateBoardForm extends React.Component {
       description: '',
       author_id: this.props.currentUser,
     };
-
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }

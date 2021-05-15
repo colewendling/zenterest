@@ -29,7 +29,6 @@ class Profile extends React.Component {
           <h1 className="user-name">{this.capitalize(this.props.currentUser.username)}</h1>
           <h4 className="user-handle">@{(this.props.currentUser.username)}</h4>
           <div className="user-follows-container">
-            {/* <h4 className="user-follows">0 followers · 0 following</h4> */}
           </div>
         </div>
 
