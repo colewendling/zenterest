@@ -10,6 +10,7 @@ class ProfileBoards extends React.Component {
     this.props.fetchAllBoards();
     this.props.fetchAllPins();
     this.props.fetchUser(this.props.userId);
+    
     document.getElementById("p-button").style.background = "white";
     document.getElementById("p-button").style.color = "black";
     document.getElementById("b-button").style.background = "black";
@@ -22,7 +23,12 @@ class ProfileBoards extends React.Component {
       return board.author_id === user.id
     })
     const userBoards = userBoardsArray.map((board, idx) => {
-      return <BoardIndexItem id={board.id} openModal={this.props.openModal} key={idx} board={board} />
+      return <BoardIndexItem 
+      key={idx} 
+      id={board.id} 
+      board={board} 
+      openModal={this.props.openModal} 
+      />
     })
     return (
       <div className='board-index-spacer'>
