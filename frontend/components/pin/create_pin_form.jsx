@@ -53,7 +53,17 @@ class CreatePinForm extends React.Component {
     formData.append('pin[author_id]', this.state.author_id);
     formData.append('pin[board_id]', this.state.board_id);
     formData.append('pin[image]', this.state.imageFile);
-    document.getElementsByClassName("loader")[0].style.opacity = "80%";
+
+    document.getElementsByClassName("loader")[0].style.opacity = "90%";
+    document.getElementsByClassName("create-modal-container")[0].style.background = "grey";
+    document.getElementsByClassName("create-input-item")[0].style.opacity = "5%";
+    document.getElementsByClassName("create-input-item")[1].style.opacity = "5%";
+    document.getElementsByClassName("input-label")[0].style.opacity = "20%";
+    document.getElementsByClassName("input-label")[1].style.opacity = "20%";
+    document.getElementsByClassName("input-button")[0].style.opacity = "20%";
+    document.getElementsByClassName("create-button")[0].style.opacity = "20%";
+
+
 
     this.props.createPin(formData)
     .then((action) => {
