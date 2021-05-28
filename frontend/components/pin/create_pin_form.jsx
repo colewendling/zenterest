@@ -35,7 +35,10 @@ class CreatePinForm extends React.Component {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
     }
       if (file) {
-      document.getElementsByClassName("input-button")[0].style.background = "green";
+      document.getElementsByClassName("input-button")[0].style.background = "#efefef";
+      document.getElementsByClassName("input-button")[0].style.color = "#333333";
+      document.getElementsByClassName("create-button")[0].style.background = "green";
+      document.getElementsByClassName("create-button")[0].style.color = "white";
       fileReader.readAsDataURL(file);
     }
   }
