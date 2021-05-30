@@ -11,14 +11,17 @@ class CreatePinForm extends React.Component {
       author_id: 1,
       board_id: 1,
       imageFile: null,
-      imageUrl: null
+      imageUrl: null,
+      // isLoading: true
     };
-
+    
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
     
   }
+
+  
 
 
   update(field) {
@@ -54,23 +57,44 @@ class CreatePinForm extends React.Component {
     formData.append('pin[board_id]', this.state.board_id);
     formData.append('pin[image]', this.state.imageFile);
     
+    document.getElementsByClassName("loader")[0].style.opacity = "90%";
     this.props.createPin(formData)
       .then((action) => {
         // this.props.history.push(`/users/${action.pin.author_id}/pins/${action.pin.id}`);
         location.reload();
+        // document.getElementsByClassName("loader")[0].style.opacity = "0%";
         // this.props.closeModal();
       })
   }
 
 
+  // componentDidMount() {
+  //   this.setState({isLoading: true})
+  //   this.props.makeApiCall()
+  //   }
+  
 
+  // fakeRequest = () => {
+  //   return new Promise(resolve => setTimeout(() => resolve(), 2500));
+  // };
 
+   
 
   render() {
 
+    // $(window).load(function () {
+    //   $('#loader').hide();
+    // });
+    
 
     return (
+      
       <div className="create-modal-container">
+
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
+
         <h1 className='create-text'>Create Pin</h1>
         <form onSubmit={this.handleSubmit} className="create-form">
 
@@ -122,6 +146,7 @@ class CreatePinForm extends React.Component {
         
           
         </form>
+        
       </div>
     );
   }
