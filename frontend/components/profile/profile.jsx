@@ -24,7 +24,7 @@ class Profile extends React.Component {
       <div className="profile-nav">
         <div className="profile-header">
           <div className="user-circle">
-            <h1 className="user-letter">{(this.props.currentUser.username)[0]}</h1>
+            <h1 data-text={(this.props.currentUser.username)[0]} className="user-letter">{(this.props.currentUser.username)[0]}</h1>
           </div>
           <h1 className="user-name">{this.capitalize(this.props.currentUser.username)}</h1>
           <h4 className="user-handle">@{(this.props.currentUser.username)}</h4>

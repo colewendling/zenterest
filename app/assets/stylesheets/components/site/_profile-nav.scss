@@ -70,12 +70,51 @@
 }
 
 .user-letter {
+  margin:0;
+  padding:0;
+  position: absolute;
   font-family: 'Roboto', sans-serif;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 84px;
   color: lightgray;
   text-align: center;
   justify-content: center;
+  font-weight: 400;
+}
+
+.user-letter:before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #e60023;
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+.user-letter:hover:before{
+  width: 100%;
+}
+
+.user-letter:hover{
+  font-weight: 500;
+  transform: scale(1.3);
+}
+
+.plus-button-container .dropbtn:hover {
+  transform: scale(1.08);
+}
+
+.work-link .link:hover {
+  color: #e60023;
+}
+
+#p-button:hover {
+  transform: scale(1.08);
+}
+
+#b-button:hover { 
+  transform: scale(1.08);
 }
 
 .user-handle {
