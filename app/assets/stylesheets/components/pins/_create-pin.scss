@@ -8,8 +8,6 @@
   z-index: 10;
 }
 
-
-
 .create-modal-container {
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -17,12 +15,9 @@
   flex-direction: column;
   justify-content: center;
   background: white;
-  // min-height: 390px;
   width:540px;
   padding: 20px 10px;
   border-radius:24px;
-  // padding-bottom: 100px;
-  
 }
 .create-modal-container img {
   justify-content: center;
@@ -66,7 +61,7 @@
 }
 .bt{
   display: flex;
-flex-direction: row;
+  flex-direction: row;
   justify-content: space-between;
   vertical-align: none;
   align-items: none;
@@ -85,24 +80,21 @@ flex-direction: row;
 }
 
 .create-input-item input::placeholder {
-  // text-align: center;
   opacity: 40%;
   padding-top: -12px;
 }
 
 .create-input-item textarea::placeholder {
   opacity: 40%;
-  // padding-top: 30px;
-  // text-align: center;
 }
 
 .create-form h2 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
   color: rgb(51, 51, 51);
-font-weight: 400;
-margin-top: 4px;
-margin-bottom: 4px;
+  font-weight: 400;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .create-input-item-title {
@@ -139,67 +131,6 @@ margin-bottom: 4px;
   align-self: center;
 }
 
-// .create-submit button {
-//   position: relative;
-//   left: 50%;
-//   margin-left: -25px;
-//   margin-top: 25px;
-//   margin-bottom: 10px;
-// }
-
-// .create-bt button:hover {
-//    filter: brightness(85%);
-// }
-
-// .upload-image {
-//   background-color: rgba(152, 183, 194, 0.082);
-//   // width: 450px;
-//   // height: 100px;
-//   box-sizing: border-box;
-//   border-radius: 16px;
-//   // padding: 12px;
-//   font-size: 16px;
-//   border: 3px solid #efefef;
-//   text-align: center;
-// }
-
-// .upload-image p {
-//   align-self: center;
-//   padding-top: 20px;
-//   opacity: 50%;
-// }
-
-// // .file-upload-button {
-// //   background-color:blue;
-// // }
-
-// .upload-zone {
-//   // position: absolute;
-//   // margin-left: -230px;
-//   // padding: 0;
-//   // size:'500';
-//   width: 100%;
-//   // height: 100%;
-//   border-radius: 0px;
-//   outline: none;
-//   opacity: 100;
-// }
-
-// .upload-image:hover {
-//   border: 3px solid rgba(0, 132, 255, 0.5);
-//   background-color: rgba(153, 230, 255, 0.2);
-
-// }
-
-// .upload-image:focus {
-//   background-color: rgba(153, 230, 255, 0.2);
-// }
-
-// .create-form h2 {
-//   margin-top: 12px;
-//   margin-bottom: 6px;
-// }
-
 .file {
   opacity: 0;
   width: 0.1px;
@@ -209,7 +140,6 @@ margin-bottom: 4px;
 
 .input-button {
   display: block;
-  // position: relative;
   width: 200px;
   height: 50px;
   border-radius: 25px;
@@ -218,17 +148,12 @@ margin-bottom: 4px;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
-  // align-self: center;
   justify-content: center;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
   transition: transform .2s ease-out;
-  
 }
-
-// .file-input:valid { background-color: green; }
-// .file-input:invalid { background-color: red; }
 
 input:hover + label,
 input:focus + label {
@@ -250,19 +175,18 @@ input:focus + label {
 
 .file-input {
   display: flex;
-align-content: center;
-justify-content: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .create-button-container {
-   display: flex;
-align-content: center;
-justify-content: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .create-button {
   display: block;
-  // position: relative;
   margin-top: 25px;
   margin-bottom: 20px;
   width: 200px;
@@ -272,9 +196,7 @@ justify-content: center;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
-  // align-self: center;
   justify-content: center;
-  // color: #fff;
   font-weight: bold;
   cursor: pointer;
   transition: transform .2s ease-out;
@@ -288,7 +210,6 @@ justify-content: center;
 .loader {
   margin-top: 30%;
   position: fixed;
-  // display: block;
   width: 100%;
   height: 100%;
   border: 8px solid #efefef;
@@ -299,11 +220,6 @@ justify-content: center;
   animation: spin 2s linear infinite;
   opacity: 0%;
 }
-
-
-// .loader--hide {
-//   opacity: 0%;
-// }
 
 @keyframes spin {
   0%  { transform: rotate(0deg); }
