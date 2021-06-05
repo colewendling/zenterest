@@ -7,7 +7,6 @@ import BoardShow from './board_show';
 
 const mapStateToProps = (state) => {
   return ({
-    boards: state.entities.boards,
     currentUser: state.entities.users[state.session.currentUser],
     boards: state.entities.boards,
   })

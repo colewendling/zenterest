@@ -63,7 +63,7 @@ class ProfileBoards extends React.Component {
 
 
         <div className='board-index-container'>
-          {userBoards}
+          {userBoards.reverse()}
         </div>
       </div>
     )
