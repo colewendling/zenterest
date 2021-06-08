@@ -5,7 +5,6 @@ class BoardShow extends React.Component {
     super(props);
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
   update(field) {
@@ -13,16 +12,6 @@ class BoardShow extends React.Component {
       [field]: e.currentTarget.value
     });
   }
-
-
-  // componentDidUpdate(prevProps) {
-  //   // Typical usage (don't forget to compare props):
-  //   debugger
-  //   if (this.props.pins.length !== prevProps.pins.length) {
-  //     // this.fetchData(this.props.userID);
-  //   }
-  // }
-
 
   handleSubmit(e) {
     e.preventDefault();
@@ -35,30 +24,29 @@ class BoardShow extends React.Component {
     const board = this.props.board
     return (
       <div className='board-show'>
-
         <h1 className='board-show-title'>{board.title}</h1>
-      <hr />
+        <hr />
         <p className='board-show-description'>{board.description}</p>
-      <div className='board-show-container'>
-      <div className='pin-index-container'>
-        {board.pins.map((pin)=> 
-          <a key={pin.id} onClick={() => this.props.openModal(['pinShow', pin.id])} >
-          <div className='pin-index-item-container'>
-            <div className='pin-index-item-image'>
-              <img src={pin.imageUrl} alt={pin.title} />
-            </div>
+        <div className='board-show-container'>
+          <div className='pin-index-container'>
+            {board.pins.map((pin)=> 
+              <a key={pin.id} onClick={() => this.props.openModal(['pinShow', pin.id])} >
+              <div className='pin-index-item-container'>
+                <div className='pin-index-item-image'>
+                  <img src={pin.imageUrl} alt={pin.title} />
+                </div>
+              </div>
+              </a>
+            )}
           </div>
-          </a>
-          )}
-      </div>
         </div>
-     
-          <button className="board-delete-button" onClick={() => {
-            this.props.deleteBoard(board.id)
-            this.props.closeModal()
-            window.location.reload();
+
+        <button className="board-delete-button" onClick={() => {
+          this.props.deleteBoard(board.id);
+          this.props.closeModal();
+          window.location.reload();
           }}>Delete
-          </button>
+        </button>
       </div>
     );
   }

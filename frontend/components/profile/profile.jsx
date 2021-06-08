@@ -9,23 +9,19 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
-    
     this.props.fetchUser(this.props.userId);
   }
-
-  
 
   capitalize(string) {
     return string[0].toUpperCase() + string.slice(1)
   }
 
   render() {
-    
     const user = this.props.currentUser;
     if (!user) return <div>Current User is Null</div>;
+
     return (
       <div className="profile-nav">
-
         <div className="profile-header">
           <div className="user-circle">
             <h1 className="user-letter">{(this.props.currentUser.username)[0]}</h1>

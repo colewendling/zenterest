@@ -1,7 +1,7 @@
 .profile-header {
- align-items: center;
- display: flex;
- flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .user-name-container {
@@ -36,39 +36,20 @@
   margin-bottom: 4px;
   justify-content: center;
   align-items: center;
-
-
-    // box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
-    // -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
   font-size: 5rem;
-  // width: 200px;
-  // height: 200px;
   border-radius: 40px;
   overflow: hidden;
   padding: 1.3rem;
   display: flex;
-    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
-    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
-
-
-      justify-content: space-around;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+  inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  justify-content: space-around;
   align-items: center;
 }
 
-// body {
-//   padding: 3rem 4rem 0;
-//   background-color: #e0e0e0;
-//   color: #999;
-//   display: flex;
-//   flex-wrap: wrap;
-//   max-width: 680px;
-//   font-family: "Arial", sans-serif;
-//   margin: 0 auto;
-// }
-
 .neumorphic {
   box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
-    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+  -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
   font-size: 5rem;
   width: 200px;
   height: 200px;
@@ -80,7 +61,7 @@
 
 .neumorphic--pressed {
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
-    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
 }
 
 .variation2 {
@@ -88,13 +69,11 @@
   align-items: center;
 }
 
-
 .user-letter {
   font-family: 'Roboto', sans-serif;
   text-transform: capitalize;
   font-size: 84px;
   color: lightgray;
-  
   text-align: center;
   justify-content: center;
 }
@@ -137,14 +116,6 @@
   background-color: white;
 }
 
-
-// .internal-nav-right .dropdown-content {
-//   writing-mode: horizontal-tb;
-//   white-space: nowrap;
-//   align-content: right;
-//   background-color: white;
-// }
-
 .plus-button-container {
   margin-right: 28px;
   align-items: center;
@@ -183,10 +154,9 @@
 }
 
 .profile-btn-item {
-    color: rgb(17, 17, 17);
+  color: rgb(17, 17, 17);
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-
   padding: 4px;
 }
 
@@ -194,16 +164,6 @@
   display: flex;
   align-items: right;
 }
-
-// .dropdown {
-//   float: right;
-//     align-items: left;
-
-// }
-
-// .internal-nav-right .dropdown-content{
-// text-align: right;
-// }
 
 #b-button {
    color: rgb(51, 51, 51);

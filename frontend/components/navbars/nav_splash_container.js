@@ -4,12 +4,12 @@ import { openModal } from '../../actions/modal_actions';
 import NavSplash from './nav_splash';
 
 const mapStateToProps = ({ session }) => ({
-    currentUser: session.currentUser
+  currentUser: session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
-    logout: () => dispatch(logout()),
-    openModal: modal => dispatch(openModal(modal))
+  logout: () => dispatch(logout()),
+  openModal: modal => dispatch(openModal(modal))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavSplash);

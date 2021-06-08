@@ -25,7 +25,6 @@ export const fetchUser = userId => dispatch => (
     )
 );
 
-
 export const fetchAllUsers = () => dispatch => (
     UsersApiUtil.fetchAllUsers().then(
         users => dispatch(receiveAllUsers(users))

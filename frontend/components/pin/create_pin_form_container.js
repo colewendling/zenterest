@@ -10,7 +10,6 @@ const mapStateToProps = state => {
   currentUser: state.session.currentUser,
   user: Object.values(state.entities.users)[0],
   boards: Object.values(state.entities.boards),
-  // boards: state.entities.boards,
   })
 }
 

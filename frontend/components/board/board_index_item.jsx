@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const BoardIndexItem = ({ board, openModal, id}) => {

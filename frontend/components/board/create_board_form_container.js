@@ -7,7 +7,6 @@ import CreateBoardForm from './create_board_form';
 
 const mapStateToProps = ({ session }) => {
   return {
-    // errors: errors.board,
     author_id: session.currentUser
   }
 }

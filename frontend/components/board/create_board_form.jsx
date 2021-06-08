@@ -19,7 +19,6 @@ class CreateBoardForm extends React.Component {
     });
   }
 
-
   handleSubmit(e) {
     e.preventDefault();
     this.props.createBoard(this.state).then(this.props.closeModal)
@@ -27,7 +26,6 @@ class CreateBoardForm extends React.Component {
   }
 
   render() {
-
     return (
       <div className="create-modal-container">
         <div className="loader-container">

@@ -4,8 +4,6 @@ import { closeModal, openModal } from '../../actions/modal_actions';
 import { fetchBoard, deleteBoard, fetchAllBoards} from '../../actions/board_actions';
 import { fetchUser } from '../../actions/user_actions';
 import BoardShow from './board_show';
-// import {openModal } from '../../actions/modal_actions';
-
 
 const mapStateToProps = (state) => {
   return ({

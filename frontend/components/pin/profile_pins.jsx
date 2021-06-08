@@ -8,14 +8,6 @@ class ProfilePins extends React.Component {
     super(props);
   }
 
-  // componentDidUpdate(prevProps) {
-  //   // Typical usage (don't forget to compare props):
-  //   debugger
-  //   if (this.props.pins.length !== prevProps.pins.length) {
-  //     // this.fetchData(this.props.userID);
-  //   }
-  // }
-
   componentDidMount() {
     this.props.fetchAllPins();
     this.props.fetchAllBoards();

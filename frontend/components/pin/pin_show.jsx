@@ -5,14 +5,6 @@ class PinShow extends React.Component {
     super(props);
   }
 
-  // componentDidUpdate(prevProps) {
-  //   // Typical usage (don't forget to compare props):
-  //   debugger
-  //   if (this.props.pins.length !== prevProps.pins.length) {
-  //     // this.fetchData(this.props.userID);
-  //   }
-  // }
-
   render() {
     const pin = this.props.pins[this.props.id]
     return (

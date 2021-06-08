@@ -31,13 +31,9 @@ class CreatePinForm extends React.Component {
   }
 
 
- toggleClass() {
-  const element = document.getElementById("board-li");
-  element.classList.toggle("red-boy");
-}
-
-  componentDidMount() {
-    // this.props.fetchUser(this.props.user.id)
+  toggleClass() {
+    const element = document.getElementById("board-li");
+    element.classList.toggle("red-boy");
   }
 
   handleFile(e) {
@@ -63,7 +59,6 @@ class CreatePinForm extends React.Component {
     formData.append('pin[author_id]', this.state.author_id);
     formData.append('pin[board_id]', this.state.board_id);
     formData.append('pin[image]', this.state.imageFile);
-
     document.getElementsByClassName("loader")[0].style.opacity = "90%";
     document.getElementsByClassName("create-modal-container")[0].style.background = "grey";
     document.getElementsByClassName("create-input-item")[0].style.opacity = "5%";
@@ -80,99 +75,74 @@ class CreatePinForm extends React.Component {
 
   selectListItem(id) {
     this.setState({ board_id: id});
-    // debugger
-    // // document.getElementsByClassName("board-select-list").style.color= "blue";
-    // // arr.forEach(el => {
-    // //   if (el.style.color === "red") {
-    // //     el.style.color = ''
-    // //   }
-    // // })
-
-
     event.target.style.color = "red";
   }
 
   render() {
     return (
       <div className="create-modal-container">
-
         <div className="loader-container">
           <div className="loader"></div>
         </div>
         <h1 className='create-text'>Create Pin</h1>
-
-
         <form onSubmit={this.handleSubmit} className="create-form">
 
           <h2 className="input-label">Title:</h2>
           <label className="create-input-item">
             <input
-              className="create-input-item-title"
-              type="text"
-              value={this.state.title}
-              placeholder="Add pin title here..."
-              onChange={this.update('title')}
+            className="create-input-item-title"
+            type="text"
+            value={this.state.title}
+            placeholder="Add pin title here..."
+            onChange={this.update('title')}
             />
           </label>
 
           <h2 className="input-label">Description:</h2>
           <label className="create-input-item">
             <textarea
-              className="create-input-item-description"
-              type="text"
-              value={this.state.description}
-              placeholder="Describe your new pin..."
-              onChange={this.update('description')}
+            className="create-input-item-description"
+            type="text"
+            value={this.state.description}
+            placeholder="Describe your new pin..."
+            onChange={this.update('description')}
             />
           </label>
 
-
           <div className='create-bottom'>
-
             <div className='create-left'>
               <div className='file-input'>
-              <input
-                className='file'
-                type="file"
-                id='file'
-                onChange={this.handleFile}  
-              />
-              <label className='input-button' htmlFor='file'>
-                Select file
-                <p className='file-name'></p>
-              </label>
+                <input
+                  className='file'
+                  type="file"
+                  id='file'
+                  onChange={this.handleFile}  
+                />
+                <label className='input-button' htmlFor='file'>
+                  Select file
+                  <p className='file-name'></p>
+                </label>
+              </div>
+              <button className='create-button'>Create</button>
             </div>
-                
-                  <button className='create-button'>Create</button>
-               
-            </div>
+
             <div className='create-right'>
-           
-              {/* <div className="dropdown">
-               
-                <div className="dropdown-content"> */}
               <h2 className="input-label">Board:</h2>
               <div className='board-select-list'>
-                  {this.props.boards.map(board => 
-                    <div
-                    className='board-li'
-                      onClick={() => this.selectListItem(board.id)}
-                      key={board.id}
-                      // className='board-select-list-item'
-                      >
-                      {board.title}
-                    </div>
-                    )}
-                    </div>
-                {/* </div>
-                </div> */}
-        
-
+                {this.props.boards.map(board => 
+                <div
+                  className='board-li'
+                  onClick={() => this.selectListItem(board.id)}
+                  key={board.id}
+                  >
+                  {board.title}
+                </div>
+                )}
+              </div>
             </div>
-          
+          </div>
+        </form>
       </div>
-    </form>
-     </div>
     );
   }
 }

@@ -4,7 +4,6 @@ import { openModal } from '../../actions/modal_actions';
 import ProfilePins from './profile_pins';
 import { fetchAllPins, fetchPin } from '../../actions/pin_actions';
 import { fetchUser } from '../../actions/user_actions';
-
 import { fetchAllBoards } from '../../actions/board_actions';
 
 const mapStateToProps = (state, ownProps) => {

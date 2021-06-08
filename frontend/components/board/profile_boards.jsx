@@ -10,9 +10,6 @@ class ProfileBoards extends React.Component {
     this.props.fetchAllBoards();
     this.props.fetchAllPins();
     this.props.fetchUser(this.props.userId);
-
-
-
     document.getElementById("p-button").style.background = "white";
     document.getElementById("p-button").style.color = "black";
     document.getElementById("b-button").style.background = "black";
@@ -21,22 +18,20 @@ class ProfileBoards extends React.Component {
 
   render() {
     const { user, boards } = this.props;
-
     let userBoardsArray = Object.values(boards).filter(board => {
       return board.author_id === user.id
     })
-    
     const userBoards = userBoardsArray.map((board, idx) => {
       return <BoardIndexItem id={board.id} openModal={this.props.openModal} key={idx} board={board} />
     })
-
     return (
       <div className='board-index-spacer'>
-      <div className='board-index-container'>
-        {userBoards.reverse()}
-      </div>
+        <div className='board-index-container'>
+          {userBoards.reverse()}
+        </div>
       </div>
     )
   }
 }
+
 export default ProfileBoards;
