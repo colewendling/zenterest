@@ -5,11 +5,9 @@ import { fetchUser } from '../../actions/user_actions';
 import { closeModal, openModal } from '../../actions/modal_actions';
 import PinShow from './pin_show';
 
-const mapStateToProps = (state, ownProps ) => {
+const mapStateToProps = (state) => {
   return ({
-    // pins: Object.values(state.entities.pins)
     pins: state.entities.pins,
-    // pin: state.entities.pins[ownProps.match.params.pinId],
     currentUser: state.entities.users[state.session.currentUser],
     boards: state.entities.boards,
   })

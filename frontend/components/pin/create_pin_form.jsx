@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class CreatePinForm extends React.Component {
 
   constructor(props) {
@@ -29,15 +28,14 @@ class CreatePinForm extends React.Component {
 
   
   handleFile(e) {
-    // this.setState({ imageFile: e.target.files[0] });
-      const file = e.currentTarget.files[0];
-      const fileReader = new FileReader();
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
       fileReader.onloadend = () => {
-          this.setState({ imageFile: file, imageUrl: fileReader.result });
-      }
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    }
       if (file) {
-          fileReader.readAsDataURL(file);
-      }
+      fileReader.readAsDataURL(file);
+    }
   }
 
   handleSubmit(event) {
