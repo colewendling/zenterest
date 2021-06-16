@@ -64,11 +64,10 @@
 }
 
  .form-container{
-    display: flex;
-    flex-direction: column;
-    width: 268px;
+  display: flex;
+  flex-direction: column;
+  width: 268px;
  }
-
 
 .switch-form-link {
   margin: 0
@@ -76,9 +75,9 @@
 
 
 .form-container {
-    margin: 0px auto;
-    position: relative;
-    text-align: center;
+  margin: 0px auto;
+  position: relative;
+  text-align: center;
 }
 
 .modal-form {
@@ -137,7 +136,7 @@
 }
 
 .modal-form div:hover{
-   text-decoration: underline;
+  text-decoration: underline;
 }
 
 .modal-form h6 .tos{
@@ -149,21 +148,19 @@
   text-decoration: underline;
 }
 
-
 .demo-button {
   box-sizing: border-box;
   background-color: rgba(9, 30, 66, .7);
   color: rgb(255, 255, 255);
   width: 100%;
-  // margin-top: 15px;
 }
 
 .modal-button:hover {
-   filter: brightness(85%);
+  filter: brightness(85%);
 }
 
 .demo-button:hover {
-   filter: brightness(85%);
+  filter: brightness(85%);
 }
 
 .modal-form h1 {
@@ -175,12 +172,12 @@
 }
 
 .error-text {
-   color: #e60023;
-   font-weight: 400;
-   font-size: 15px;
-   text-align: center;
+  color: #e60023;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
 }
 
 .grey-button:hover {
-     color: #e60023;
+  color: #e60023;
 }

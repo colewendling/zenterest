@@ -22,15 +22,18 @@
 @import 'base/fonts.scss';
 // @import 'base/reset.scss';
 
-
 //Components
-@import 'components/profile/profile.scss';
+@import 'components/boards/_create-board.scss';
+@import 'components/boards/_index-board.scss';
+@import 'components/boards/_show-board.scss';
+
 @import 'components/pins/_create-pin.scss';
 @import 'components/pins/_index-pin.scss';
 @import 'components/pins/_show-pin.scss';
-@import 'components/_modal.scss';
-@import 'components/_navbar.scss';
-@import 'components/_session.scss';
+
+@import 'components/site/_modal.scss';
+@import 'components/site/_navbar.scss';
+@import 'components/site/_profile-nav.scss';
 
 button {
   font-family: 'Roboto', sans-serif;
