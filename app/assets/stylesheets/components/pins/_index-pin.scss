@@ -24,8 +24,7 @@
   transition-duration: 0.025s;
   transition-property: transform;
   transition-timing-function: ease-out;
-  vertical-align: middle;
-  
+  vertical-align: middle; 
 }
 
 @media screen and (max-width: 800px) {
@@ -197,20 +196,6 @@
   padding-left: 8px;
 }
 
-// @media screen and (min-width:0px){
-//   .pin-index-container,
-//   .profile-pin-index-container {
-//     column-count: 3;
-//     column-gap: 5px;
-//     margin-left: 8px;
-//     margin-right: 8px;
-//     border-radius: 8px;
-//     margin-top: -8px;
-//     margin-bottom: 4px;
-//     top: 155px;
-//   }
-// }
-
 @media screen and (min-width:0px){
   .pin-index-container,
   .profile-pin-index-container {
@@ -221,7 +206,6 @@
     margin-bottom: 0px;
     border-radius: 8px;
     column-gap: 5px;
-    // top: 74px
   }
 }
 
@@ -234,7 +218,6 @@
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 36px;
-
   }
 }
 
@@ -242,7 +225,6 @@
   .pin-index-container,
   .profile-pin-index-container {
     column-count: 4;
-  
   }
 }
 
@@ -250,7 +232,6 @@
   .pin-index-container,
   .profile-pin-index-container {
     column-count: 4;
-  
   }
 }
 

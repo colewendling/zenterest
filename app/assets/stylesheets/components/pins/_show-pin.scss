@@ -10,16 +10,11 @@
   border-radius:36px;
 }
 
-
 @media screen and (min-width:0px){
   .pin-show { 
     max-width: 400px;
-    // min-width:400px;
-    // font-size: 14px;
   }
 }
-
-
 
 @media screen and (min-width:800px){
   .pin-show { 
@@ -61,7 +56,6 @@
 .pin-show-left img{
   display: relative;
   max-width: 100%;
-  // max-height: ;
   border-radius: 36px;
 }
 
