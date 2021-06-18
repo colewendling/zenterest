@@ -9,23 +9,24 @@ class PinShow extends React.Component {
     const pin = this.props.pins[this.props.id]
     return (
       <div className='pin-show'>
-        <div className='pin-show-image'>
+        <div className='pin-show-left'>
           <img src={pin.imageUrl} alt={pin.title} />
         </div>
+        <div className='pin-show-right'>
         <div className='pin-show-info-container'>
-          <div className='pin-delete-button-container'>
-            <button className="pin-delete-button" onClick={() => {
-                this.props.deletePin(pin.id)
-                this.props.closeModal()
-              }}>
-            <i className="far fa-times-circle"></i>
-            </button>
-          </div>
           <h1 className='pin-show-title'>{pin.title}</h1>
           <hr />
           <p className='pin-show-description'>{pin.description}</p>
         </div>
+          <div className='pin-delete-button-container'>
+            <button className="pin-delete-button" onClick={() => {
+                this.props.deletePin(pin.id)
+                this.props.closeModal()
+              }}>Delete
+            </button>
+          </div>
       </div>
+    </div>
     );
   }
 }

@@ -1,9 +1,10 @@
 .nav-box {
+  display: flex;
   align-items: center;
   box-sizing: border-box;
-  display: flex;
   flex-direction: row;
-  height: 80px;
+  // height: 80px;
+  // min-width: 100%;
   justify-content: space-between;
   position: relative;
   z-index: 1;
@@ -79,6 +80,35 @@
   text-size-adjust: 100%;
   box-shadow: none;
 }
+
+@media screen and (max-width:700px){
+ .text-link { 
+   margin: 0px;
+   padding: 0px;
+   width: 0px;
+  display:hidden;
+  opacity: 0%;
+
+  // .text-links-box .work-link {
+  //   // display: block;
+  //   opacity: 100%;
+  //   // width: 100%;
+  // }
+  }
+
+ .animation {
+   position: absolute;
+  top: 0px;
+  width: 100%;
+  // margin-right: 0px;
+  }
+
+  // .nav-button-box .red-button .grey-button{
+  //   margin: 3px;
+  //   padding: 6px;
+  // }
+}
+
 
 .link {
   padding-bottom: 0px;
@@ -307,6 +337,7 @@ button:active {
   width: 90%;
   height: 90%;
 }
+
 
 
 

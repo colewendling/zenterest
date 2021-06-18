@@ -3,23 +3,66 @@
   font-family: 'Roboto', sans-serif;
   flex-direction: row;
   background: white;
-  min-height: 200px;
-  min-width:425px;
+  min-height: 300px;
+  min-width:600px;
   height: auto;
-  padding: 36px;
+  padding: 20px;
   border-radius:36px;
 }
 
-.pin-show-image img{
-  min-width: 100%;
-  display: flex;
-  border-radius: 16px;
-  align-self: center;
+
+@media screen and (min-width:0px){
+  .pin-show { 
+    max-width: 400px;
+    // min-width:400px;
+    // font-size: 14px;
+  }
 }
 
-.pin-show-image {
-  padding-right: 25px;
+
+
+@media screen and (min-width:800px){
+  .pin-show { 
+    min-height: 300px;
+    min-width:500px;
+  }
+}
+
+@media screen and (min-width:750px){
+  .pin-show .create-pin .create-board{ 
+    min-height: 300px;
+    min-width:500px;
+  }
+}
+
+@media screen and (min-width:800px){
+  .pin-show .create-pin .create-board {
+    min-height: 300px;
+    min-width:600px;
+  }
+}
+
+.pin-show-left {
   display: flex;
+  width: 50%;
+  margin: 16px;
+}
+
+.pin-show-right {
+  display: flex;
+  width: 50%;
+  margin: 16px;
+}
+
+.pin-show-description {
+  width: 120%;
+}
+
+.pin-show-left img{
+  display: relative;
+  max-width: 100%;
+  // max-height: ;
+  border-radius: 36px;
 }
 
 .pin-show-title {
@@ -31,23 +74,13 @@
 .pin-show-info-container {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
-}
-
-.pin-show-info-container hr {
-  height: 1px;
-  background-color: #333;
-  border: none;
-  width: 200px;
-  opacity: 30%;
-  margin-left: 0px;
-  border-radius: 0px;
+  width: 100%;
+  align-content: space-around;
 }
 
 .pin-delete-button-container {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 0px;
+  display: absolute;
+  align-self: flex-end;
 }
 
 .pin-delete-button {
@@ -57,10 +90,18 @@
   font-size: 16px;
   cursor: pointer;
   color:rgba(91, 91, 91, 0.3);
+  box-shadow: none;
 }
 
-.pin-delete-button button{
+.pin-delete-button button {
   display: flex;
+}
+
+.pin-show-info-container hr {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-right: 6px;
+  width: 120%;
 }
 
 .fa-times-circle {
@@ -73,5 +114,9 @@
 }
 
 .fa-times-circle:hover {
+  color:red;
+}
+
+.pin-delete-button:hover {
   color:red;
 }

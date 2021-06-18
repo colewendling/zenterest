@@ -49,6 +49,7 @@
 .plus-button-container {
   float: center;
   margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 .b-row {
@@ -163,50 +164,32 @@
 }
 .pin-index-container {
   display: relative;
-  // position: ;
-  // top: 72px;
-  // border: 2px solid crimson;
-  // column-count: 4;
-  // column-width: 250px;
-  column-gap: 6px;
+  column-gap: 8px;
   margin: 0px 0px 0px 0px;
   z-index: 0; 
-  margin-left: 12px;
-  margin-right: 12px;
-  // text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .pin-index-item-container {
-  // border: 2px solid rgb(20, 220, 20);
   display: inline-block;
   width: 100%;
   margin-bottom: 4px;
-  // text-align: left;
 }
 
-// .column img:hover {
-//     filter: brightness(75%);
-//     transform: scale(0.97);
-//     transition-delay: 0s;
-//     transition-duration: 0.025s;
-//     transition-property: transform;
-//     transition-timing-function: ease-out;
-//     vertical-align: middle;
-// }
-
 .pin-index-item-container:hover img {
-    filter: brightness(75%);
-    transform: scale(0.97);
-    transition-delay: 0s;
-    transition-duration: 0.025s;
-    transition-property: transform;
-    transition-timing-function: ease-out;
-    vertical-align: middle;
+  filter: brightness(75%);
+  transform: scale(0.97);
+  transition-delay: 0s;
+  transition-duration: 0.025s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  vertical-align: middle;
 }
 
 .pin-index-item-image img {
   width: 100%;
-  border-radius: 42px;
+  border-radius: 36px;
 }
 
 .pin-index-item-title {
@@ -214,26 +197,44 @@
   padding-left: 8px;
 }
 
-@media screen and (min-width:0){
-  .pin-index-container,
-  .profile-pin-index-container,
-  .profile-container {
-    column-count: 1;
-    top: 155px;
-  }
-}
-@media screen and (min-width:500px){
+// @media screen and (min-width:0px){
+//   .pin-index-container,
+//   .profile-pin-index-container {
+//     column-count: 3;
+//     column-gap: 5px;
+//     margin-left: 8px;
+//     margin-right: 8px;
+//     border-radius: 8px;
+//     margin-top: -8px;
+//     margin-bottom: 4px;
+//     top: 155px;
+//   }
+// }
+
+@media screen and (min-width:0px){
   .pin-index-container,
   .profile-pin-index-container {
-    column-count: 2;
-    top: 74px
+    column-count: 3;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: -8px;
+    margin-bottom: 0px;
+    border-radius: 8px;
+    column-gap: 5px;
+    // top: 74px
   }
 }
 
 @media screen and (min-width:750px){
   .pin-index-container,
   .profile-pin-index-container {
-    column-count: 3;
+    column-count: 4;
+    column-gap: 8px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 36px;
+
   }
 }
 
@@ -241,26 +242,28 @@
   .pin-index-container,
   .profile-pin-index-container {
     column-count: 4;
+  
   }
 }
 
 @media screen and (min-width:1250px){
   .pin-index-container,
   .profile-pin-index-container {
-    column-count: 5;
+    column-count: 4;
+  
   }
 }
 
 @media screen and (min-width:1500px){
   .pin-index-container,
   .profile-pin-index-container {
-    column-count: 6;
+    column-count: 4;
   }
 }
 
 @media screen and (min-width:1700px){
   .pin-index-container,
   .profile-pin-index-container {
-    column-count: 7;
+    column-count: 4;
   }
 }

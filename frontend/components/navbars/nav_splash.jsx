@@ -17,7 +17,7 @@ render() {
         </div>
         <div className="nav-right">
           <div className="text-links-box">
-            <form action='https://wendling.io/' className="text-link">
+            <form action='https://wendling.io/' className="work-link">
                 <button className="link" type='submit'>Work</button>
             </form>
             <form action='https://github.com/colewendling' className="text-link">
