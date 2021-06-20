@@ -2,7 +2,6 @@ import { RECEIVE_ALL_PINS, RECEIVE_PIN, REMOVE_PIN } from '../actions/pin_action
 
 const pinsReducer = (state = {}, action) => {
   Object.freeze(state)
-
   switch (action.type) {
     case RECEIVE_ALL_PINS:
       return action.pins;

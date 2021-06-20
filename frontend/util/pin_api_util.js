@@ -14,12 +14,12 @@ export const createPin = (formData) => ( // (pin)
     })
 )
 
-export const fetchAllPins = () => (
-  $.ajax({
+export const fetchAllPins = () => {
+  return $.ajax({
     url: '/api/pins',
     method: 'GET'
   })
-)
+}
 
 export const fetchPin = (pinId) => {
   $.ajax({

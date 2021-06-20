@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { openModal } from '../../actions/modal_actions';
 import ProfilePins from './profile_pins';
-import { fetchPin } from '../../actions/pin_actions';
+import { fetchAllPins, fetchPin } from '../../actions/pin_actions';
 
 const mapStateToProps = (state, ownProps) => {
   
@@ -18,10 +18,10 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchPin: pinId => dispatch(fetchPin(pinId)),
-  fetchAllPins: () => dispatch(requestAllPins()),
+  fetchAllPins: () => dispatch(fetchAllPins()),
   requestPin: (pinId) => dispatch(requestPin(pinId)),
   getUserBoards: (userId) => dispatch(getUserBoards(userId)),
-  openModal: (modal) => dispatch(openModal(modal, boardId))
+  openModal: (modal) => dispatch(openModal(modal))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProfilePins));

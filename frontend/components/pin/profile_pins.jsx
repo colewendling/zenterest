@@ -7,6 +7,10 @@ class ProfilePins extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchAllPins();
+  }
+
   capitalize(string) {
     return string[0].toUpperCase() + string.slice(1)
   }
@@ -21,11 +25,10 @@ class ProfilePins extends React.Component {
     const user  = this.props.currentUser;
     
     if (!user) return <div>Current User is Null</div>;
+    // const userPins = user.pins.map((pin, idx) => {
+    //   return <PinIndexItem key={idx} pin={Object.values(pin)[0]} />
+    // })
     debugger
-    const userPins = user.pins.map((pin, idx) => {
-      return <PinIndexItem key={idx} pin={Object.values(pin)[0]} />
-    })
-
     return (
       <div className="profile-container">
 
@@ -57,7 +60,7 @@ class ProfilePins extends React.Component {
         </div>
 
         <div className='pin-index-container'>
-          {userPins}
+          {/* {userPins} */}
         </div>
       </div>
     )
