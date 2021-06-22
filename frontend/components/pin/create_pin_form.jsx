@@ -116,22 +116,6 @@ class CreatePinForm extends React.Component {
           </label>
 
           <div className='create-bottom'>
-            <div className='create-left'>
-              <div className='file-input'>
-                <input
-                  className='file'
-                  type="file"
-                  id='file'
-                  onChange={this.handleFile}  
-                />
-                <label className='input-button' htmlFor='file'>
-                  Select file
-                  <p className='file-name'></p>
-                </label>
-              </div>
-              <button className='create-button'>Create</button>
-            </div>
-
             <div className='create-right'>
               <h2 className="input-label">Select Board:</h2>
               <div className='board-select-list'>
@@ -143,8 +127,23 @@ class CreatePinForm extends React.Component {
                   >
                   {board.title}
                 </div>
-                )}
+                ).reverse()}
               </div>
+            </div>
+            <div className='create-left'>
+              
+                <input
+                  className='file'
+                  type="file"
+                  id='file'
+                  onChange={this.handleFile}  
+                />
+                <label className='input-button' htmlFor='file'>
+                  Select file
+                  <p className='file-name'></p>
+                </label>
+              
+              <button className='create-button'>Create</button>
             </div>
           </div>
         </form>
