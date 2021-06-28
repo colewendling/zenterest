@@ -81,11 +81,12 @@
   flex-direction: row;
 }
 
-.dropdown-content a {
+.dropdown-content {
   writing-mode: horizontal-tb;
   white-space: nowrap;
   align-content: center;
   background-color: white;
+  // border-radius: 0px;
 }
 .plus-button-container {
    background-color: white;

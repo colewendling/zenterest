@@ -10,7 +10,7 @@ import Profile from '../components/profile/profile_container';
 // import ProfilePins from './profile/profile_container';
 
 // import PinIndex from './pin/pin_index_container';
-// import PinShow  from './pin/pin_show_container';
+import PinShow  from './pin/pin_show_container';
 
 import BoardIndex from './board/board_index';
 import BoardShow from './board/board_show';
@@ -32,7 +32,7 @@ const App = () => (
     <ProtectedRoute exact path='/users/:userId/boards' component={Profile} />
     <ProtectedRoute exact path='/users/:userId/boards/:boardId' component={BoardShow} />
     <ProtectedRoute exact path='/users/:userId/pins' component={ProfilePins} />
-    {/* <ProtectedRoute exact path='/pins/:pinId' component={PinShow} /> */ }
+    <ProtectedRoute exact path='/pins/:pinId' component={PinShow} /> 
   </Switch>
 
 </div>
