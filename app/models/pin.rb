@@ -15,6 +15,6 @@ class Pin < ApplicationRecord
     class_name: :BoardPin
 
 
-   has_one_attached :image
+   has_one_attached :photo
 
 end
