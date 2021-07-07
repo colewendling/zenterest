@@ -41,7 +41,7 @@ class Profile extends React.Component {
             <div className="dropdown">
               <button className='dropbtn'><i className="fa fa-plus"></i></button>
             <div className="dropdown-content">
-                <a onClick={() => this.props.openModal('createBoard')}>Create Board</a>
+                <a onClick={() => this.props.openModal('createPin')}>Create Pin</a>
                 {/* <Link to='/pin-builder'><div>Create Pin</div></Link> */}
             {/* </div> */}
 

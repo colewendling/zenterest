@@ -5,6 +5,7 @@ import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 import CreateBoardForm from '../board/create_board_form';
 import EditBoardForm from '../board/edit_board_form';
+import CreatePinForm from '../pin/create_pin_form';
 
 function Modal({ modal, closeModal }) {
     if (!modal) {
@@ -24,6 +25,9 @@ function Modal({ modal, closeModal }) {
             break;
       case 'editBoard':
             component = <EditBoardForm />;
+            break;
+      case 'createPin':
+            component = <CreatePinForm />;
             break;
       default:
             return null;
