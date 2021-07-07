@@ -28,7 +28,6 @@ gem 'activestorage'
 gem 'jquery-rails'
 
 #AWS - Active Storage Integration
-
 gem "aws-sdk-s3"
 
 # Use ActiveStorage variant

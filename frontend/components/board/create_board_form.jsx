@@ -85,11 +85,6 @@ class CreateBoardForm extends React.Component {
 
           </div>
 
-
-
-
-
-
       </div>
     );
   }

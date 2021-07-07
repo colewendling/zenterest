@@ -1,6 +1,5 @@
 class Pin < ApplicationRecord
   validates :title, :author_id, presence: true
-  validate :ensure_image
 
    belongs_to :user,
     foreign_key: :author_id,
