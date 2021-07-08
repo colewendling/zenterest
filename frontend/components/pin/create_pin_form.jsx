@@ -19,7 +19,7 @@ class CreatePinForm extends React.Component {
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.uploadImage = this.uploadImage.bind(this);
+    // this.uploadImage = this.uploadImage.bind(this);
     this.handleFile = this.handleFile.bind(this);
   }
 
@@ -31,13 +31,25 @@ class CreatePinForm extends React.Component {
 
   
   handleFile(e) {
-    this.setState({ photoFile: e.target.files[0] });
+    this.setState({ imageFile: e.target.files[0] });
   }
 
   handleSubmit(event) {
-    debugger
     event.preventDefault();
-    this.props.createPin(this.state)
+    const formData = new FormData();
+
+    formData.append('pin[title]', this.state.title);
+    formData.append('pin[description]', this.state.description);
+    formData.append('pin[url]', this.state.url);
+    formData.append('pin[author_id]', this.state.author_id);
+    formData.append('pin[board_id]', this.state.board_id);
+    formData.append('pin[image]', this.state.imageFile);
+    
+    // if (this.state.imageFile) {
+
+    // }
+ 
+    this.props.createPin(formData)
       .then((action) => {
         this.props.history.push(`/users/${action.pin.author_id}/pins/${action.pin.id}`);
         this.props.closeModal();
@@ -49,22 +61,22 @@ class CreatePinForm extends React.Component {
   //   this.props.closeModal();
   // }
 
-  uploadImage(e) {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('pin[title]', this.state.title);
-    if (this.state.imageFile) {
+  // uploadImage(e) {
+  //   e.preventDefault();
+  //   const formData = new FormData();
+  //   formData.append('pin[title]', this.state.title);
+  //   if (this.state.imageFile) {
 
-      formData.append('pin[image]', this.state.imageFile);
-    }
-    $.ajax({
-      url: '/api/pins',
-      method: 'POST',
-      data: formData,
-      contentType: false,
-      processData: false
-    });
-  }
+  //     formData.append('pin[image]', this.state.imageFile);
+  //   }
+  //   $.ajax({
+  //     url: '/api/pins',
+  //     method: 'POST',
+  //     data: formData,
+  //     contentType: false,
+  //     processData: false
+  //   });
+  // }
 
 
   render() {

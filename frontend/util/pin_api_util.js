@@ -1,9 +1,17 @@
-export const createPin = (pin) => (
+export const createPin = (formData) => ( // (pin)
+  // $.ajax({
+  //   url: '/api/pins',
+  //   method: 'POST',
+  //   data: {pin}
+  // })
+
   $.ajax({
-    url: '/api/pins',
-    method: 'POST',
-    data: {pin}
-  })
+      url: '/api/pins',
+      method: 'POST',
+      data: formData,
+      contentType: false,
+      processData: false
+    })
 )
 
 export const fetchAllPins = () => (
