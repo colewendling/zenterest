@@ -31,7 +31,7 @@ function Modal({ modal, closeModal }) {
             component = <CreatePinForm />;
             break;
         case 'pinShow':
-          component = <PinShowContainer />;
+          component = <PinShow />;
           break;
       
       default:

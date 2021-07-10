@@ -2,19 +2,26 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { openModal } from '../../actions/modal_actions';
 import ProfilePins from './profile_pins';
+import { fetchPin } from '../../actions/pin_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  
   return {
-    userId: Number(ownProps.match.params.userId),
+    pin: state.entities.pins[ownProps.match.params.pinId],
+    pins: state.entities.pins,
+    boards: state.entities.boards,
     currentUser: state.session.currentUser,
-    // user: state.entities.users[Number(ownProps.match.params.userId)]
+    user: Object.values(state.entities.users)[0],
+    board: Object.values(state.entities.boards)[0]
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchUser: userId => dispatch(fetchUser(userId)),
-  fetchAllUserBoards: userId => dispatch(fetchAllUserBoards(userId)),
-  openModal: modal => dispatch(openModal(modal)),
+  fetchPin: pinId => dispatch(fetchPin(pinId)),
+  fetchAllPins: () => dispatch(requestAllPins()),
+  requestPin: (pinId) => dispatch(requestPin(pinId)),
+  getUserBoards: (userId) => dispatch(getUserBoards(userId)),
+  openModal: (modal) => dispatch(openModal(modal, boardId))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProfilePins));

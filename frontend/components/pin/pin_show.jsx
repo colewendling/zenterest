@@ -33,6 +33,9 @@ class PinShow extends React.Component {
     return (
       <div>
         <button onClick={() => this.props.history.goback()}></button>
+        <div>
+          <img src={pin.imageFile} alt={pin.title} />
+        </div>
       </div>
     )
   }
