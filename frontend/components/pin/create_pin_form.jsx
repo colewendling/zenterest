@@ -86,14 +86,16 @@ class CreatePinForm extends React.Component {
             />
           </label>
 
-          <h2 className="input-label">Image:</h2>
-          <form className='upload-image'>
-            <input 
+          <h2 className="input-label">Insert Image:</h2>
+          <label className='upload-image'>
+            <input
+              className='upload-zone'
+              placeholder="Drag files or click here"
               type="file"
               onChange={this.handleFile}              
             />
-            <p>Drag files or click here</p>
-          </form>
+            {/* <p>Drag files or click here</p> */}
+          </label>
           
           
            <div className='create-submit'>
