@@ -23,21 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
       store = configureStore();
     }
 
-
-    // const root = document.getElementById('root');
-    // let preloadedState = undefined;
-    // if (window.currentUser) {
-    //   preloadedState = {
-    //     session: {
-    //       currentUser: window.currentUser
-    //     }
-    //   };
-    // }
-    // const store = configureStore(preloadedState);
-
-
-
-    //testing
     
     window.login = login;
     window.logout = logout;
