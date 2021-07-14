@@ -26,6 +26,7 @@ render() {
             <form action='https://www.linkedin.com/in/colewendling/' className="text-link">
                 <button className="link" type='submit'>Linkedin</button>
             </form>
+            </div>
           <div className="nav-button-box">
             <button className="red-button" onClick={() => openModal('login')}>Log in</button>
           </div>

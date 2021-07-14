@@ -6,6 +6,6 @@ bundle.js.map
 /public/assets
 .byebug_history
 npm-debug.log
-tmp/
+tmp/cache/assets/
+log/development.log
 tmp/pids/server.pid
-log/
