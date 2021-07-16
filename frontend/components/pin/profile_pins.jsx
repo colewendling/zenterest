@@ -60,7 +60,23 @@ class ProfilePins extends React.Component {
         </div>
 
         <div className='pin-index-container'>
-            {allPins}
+          <div className="row">
+            <div className="column">
+              {allPins.slice(0, 8)}
+            </div>
+            <div className="column">
+              {allPins.slice(8, 17)}
+
+            </div>
+            <div className="column">
+              {allPins.slice(17, 24)}
+
+            </div>
+            <div className="column">
+              {allPins.slice(24, 31)}
+
+            </div>
+          </div>
         </div>
       </div>
     )

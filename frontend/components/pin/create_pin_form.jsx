@@ -1,8 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { createPin } from '../../actions/pin_actions';
-import { closeModal } from '../../actions/modal_actions';
+
 
 class CreatePinForm extends React.Component {
 
@@ -16,7 +13,6 @@ class CreatePinForm extends React.Component {
       board_id: 1,
       imageFile: null,
       imageUrl: null
-      
     };
 
     this.update = this.update.bind(this);

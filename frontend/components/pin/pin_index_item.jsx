@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { openModal } from '../../actions/modal_actions';
+
 
 const PinIndexItem = ({ pin }) => {
 
@@ -9,7 +11,7 @@ const PinIndexItem = ({ pin }) => {
         <div className='pin-index-item-image'>
           <img src={pin.imageUrl} alt={pin.title} />
         </div>
-        <div className='pin-index-item-title'>{pin.title}</div>
+        {/* <div className='pin-index-item-title'>{pin.title}</div> */}
       </div>
     </Link>
   )
