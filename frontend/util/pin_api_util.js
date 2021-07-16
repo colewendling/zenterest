@@ -21,12 +21,12 @@ export const fetchAllPins = () => {
   })
 }
 
-export const fetchPin = (pinId) => {
+export const fetchPin = (pinId) => (
   $.ajax({
     url: `/api/pins/${pinId}`,
     method: 'GET'
   })
-}
+)
 
 export const updatePin = pin => (
   $.ajax({

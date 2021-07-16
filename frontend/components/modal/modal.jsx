@@ -12,7 +12,14 @@ function Modal({ modal, closeModal }) {
     if (!modal) {
         return null;
     }
-    
+    let pinId;
+
+    if (typeof modal != 'string' ) {
+      pinId = modal[1]
+      modal = modal[0]
+    }
+
+
     let component;
     switch (modal) {
         case 'login':
@@ -31,7 +38,9 @@ function Modal({ modal, closeModal }) {
             component = <CreatePinForm />;
             break;
         case 'pinShow':
-          component = <PinShowContainer />;
+          component = <PinShowContainer 
+            id={pinId}
+          />;
           break;
       
       default:

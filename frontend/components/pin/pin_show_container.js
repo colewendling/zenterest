@@ -7,14 +7,16 @@ import PinShow from './pin_show';
 
 const mapStateToProps = (state, ownProps ) => {
   return ({
-    pin: state.entities.pins[ownProps.match.params.pinId],
+    // pins: Object.values(state.entities.pins)
+    pins: state.entities.pins,
+    // pin: state.entities.pins[ownProps.match.params.pinId],
     currentUser: state.entities.users[state.session.currentUser],
     boards: state.entities.boards,
   })
 }
 
 const mapDispatchToProps = dispatch => ({
-  deletePin: pinId => dispatch(removePin(pinId)),
+  deletePin: pinId => dispatch(deletePin(pinId)),
   fetchPin: pinId => dispatch(fetchPin(pinId)),
   fetchUser: userId => dispatch(fetchUser(userId)),
   openModal: (modal, boardId) => dispatch(openModal(modal, boardId)),
