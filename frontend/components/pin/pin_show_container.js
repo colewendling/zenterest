@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { fetchPin, deletePin } from '../../actions/pin_actions';
 import { fetchUser } from '../../actions/user_actions';
 import { closeModal, openModal } from '../../actions/modal_actions';
-import PinShow from './create_pin_form';
+import PinShow from './pin_show';
 
 const mapStateToProps = (state, ownProps ) => {
   return ({

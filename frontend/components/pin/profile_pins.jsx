@@ -26,7 +26,12 @@ class ProfilePins extends React.Component {
     if (!user) return <div>Current User is Null</div>;
     const {pins}  = this.props;
     const allPins = pins.map(pin => (
-        <PinIndexItem key={pin.id} pin={pin} />
+        <PinIndexItem key={pin.id} pin={pin} 
+          openModal={this.props.openModal}
+          id={pin.id}
+      
+
+        />
     ))
  
     return (

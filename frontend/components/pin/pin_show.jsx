@@ -16,8 +16,6 @@ class PinShow extends React.Component {
     };
 
     this.update = this.update.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleFile = this.handleFile.bind(this);
   }
 
 
@@ -28,46 +26,19 @@ class PinShow extends React.Component {
   }
 
 
-  handleFile(e) {
-    // this.setState({ imageFile: e.target.files[0] });
-    const file = e.currentTarget.files[0];
-    const fileReader = new FileReader();
-    fileReader.onloadend = () => {
-      this.setState({ imageFile: file, imageUrl: fileReader.result });
-    }
-    if (file) {
-      fileReader.readAsDataURL(file);
-    }
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData();
-
-    formData.append('pin[title]', this.state.title);
-    formData.append('pin[description]', this.state.description);
-    formData.append('pin[url]', this.state.url);
-    formData.append('pin[author_id]', this.state.author_id);
-    formData.append('pin[board_id]', this.state.board_id);
-    formData.append('pin[image]', this.state.imageFile);
-
-    this.props.createPin(formData)
-      .then((action) => {
-        this.props.history.push(`/users/${action.pin.author_id}/pins/${action.pin.id}`);
-        this.props.closeModal();
-      })
-  }
-
-
   render() {
 
     return (
 
 
-      <div className="show-modal-container">
+      <div className="create-modal-container">
+        <h1 className='create-text'>Pin Show</h1>
+        <div className='pin-show-image'>
+          {/* <img src={pin.imageUrl} alt={pin.title} /> */}
+        </div>
+        <div>
 
-        <h1 className='show-text'>Pin Show</h1>
-
+        </div>
       </div>
     );
   }
