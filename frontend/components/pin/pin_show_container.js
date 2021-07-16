@@ -1,26 +1,24 @@
 import { connect } from 'react-redux';
-import { fetchPin } from '../../actions/pin_actions';
-import { fetchBoard } from '../../actions/board_actions';
-import { fetchAllUserBoards } from '../../actions/board_actions';
+import { withRouter } from 'react-router-dom';
+import { fetchPin, deletePin } from '../../actions/pin_actions';
 import { fetchUser } from '../../actions/user_actions';
-import { openModal } from '../../actions/modal_actions';
+import { closeModal, openModal } from '../../actions/modal_actions';
 import PinShow from './pin_show';
 
-const mapStateToProps  = (state, ownProps) => {
-  return {
-    currentUser: state.session.currentUser,
-    pin: state.entities.pins[ownProps.match.params.pinId],
+const mapStateToProps = (state) => {
+  return ({
     pins: state.entities.pins,
-    boards: state.session.boards
-  }
+    currentUser: state.entities.users[state.session.currentUser],
+    boards: state.entities.boards,
+  })
 }
 
 const mapDispatchToProps = dispatch => ({
+  deletePin: pinId => dispatch(deletePin(pinId)),
   fetchPin: pinId => dispatch(fetchPin(pinId)),
-  fetchAllUserBoards: (userId) => dispatch(fetchAllUserBoards(userId)),
-  fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   fetchUser: userId => dispatch(fetchUser(userId)),
-  openModal: modal => dispatch(openModal(modal))
+  openModal: (modal, boardId) => dispatch(openModal(modal, boardId)),
+  closeModal: () => dispatch(closeModal()),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(PinShow);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(PinShow));

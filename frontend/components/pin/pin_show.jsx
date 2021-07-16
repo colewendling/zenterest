@@ -1,43 +1,28 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+
 
 class PinShow extends React.Component {
+
   constructor(props) {
     super(props);
-    this.state = {
-      board_id:'',
-      pin_id: '',
-      author_id: this.props.currentUser
-    }
-  }
-
-  componentDidMount() {
-    this.props.fetchPin(this.props.match.params.pinId)
-    .then(action => {
-      this.props.fetchBoard(action.pin.board_id)
-      this.props.fetchUser(action.pin.author_id)
-    })
-  }
-
-  componentDidUpdate() {
-    if (!this.props.pin) {
-      this.props.fetchPin(this.props.match.params.pinId)
-      .then(action => {
-        this.props.fetchBoard
-      })
-    }
   }
 
   render() {
-    const { pin, boards } = this.props;
+    const pin = this.props.pins[this.props.id]
     return (
-      <div>
-        <button onClick={() => this.props.history.goback()}></button>
-        <div>
-          <img src={pin.imageFile} alt={pin.title} />
+      // <div className="create-modal-container">
+      <div className='pin-show-container'>
+      {/* <h1 className='pin-show-title'>Pin Show</h1> */}
+        <div className='pin-show-image-container'>
+          <img className='pin-show-image' src={pin.imageUrl} alt={pin.title} />
+        </div>
+        <div className='pin-show-info-container'>
+          <h2 className='pin-show-title'>{pin.title}</h2>
+          <p className='pin-show-description'>{pin.description}</p>
         </div>
       </div>
-    )
+    // </div>
+    );
   }
 }
 

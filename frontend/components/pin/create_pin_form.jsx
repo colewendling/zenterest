@@ -1,8 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { createPin } from '../../actions/pin_actions';
-import { closeModal } from '../../actions/modal_actions';
 
 class CreatePinForm extends React.Component {
 
@@ -16,7 +12,6 @@ class CreatePinForm extends React.Component {
       board_id: 1,
       imageFile: null,
       imageUrl: null
-      
     };
 
     this.update = this.update.bind(this);
@@ -33,15 +28,14 @@ class CreatePinForm extends React.Component {
 
   
   handleFile(e) {
-    // this.setState({ imageFile: e.target.files[0] });
-      const file = e.currentTarget.files[0];
-      const fileReader = new FileReader();
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
       fileReader.onloadend = () => {
-          this.setState({ imageFile: file, imageUrl: fileReader.result });
-      }
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    }
       if (file) {
-          fileReader.readAsDataURL(file);
-      }
+      fileReader.readAsDataURL(file);
+    }
   }
 
   handleSubmit(event) {
