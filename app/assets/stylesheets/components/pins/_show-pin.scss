@@ -1,16 +1,31 @@
-.pin-show-modal-container {
+.pin-show {
   display: flex;
+  align-items: flex-start;
   // flex-direction: row;
   // justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: row;
+  flex-direction: row;
+  justify-content: flex-start;
+  background: white;
+  // min-height: 400px;
+  width:425px;
+  padding: 36px;
+  border-radius:36px;
+
 }
 
-.pin-show-image-container {
-  // flex: 1;
+.pin-show-image img{
+  // width: 85%;
+  // margin-top: 4px;
+  vertical-align: middle;
+  border-radius: 16px;
+ 
 }
-
 
 .pin-show-image {
-  
+  padding-right: 25px;
 }
 
 .pin-show-info-container {
@@ -18,7 +33,9 @@
 }
 
 .pin-show-title {
-
+ color: #333333;
+ font-size: 28px;
+ font-weight: 700;
 }
 
 .pin-show-description {
@@ -27,4 +44,13 @@
 
 .delete-pin-button {
 
+}
+
+.pin-show-info-container {
+  // margin-right: 50px;
+}
+
+.pin-show-info-container hr {
+  width: 150px;
+  opacity: 30%;
 }
