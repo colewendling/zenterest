@@ -8,14 +8,6 @@
   z-index: 10;
 }
 
-.create-modal-child {
-  display: flex;
-  flex-direction: column;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 
 
 .create-modal-container {
@@ -25,10 +17,11 @@
   flex-direction: column;
   justify-content: center;
   background: white;
-  min-height: 370px;
+  // min-height: 390px;
   width:540px;
   padding: 20px 10px;
   border-radius:24px;
+  // padding-bottom: 100px;
   
 }
 .create-modal-container img {
@@ -91,6 +84,18 @@ flex-direction: row;
   border: 3px solid #efefef;
 }
 
+.create-input-item input::placeholder {
+  // text-align: center;
+  opacity: 40%;
+  padding-top: -12px;
+}
+
+.create-input-item textarea::placeholder {
+  opacity: 40%;
+  // padding-top: 30px;
+  // text-align: center;
+}
+
 .create-form h2 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
@@ -106,29 +111,12 @@ margin-bottom: 4px;
   resize: none;
   font-size: 16px;
   padding: 12px;
+  padding-top: 7px;
   border-radius: 16px;
   outline: none;
   box-sizing: border-box;
   border: 3px solid #efefef;
 }
-
-
-// .create-input-item-title {
-//   text-align: start;
-//   box-sizing: border-box;
-//   border: 2px solid #ddd;
-//   border-radius: 16px;
-//   margin-bottom: 6px;
-//   min-height: 48px;
-//   padding-bottom: 8px;
-//   padding-left: 16px;
-//   padding-right: 16px;
-//   padding-top: 8px;
-//   font-size: 16px;
-//   overflow: visible;
-//   width: 100%;
-//   outline: none;
-// }
 
 .create-input-item-title:hover {
   border: 3px solid rgba(0, 132, 255, 0.5);
@@ -138,24 +126,6 @@ margin-bottom: 4px;
   background-color: rgba(153, 230, 255, 0.2);
 }
 
-
-// .create-input-item-description {
-//   text-align: start;
-//   box-sizing: border-box;
-//   border: 2px solid #ddd;
-//   border-radius: 16px;
-//   margin-bottom: 6px;
-//   min-height: 48px;
-//   padding-bottom: 8px;
-//   padding-left: 16px;
-//   padding-right: 16px;
-//   padding-top: 8px;
-//   font-size: 16px;
-//   overflow: visible;
-//   width: 100%;
-//   outline: none;
-// }
-
 .create-input-item-description:hover {
   border: 3px solid rgba(0, 132, 255, 0.5);
 }
@@ -164,11 +134,62 @@ margin-bottom: 4px;
   background-color: rgba(153, 230, 255, 0.2);
 }
 
-// .bt button:hover {
-//   border: 2px solid #e60023;
-// }
+.create-nav {
+  position: relative;
+  align-self: center;
+}
 
-.bt button:hover {
+.create-submit button {
+  position: relative;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.create-bt button:hover {
    filter: brightness(85%);
 }
 
+.upload-image {
+  background-color: rgba(152, 183, 194, 0.082);
+  width: 450px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 12px;
+  font-size: 16px;
+  border: 3px solid #efefef;
+  text-align: center;
+}
+
+.upload-image p {
+  align-self: center;
+  padding-top: 20px;
+  opacity: 50%;
+}
+
+.upload-image input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+}
+
+.upload-image:hover {
+  border: 3px solid rgba(0, 132, 255, 0.5);
+  background-color: rgba(153, 230, 255, 0.2);
+
+}
+
+.upload-image:focus {
+  background-color: rgba(153, 230, 255, 0.2);
+}
+
+.create-form h2 {
+  margin-top: 12px;
+  margin-bottom: 6px;
+}

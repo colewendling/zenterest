@@ -60,60 +60,51 @@ class CreatePinForm extends React.Component {
   render() {
 
     return (
-
-
       <div className="create-modal-container">
-
-
         <h1 className='create-text'>Create Pin</h1>
-
-
         <form onSubmit={this.handleSubmit} className="create-form">
+
           <h2 className="input-label">Title:</h2>
-          <div className="create-form-input-title">
-            <label className="create-input-item">
-              <input
-                className="create-input-item-title"
-                type="text"
-                value={this.state.title}
-                placeholder="Add pin title here."
-                onChange={this.update('title')}
-              />
-            </label>
-            <h2 className="input-label">Description:</h2>
-            <label className="create-input-item">
-              <textarea
-                className="create-input-item-description"
-                type="text"
-                value={this.state.description}
-                placeholder="Briefly describe your new pin."
-                onChange={this.update('description')}
-              />
-            </label>
-            <h2 className="input-label">Insert Image:</h2>
+          <label className="create-input-item">
+            <input
+            className="create-input-item-title"
+            type="text"
+            value={this.state.title}
+            placeholder="Add pin title here..."
+            onChange={this.update('title')}
+            />
+          </label>
 
-              <label>Upload Image Here</label>
-              <input type="file" onChange={this.handleFile}/>
-            
+          <h2 className="input-label">Description:</h2>
+          <label className="create-input-item">
+            <textarea
+            className="create-input-item-description"
+            type="text"
+            value={this.state.description}
+            placeholder="Describe your new pin..."
+            onChange={this.update('description')}
+            />
+          </label>
 
-
-       
-          </div>
-
-          <div className="create-nav">
-           
-            <div className="bt">
-
+          <h2 className="input-label">Image:</h2>
+          <form className='upload-image'>
+            <input 
+              type="file"
+              onChange={this.handleFile}              
+            />
+            <p>Drag files or click here</p>
+          </form>
+          
+          
+           <div className='create-submit'>
               <button className='grey-button'>Create</button>
-            </div>
-
-          </div>
+           </div>
+        
+          
         </form>
-
       </div>
     );
   }
 }
-
 
 export default CreatePinForm;
