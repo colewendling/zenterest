@@ -1,23 +1,18 @@
 class User < ApplicationRecord
-
-  attr_reader :password
-
-  validates :username, :password_digest, :session_token, presence: true
-  validates :username, uniqueness: true
-  validates :email, uniqueness: true, presence: true
+  validates :username, :email, :password_digest, :session_token, presence: true
+  validates :username, :email,  uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
-
   after_initialize :ensure_session_token
-  attr_reader :password
-
+  
   has_many :pins,
-    foreign_key: :author_id,
-    class_name: :Pin
-
+  foreign_key: :author_id,
+  class_name: :Pin
+  
   has_many :boards,
-    foreign_key: :author_id,
-    class_name: :Board
-
+  foreign_key: :author_id,
+  class_name: :Board
+  
+  attr_reader :password
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -41,7 +36,6 @@ class User < ApplicationRecord
   end
 
   private
-
   def ensure_session_token
     generate_unique_session_token unless self.session_token
   end
