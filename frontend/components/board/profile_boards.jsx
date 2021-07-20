@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Profile from '../profile/profile';
-
 import BoardIndexItem from './board_index_item';
+// import Profile from '../profile/profile';
+
 
 class ProfileBoards extends React.Component {
   constructor(props) {
@@ -10,7 +10,8 @@ class ProfileBoards extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchUserBoards(this.props.currentUser.id);
+    this.props.fetchAllBoards();
+    this.props.fetchUser(this.props.userId);
   }
 
   capitalize(string) {
@@ -18,9 +19,18 @@ class ProfileBoards extends React.Component {
   }
 
   render() {
-    const user  = this.props.currentUser;
-    if (!user) return <div>Current User is Null</div>;
-    const { boards } = this.props;
+    const { user, boards } = this.props;
+
+    // if (!user) return <div></div>;
+    // if (!allBoards) return <div></div>;
+
+    let userBoardsArray = Object.values(boards).filter(board => {
+      return board.author_id === user.id
+    })
+
+    const userBoards = userBoardsArray.map((board, idx) => {
+      return <BoardIndexItem key={idx} board={board} />
+    })
 
     return (
       <div className="profile-container">
@@ -56,7 +66,7 @@ class ProfileBoards extends React.Component {
 
 
         <div className='board-index-container'>
-          <h1>Boards Go Here</h1>
+          {userBoards}
         </div>
       </div>
     )

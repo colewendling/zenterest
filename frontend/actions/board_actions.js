@@ -1,13 +1,13 @@
 import * as BoardApiUtil from '../util/board_api_util'
-import { fetchUser } from '../util/user_api_util'
-export const RECEIVE_USER_BOARDS = 'RECEIVE_USER_BOARDS';
+// import { fetchUser } from '../util/user_api_util'
+export const RECEIVE_ALL_BOARDS = 'RECEIVE_ALL_BOARDS';
 export const RECEIVE_BOARD = 'RECEIVE_BOARD';
 export const REMOVE_BOARD = 'REMOVE_BOARD';
 export const RECEIVE_BOARD_ERRORS = 'RECEIVE_BOARD_ERRORS';
 
-const receiveUserBoards = (userBoards) => ({
-  type: RECEIVE_USER_BOARDS,
-  userBoards
+const receiveAllBoards = boards => ({
+  type: RECEIVE_ALL_BOARDS,
+  boards
 })
 
 const receiveBoard = board => {
@@ -50,10 +50,8 @@ export const deleteBoard = boardId => dispatch => BoardApiUtil.deleteBoard(board
     errors => dispatch(receiveBoardErrors(errors.responseJSON)));
 
 
-export const fetchUserBoards = (userId) => dispatch => {
-  return fetchUser(userId)
-    .then((user) => dispatch(receiveUserBoards(user)),
-      (errors) => dispatch(receiveBoardErrors(errors.responseJSON)));
-}
+export const fetchAllBoards = () => dispatch => BoardApiUtil.fetchAllBoards()
+  .then(boards => dispatch(receiveAllBoards(boards)),
+    errors => dispatch(receiveBoardErrors(errors.responseJSON)))
 
 
