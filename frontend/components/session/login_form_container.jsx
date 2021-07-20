@@ -6,23 +6,23 @@ import { login } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = ({ errors }) => {
-    return {
-       errors: errors.session,
-       form: 'login'
-    };
+  return {
+    errors: errors.session,
+    form: 'login'
+  };
 };
 
 const mapDispatchToProps = dispatch => {
-    return {
-       demoLogin: (user) => dispatch(login(user)),
-       processForm: (user) => dispatch(login(user)),
-       closeModal: () => dispatch(closeModal()),
-       switchForm: (
-        <h1 onClick={() => dispatch(openModal('signup'))} className="switch-form-link">
-          Need an account? Sign up now
-        </h1>
-       )
-    };
+  return {
+    demoLogin: (user) => dispatch(login(user)),
+    processForm: (user) => dispatch(login(user)),
+    closeModal: () => dispatch(closeModal()),
+    switchForm: (
+      <h1 onClick={() => dispatch(openModal('signup'))} className="switch-form-link">
+      Need an account? Sign up now
+      </h1>
+    )
+  };
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SessionForm));

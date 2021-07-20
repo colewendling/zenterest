@@ -1,23 +1,33 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 class BoardShow extends React.Component {
-
   constructor(props) {
     super(props);
   }
 
   render() {
+    const board = this.props.boards[this.props.id]
     return (
-      <div>TEST</div>
+      <div className='board-show'>
+        <div className='board-show-image'>
+          <img src={board.imageUrl} alt={board.title} />
+        </div>
+        <div className='board-show-info-container'>
+          <div className='board-delete-button-container'>
+            <button className="board-delete-button" onClick={() => {
+                this.props.deleteBoard(board.id)
+                this.props.closeModal()
+              }}>
+            <i className="far fa-times-circle"></i>
+            </button>
+          </div>
+          <h1 className='board-show-title'>{board.title}</h1>
+          <hr />
+          <p className='board-show-description'>{board.description}</p>
+        </div>
+      </div>
     );
   }
 }
 
-const mapStateToProps = state => {
-};
-
-const mapDispatchToProps = dispatch => ({
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(BoardShow);
+export default BoardShow;

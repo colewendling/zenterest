@@ -13,15 +13,15 @@ const mapStateToProps = ({ errors }) => {
 };
 
 const mapDispatchToProps = dispatch => {
-    return {
-        processForm: user => dispatch(signup(user)),
-        closeModal: () => dispatch(closeModal()),
-        switchForm: (
-        <h1 onClick={() => dispatch(openModal('login'))} className="switch-form-link">
-          Need an account? Sign up now
-        </h1>
-        )
-    };
+  return {
+    processForm: user => dispatch(signup(user)),
+    closeModal: () => dispatch(closeModal()),
+    switchForm: (
+      <h1 onClick={() => dispatch(openModal('login'))} className="switch-form-link">
+      Need an account? Sign up now
+      </h1>
+    )
+  };
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SessionForm));

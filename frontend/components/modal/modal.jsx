@@ -1,12 +1,16 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
+
 import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
-import CreateBoardForm from '../board/create_board_form';
-import EditBoardForm from '../board/edit_board_form';
+
+import CreateBoardForm from '../board/create_board_form_container'
 import CreatePinForm from '../pin/create_pin_form_container';
+
 import PinShowContainer from '../pin/pin_show_container';
+import BoardShowContainer from '../board/board_show_container';
+
 
 function Modal({ modal, closeModal }) {
     if (!modal) {
@@ -31,9 +35,6 @@ function Modal({ modal, closeModal }) {
         case 'createBoard':
             component = <CreateBoardForm />;
             break;
-        case 'editBoard':
-            component = <EditBoardForm />;
-            break;
         case 'createPin':
             component = <CreatePinForm />;
             break;
@@ -42,6 +43,11 @@ function Modal({ modal, closeModal }) {
             id={pinId}
           />;
           break;
+      case 'boardShow':
+        component = <BoardShowContainer
+          id={boardId}
+        />;
+        break;
       
       default:
             return null;

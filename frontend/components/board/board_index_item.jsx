@@ -1,23 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-class BoardIndexItem extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  render() { 
-    return (
-      <div>TEST</div>
-    );
-  }
+const BoardIndexItem = ({ board, openModal, id}) => {
+  return (
+    <a onClick={() => openModal( ['boardShow', id] )} >
+      <div className='board-index-item-container'>
+      </div>
+    </a>
+  )
 }
 
-const mapStateToProps = state => {
-};
-
-const mapDispatchToProps = dispatch => ({
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(BoardIndexItem);
+export default BoardIndexItem;

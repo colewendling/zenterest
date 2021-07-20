@@ -5,7 +5,6 @@ import ProfilePins from './profile_pins';
 import { fetchAllPins, fetchPin } from '../../actions/pin_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  
   return {
     pin: state.entities.pins[ownProps.match.params.pinId],
     pins: Object.values(state.entities.pins), 
