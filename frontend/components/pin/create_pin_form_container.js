@@ -6,8 +6,10 @@ import { closeModal, openModal } from '../../actions/modal_actions';
 import CreatePinForm from './create_pin_form';
 
 const mapStateToProps = state => ({
-  currentUser: state.entities.users[state.session.currentUser],
-  boards: state.entities.boards,
+  currentUser: state.session.currentUser,
+  user: Object.values(state.entities.users)[0],
+  // boards: Object.values(state.entities.boards),
+  boards: state.session.currentUser.boards,
 })
 
 const mapDispatchToProps = dispatch => ({

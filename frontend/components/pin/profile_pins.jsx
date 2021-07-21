@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PinIndexItem from './pin_index_item';
-import Profile from '../profile/profile';
+// import Profile from '../profile/profile';
 
 class ProfilePins extends React.Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class ProfilePins extends React.Component {
     // debugger
     return (
       <div className="profile-container">
-        <div className="profile-nav">  {/* DRY - Make an imported component from /profile.jsx */}
+        <div className="profile-nav">  
 
           <div className="profile-header">
             <div className="user-circle">
@@ -59,21 +59,7 @@ class ProfilePins extends React.Component {
         </div>
 
         <div className='pin-index-container'>
-          <h1>Pins Go Here</h1>
-          <div className="row">
-            <div className="column">
-              {allPins.slice(0, 8)}
-            </div>
-            <div className="column">
-              {allPins.slice(8, 17)}
-            </div>
-            <div className="column">
-              {allPins.slice(17, 24)}
-            </div>
-            <div className="column">
-              {allPins.slice(24, 31)}
-            </div>
-          </div>
+          {allPins}
         </div>
       </div>
     )
