@@ -29,6 +29,10 @@ class CreatePinForm extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.props.fetchUser(this.props.user.id)
+  }
+
   handleFile(e) {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
@@ -42,6 +46,14 @@ class CreatePinForm extends React.Component {
       document.getElementsByClassName("create-button")[0].style.color = "white";
       fileReader.readAsDataURL(file);
     }
+  }
+
+  boardFromTitle(boardTitle) {
+    let currentUserBoards = this.props.currentUser.boards
+    let board = currentUserBoards.filter(board => {
+      return Object.values(board)[0].title === boardTitle
+    })
+    return Object.values(board[0])[0];
   }
 
   handleSubmit(event) {
@@ -68,7 +80,13 @@ class CreatePinForm extends React.Component {
   }
 
   render() {
-    
+    const { user } = this.props;
+    const boardTitles = user.boards.map((board, idx) => {
+      return <div className="show-pin-select-board-title" onClick={this.handleSelect} key={Object.values(board)[0].id}>{Object.values(board)[0].title}</div>;
+    })
+    const imagePreview = this.state.imageUrl ? <img src={this.state.imageUrl} alt='pin image preview' /> : null;
+    const imagePreviewClass = this.state.imageUrl ? 'show' : '';
+   
     return (
       <div className="create-modal-container">
         <div className="loader-container">
@@ -107,6 +125,16 @@ class CreatePinForm extends React.Component {
               Select file
               <p className='file-name'></p>
             </label>
+            <div className={`create-pin-form-image-preview ${imagePreviewClass}`}>{imagePreview}</div>
+
+          </div>
+          <div className="show-pin-board-dropdown">
+            <button className='show-pin-select'>Select</button>
+            <i className="fas fa-chevron-down select-arrow"></i>
+            <div className='show-pin-select-content'>
+              {boardTitles}
+            </div>
+            
           </div>
           <div className='create-button-container'>
             <button className='create-button'>Create</button>
