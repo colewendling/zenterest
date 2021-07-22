@@ -40,8 +40,8 @@ class NavInternal extends React.Component {
             <button className="dropbtn"><i className="fa fa-bars"></i></button>
             <div className="dropdown-content">
               <a onClick={this.handleLogout}>Log out</a>
-              <a onClick={() => this.props.history.push(`/users/:userId/boards`)}>{this.capitalize(this.props.currentUser.username)}'s Boards</a>
-              <a onClick={() => this.props.history.push(`/users/:userId/pins`)}>{this.capitalize(this.props.currentUser.username)}'s Pins</a>
+              <a onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}/boards`)}>{this.capitalize(this.props.currentUser.username)}'s Boards</a>
+              <a onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}/pins`)}>{this.capitalize(this.props.currentUser.username)}'s Pins</a>
             </div>
         </div>
       </div>
