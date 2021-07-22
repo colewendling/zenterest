@@ -48,13 +48,13 @@ class CreatePinForm extends React.Component {
     }
   }
 
-  boardFromTitle(boardTitle) {
-    let currentUserBoards = this.props.currentUser.boards
-    let board = currentUserBoards.filter(board => {
-      return Object.values(board)[0].title === boardTitle
-    })
-    return Object.values(board[0])[0];
-  }
+  // boardFromTitle(boardTitle) {
+  //   let currentUserBoards = this.props.currentUser.boards
+  //   let board = currentUserBoards.filter(board => {
+  //     return Object.values(board)[0].title === boardTitle
+  //   })
+  //   return Object.values(board[0])[0];
+  // }
 
   handleSubmit(event) {
     event.preventDefault();
@@ -80,12 +80,12 @@ class CreatePinForm extends React.Component {
   }
 
   render() {
-    const { user } = this.props;
-    const boardTitles = user.boards.map((board, idx) => {
-      return <div className="show-pin-select-board-title" onClick={this.handleSelect} key={Object.values(board)[0].id}>{Object.values(board)[0].title}</div>;
-    })
-    const imagePreview = this.state.imageUrl ? <img src={this.state.imageUrl} alt='pin image preview' /> : null;
-    const imagePreviewClass = this.state.imageUrl ? 'show' : '';
+    // const { user } = this.props;
+    // const boardTitles = user.boards.map((board, idx) => {
+    //   return <div className="show-pin-select-board-title" onClick={this.handleSelect} key={Object.values(board)[0].id}>{Object.values(board)[0].title}</div>;
+    // })
+    // const imagePreview = this.state.imageUrl ? <img src={this.state.imageUrl} alt='pin image preview' /> : null;
+    // const imagePreviewClass = this.state.imageUrl ? 'show' : '';
    
     return (
       <div className="create-modal-container">
@@ -94,6 +94,7 @@ class CreatePinForm extends React.Component {
         </div>
         <h1 className='create-text'>Create Pin</h1>
         <form onSubmit={this.handleSubmit} className="create-form">
+
           <h2 className="input-label">Title:</h2>
           <label className="create-input-item">
             <input
@@ -104,6 +105,7 @@ class CreatePinForm extends React.Component {
               onChange={this.update('title')}
             />
           </label>
+
           <h2 className="input-label">Description:</h2>
           <label className="create-input-item">
             <textarea
@@ -114,6 +116,7 @@ class CreatePinForm extends React.Component {
               onChange={this.update('description')}
             />
           </label>
+
           <div className='file-input'>
             <input
               className='file'
@@ -125,16 +128,7 @@ class CreatePinForm extends React.Component {
               Select file
               <p className='file-name'></p>
             </label>
-            <div className={`create-pin-form-image-preview ${imagePreviewClass}`}>{imagePreview}</div>
 
-          </div>
-          <div className="show-pin-board-dropdown">
-            <button className='show-pin-select'>Select</button>
-            <i className="fas fa-chevron-down select-arrow"></i>
-            <div className='show-pin-select-content'>
-              {boardTitles}
-            </div>
-            
           </div>
           <div className='create-button-container'>
             <button className='create-button'>Create</button>

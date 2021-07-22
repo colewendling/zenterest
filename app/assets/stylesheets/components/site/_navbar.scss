@@ -77,6 +77,7 @@
   margin-left: 16px;
   margin-right: 16px;
   text-size-adjust: 100%;
+  box-shadow: none;
 }
 
 .link {
@@ -90,6 +91,7 @@
   text-decoration-color: rgb(17, 17, 17);
   font-weight: 500;
   text-size-adjust: 100%;
+  box-shadow: none;
 }
 
 
@@ -281,6 +283,8 @@ button {
   writing-mode: horizontal-tb;
   white-space: nowrap;
   overflow: hidden;
+    box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+    -6px -6px 12px 0 rgba(255, 255, 255, 0.55);
 }
 
 button:focus {

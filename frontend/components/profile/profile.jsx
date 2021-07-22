@@ -14,7 +14,7 @@ class Profile extends React.Component {
   }
 
   render() {
-    debugger
+    
     const user = this.props.currentUser;
     if (!user) return <div>Current User is Null</div>;
     return (

@@ -20,10 +20,6 @@ class ProfileBoards extends React.Component {
 
   render() {
     const { user, boards } = this.props;
-
-    // if (!user) return <div></div>;
-    // if (!allBoards) return <div></div>;
-
     let userBoardsArray = Object.values(boards).filter(board => {
       return board.author_id === user.id
     })
@@ -31,12 +27,11 @@ class ProfileBoards extends React.Component {
     const userBoards = userBoardsArray.map((board, idx) => {
       return <BoardIndexItem key={idx} board={board} />
     })
-
+    
     return (
       <div className="profile-container">
 
           <div className="profile-nav"> 
-          
             <div className="profile-header">
               <div className="user-circle">
                 <h1 className="user-letter">{(this.props.currentUser.username)[0]}</h1>
