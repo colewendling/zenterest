@@ -60,7 +60,7 @@ class ProfilePins extends React.Component {
         </div>
 
         <div className='pin-index-container'>
-          {allPins}
+          {allPins.reverse()}
         </div>
       </div>
     )

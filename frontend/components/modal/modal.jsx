@@ -45,7 +45,7 @@ function Modal({ modal, closeModal }) {
           break;
       case 'boardShow':
         component = <BoardShowContainer
-          id={boardId}
+          id={pinId}
         />;
         break;
       

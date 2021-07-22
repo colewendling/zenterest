@@ -23,10 +23,12 @@ class ProfileBoards extends React.Component {
     let userBoardsArray = Object.values(boards).filter(board => {
       return board.author_id === user.id
     })
-
+    
     const userBoards = userBoardsArray.map((board, idx) => {
-      return <BoardIndexItem key={idx} board={board} />
+      return <BoardIndexItem id={board.id} openModal={this.props.openModal} key={idx} board={board} />
     })
+
+    
     
     return (
       <div className="profile-container">

@@ -8,8 +8,20 @@ class BoardShow extends React.Component {
   render() {
     const board = this.props.boards[this.props.id]
     return (
-      <div className='board-show'>
-        <div className='board-show-image'>
+      <div className='pin-show'>
+        {board.pins.map(pin => 
+        <div>
+          <div>
+              {pin.title}
+          </div>
+
+            <img src={pin.imageUrl} />
+              
+       
+          </div>
+          
+          )}
+        {/* <div className='board-show-image'>
           <img src={board.imageUrl} alt={board.title} />
         </div>
         <div className='board-show-info-container'>
@@ -24,7 +36,7 @@ class BoardShow extends React.Component {
           <h1 className='board-show-title'>{board.title}</h1>
           <hr />
           <p className='board-show-description'>{board.description}</p>
-        </div>
+        </div> */}
       </div>
     );
   }
