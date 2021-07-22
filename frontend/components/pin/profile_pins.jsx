@@ -10,6 +10,7 @@ class ProfilePins extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllPins();
+    this.props.fetchAllBoards();
   }
 
   capitalize(string) {

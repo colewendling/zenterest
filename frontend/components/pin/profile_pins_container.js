@@ -3,6 +3,9 @@ import { withRouter } from 'react-router-dom';
 import { openModal } from '../../actions/modal_actions';
 import ProfilePins from './profile_pins';
 import { fetchAllPins, fetchPin } from '../../actions/pin_actions';
+import { fetchUser } from '../../actions/user_actions';
+
+import { fetchAllBoards } from '../../actions/board_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -20,7 +23,9 @@ const mapDispatchToProps = dispatch => ({
   fetchAllPins: () => dispatch(fetchAllPins()),
   requestPin: (pinId) => dispatch(requestPin(pinId)),
   getUserBoards: (userId) => dispatch(getUserBoards(userId)),
-  openModal: (modal) => dispatch(openModal(modal))
+  openModal: (modal) => dispatch(openModal(modal)),
+  fetchUser: userId => dispatch(fetchUser(userId)),
+  fetchAllBoards: () => dispatch(fetchAllBoards()),
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProfilePins));

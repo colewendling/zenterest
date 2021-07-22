@@ -87,6 +87,7 @@ class CreatePinForm extends React.Component {
     // const imagePreview = this.state.imageUrl ? <img src={this.state.imageUrl} alt='pin image preview' /> : null;
     // const imagePreviewClass = this.state.imageUrl ? 'show' : '';
    
+
     return (
       <div className="create-modal-container">
         <div className="loader-container">
@@ -128,8 +129,24 @@ class CreatePinForm extends React.Component {
               Select file
               <p className='file-name'></p>
             </label>
-
           </div>
+
+
+          <div className='select-boards-button'>
+            <div className="dropdown">
+              <div className="dropbtn"><i className="fa fa-bars"></i></div>
+              <div className="dropdown-content">
+                {this.props.boards.map(board => 
+                  <div 
+                    onClick={() => this.setState({board_id: board.id})}
+                    key={board.id}>
+                    {board.title}
+                  </div>
+                  )}
+               </div>
+              </div>
+          </div>
+
           <div className='create-button-container'>
             <button className='create-button'>Create</button>
           </div>

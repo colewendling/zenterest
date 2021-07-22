@@ -23,7 +23,7 @@ class CreateBoardForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createBoard(this.state).then(this.props.closeModal)
-      .then(() => this.props.fetchUserBoards(this.props.author_id))
+      .then(() => this.props.fetchAllBoards())
   }
 
   render() {
