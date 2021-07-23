@@ -22,6 +22,7 @@ class PinShow extends React.Component {
             <button className="pin-delete-button" onClick={() => {
                 this.props.deletePin(pin.id)
                 this.props.closeModal()
+                window.location.reload();
               }}>Delete
             </button>
           </div>

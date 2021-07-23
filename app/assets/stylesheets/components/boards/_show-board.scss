@@ -85,3 +85,21 @@
   border-color: transparent;
 }
 
+
+.board-show-title {
+ color: #333333;
+ font-size: 28px;
+ font-weight: 700;
+}
+
+.board-show {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  flex-direction: row;
+  background: white;
+  min-height: 300px;
+  min-width:600px;
+  height: auto;
+  padding: 20px;
+  border-radius:36px;
+}

@@ -14,6 +14,13 @@ class ProfileBoards extends React.Component {
     this.props.fetchUser(this.props.userId);
   }
 
+  // componentDidUpdate() {
+  //   this.props.fetchAllBoards();
+  //   this.props.fetchUser(this.props.userId);
+  // }
+
+ 
+
   capitalize(string) {
     return string[0].toUpperCase() + string.slice(1)
   }
