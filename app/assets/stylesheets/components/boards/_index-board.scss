@@ -6,9 +6,11 @@
   grid-template-rows: auto;
   grid-gap: 24px;
   position: relative;
-  top: 72px;
+  top: 0px !important;
   width: 100%;
 }
+
+// .board-index-container
 
 .board-index-item-container {
   width: 300px;
