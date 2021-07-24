@@ -14,10 +14,10 @@ const App = () => (
 <div> 
   <AuthRoute exact path='/' component={NavSplash} /> 
   <ProtectedRoute path='/' component={NavBar} /> 
+  <ProtectedRoute path='/users/:userId' component={Profile} />
   <Modal />
 
   <Switch>
-    <ProtectedRoute exact path='/users/:userId' component={Profile} />
     <ProtectedRoute exact path='/users/:userId/boards' component={ProfileBoards} />
     <ProtectedRoute exact path='/users/:userId/pins' component={ProfilePins} />
   </Switch>

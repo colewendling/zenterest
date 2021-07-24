@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BoardIndexItem from './board_index_item';
-// import Profile from '../profile/profile';
+import Profile from '../profile/profile';
 
 
 class ProfileBoards extends React.Component {
@@ -12,6 +12,10 @@ class ProfileBoards extends React.Component {
   componentDidMount() {
     this.props.fetchAllBoards();
     this.props.fetchUser(this.props.userId);
+    document.getElementById("p-button").style.background = "white";
+    document.getElementById("p-button").style.color = "black";
+    document.getElementById("b-button").style.background = "black";
+    document.getElementById("b-button").style.color = "white";
   }
 
   // componentDidUpdate() {
@@ -21,9 +25,9 @@ class ProfileBoards extends React.Component {
 
  
 
-  capitalize(string) {
-    return string[0].toUpperCase() + string.slice(1)
-  }
+  // capitalize(string) {
+  //   return string[0].toUpperCase() + string.slice(1)
+  // }
 
   render() {
     const { user, boards } = this.props;
@@ -40,7 +44,7 @@ class ProfileBoards extends React.Component {
     return (
       <div className="profile-container">
 
-          <div className="profile-nav"> 
+          {/* <div className="profile-nav"> 
             <div className="profile-header">
               <div className="user-circle">
                 <h1 className="user-letter">{(this.props.currentUser.username)[0]}</h1>
@@ -66,9 +70,9 @@ class ProfileBoards extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-
+        {/* <Profile /> */}
         <div className='board-index-container'>
           {userBoards.reverse()}
         </div>

@@ -1,4 +1,7 @@
+import { red } from '@material-ui/core/colors';
+import { SignalWifi4BarLockSharp } from '@material-ui/icons';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -7,7 +10,23 @@ class Profile extends React.Component {
 
   componentDidMount() {
     this.props.fetchUser();
+    // debugger
+    // if ((window.location.href).includes('boards')) {
+    //   document.getElementById("b-button").style.color = "red";
+      // document.getElementsByClassName("b-button").style.color = "white";
+      // document.getElementsByClassName("p-button").style.background = "white";
+      // document.getElementsByClassName("p-button").style.color = "black";
+      // document.getElementsByClassName("b-button")[0].style.color = "black";
+    // } 
+    // else if ((window.location.href).includes('pins')){
+    //   document.getElementsByClassName("p-button").style.background = "black";
+    //   document.getElementsByClassName("p-button").style.color = "white";
+    //   document.getElementsByClassName("b-button").style.background = "white";
+    //   document.getElementsByClassName("b-button").style.color = "black";
+    // }
   }
+
+  
 
   capitalize(string) {
     return string[0].toUpperCase() + string.slice(1)
@@ -16,16 +35,35 @@ class Profile extends React.Component {
   render() {
     
     const user = this.props.currentUser;
+    // debugger
     if (!user) return <div>Current User is Null</div>;
     return (
-      <div className="profile-header">
-        <div className="user-circle">
-          <h1 className="user-letter">{(this.props.currentUser.username)[0]}</h1>
+      <div className="profile-nav">
+
+        <div className="profile-header">
+          <div className="user-circle">
+            <h1 className="user-letter">{(this.props.currentUser.username)[0]}</h1>
+          </div>
+          <h1 className="user-name">{this.capitalize(this.props.currentUser.username)}</h1>
+          <h4 className="user-handle">@{(this.props.currentUser.username)}</h4>
+          <div className="user-follows-container">
+            <h4 className="user-follows">0 followers · 0 following</h4>
+          </div>
         </div>
-        <h1 className="user-name">{this.capitalize(this.props.currentUser.username)}</h1>
-        <h4 className="user-handle">@{(this.props.currentUser.username)}</h4>
-        <div className="user-follows-container">
-          <h4 className="user-follows">0 followers · 0 following</h4>
+
+        <div className="profile-btn-container">
+          <Link to={`/users/${this.props.currentUser.id}/boards`}><button id="b-button">Boards</button></Link>
+          <Link to={`/users/${this.props.currentUser.id}/pins`}><button id="p-button" >Pins</button></Link>
+        </div>
+
+        <div className="plus-button-container">
+          <div className="dropdown">
+            <button className='dropbtn'><i className="fa fa-plus"></i></button>
+            <div className="dropdown-content">
+              <a onClick={() => this.props.openModal('createPin')}>Create Pin</a>
+              <a onClick={() => this.props.openModal('createBoard')}>Create Board</a>
+            </div>
+          </div>
         </div>
       </div>
     )
