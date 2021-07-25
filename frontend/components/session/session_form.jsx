@@ -32,15 +32,9 @@ class SessionForm extends React.Component {
 
   demoLogin(e) {
     e.preventDefault()
-    const demoUser = {
-      email: 'zen@zenterest.net',
-      username: 'zen',
-      password: '123456'
-    }
-    this.props.demoLogin(demoUser)
-    .then(() => this.props.history.push('/users/:userId/pins'))
+    this.props.demoLogin({email: 'zen@zenterest.net', username: 'zen', password: '123456'})
+    // .then(() => this.props.history.push('/users/:userId/pins'))
     .then(this.props.closeModal)
-    debugger
   }
 
   renderErrors() {

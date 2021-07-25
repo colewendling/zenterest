@@ -11,7 +11,7 @@ const BoardIndexItem = ({ board, openModal, id}) => {
       <div className='board-index-item-container'>
         <div className='board-index-item-image'>
           {indexImage1}
-          <div>
+          <div id='board-index-item-left'>
             {indexImage2}
             {indexImage3}
           </div>
