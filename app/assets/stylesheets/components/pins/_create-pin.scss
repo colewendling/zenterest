@@ -148,7 +148,7 @@
   width: 200px;
   height: 50px;
   border-radius: 25px;
-  margin-top: 25px;
+  // margin-top: 25px;
   background: #e60023;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
   display: flex;
@@ -158,6 +158,31 @@
   font-weight: bold;
   cursor: pointer;
   transition: transform .2s ease-out;
+}
+
+.board-select-container {
+  position: relative;
+  display: inline-block;
+   position: relative;
+  display: inline-block;
+}
+
+.board-select-list div{
+   font-family: 'Noto Sans JP', sans-serif;
+  color: rgb(17, 17, 17);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 12px;
+}
+
+.board-select-item {
+   display: block;
+}
+
+.board-select-list:hover .board-select-item {
+    color: #e60023;
+
 }
 
 input:hover + label,
@@ -179,6 +204,7 @@ input:focus + label {
 }
 
 .file-input {
+  border: green solid 2px;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -229,4 +255,54 @@ input:focus + label {
 @keyframes spin {
   0%  { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.create-bottom {
+  border: orange solid 3px;
+ display: flex;
+ flex-direction: row;
+}
+
+.create-b-left {
+    border: lime solid 2px;
+
+display: flex;
+flex-direction: column;
+}
+
+.create-b-right {
+      border: lime solid 2px;
+
+  display: flex
+}
+
+.board-select-list {
+        border: teal solid 2px;
+
+  color: red;
+}
+
+.board-select-item {
+  border: pink solid 2px;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.board-select-item:hover {
+  border: pink solid 2px;
+  color: red;
+}
+
+.board-select-item:active {
+  border: pink solid 2px;
+  color: red;
+}
+
+.board-select-list:active{
+    color: red;
+
+}
+
+.board-select-item div:after{
+  color: red;
 }

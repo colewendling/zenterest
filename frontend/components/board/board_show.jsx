@@ -27,6 +27,7 @@ class BoardShow extends React.Component {
     return (
       <div className='board-show'>
         <h1 className='board-show-title'>{board.title}</h1>
+      <hr />
       <div className='pin-index-container'>
         {board.pins.map((pin)=> 
           <a onClick={() => this.props.openModal(['pinShow', pin.id])} >
@@ -38,9 +39,17 @@ class BoardShow extends React.Component {
           </a>
           )}
       </div>
-        <div className='board-delete-button-container'>
+        {/* <div className='board-delete-button-container'>
           <button className="board-delete-button" onClick={this.handleSubmit}>Delete</button>
-        </div>
+          <div className="plus-button-container">
+            <div className="dropdown">
+              <button className='dropbtn'><i className="fa fa-plus"></i></button>
+              <div className="dropdown-content">
+                <a onClick={() => this.props.openModal('createPin')}>Create Pin</a>
+              </div>
+            </div>
+          </div>
+        </div> */}
 
 {/* 
         <div className='board-delete-button-container'>

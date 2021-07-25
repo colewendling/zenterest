@@ -17,7 +17,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   fetchUser: userId => dispatch(fetchUser(userId)),
   openModal: (modal) => dispatch(openModal(modal)),
-
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Profile));
