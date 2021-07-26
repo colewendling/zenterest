@@ -48,14 +48,6 @@ class CreatePinForm extends React.Component {
     }
   }
 
-  // boardFromTitle(boardTitle) {
-  //   let currentUserBoards = this.props.currentUser.boards
-  //   let board = currentUserBoards.filter(board => {
-  //     return Object.values(board)[0].title === boardTitle
-  //   })
-  //   return Object.values(board[0])[0];
-  // }
-
   handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData();
@@ -79,21 +71,20 @@ class CreatePinForm extends React.Component {
     })
   }
 
-  render() {
-    // const { user } = this.props;
-    // const boardTitles = user.boards.map((board, idx) => {
-    //   return <div className="show-pin-select-board-title" onClick={this.handleSelect} key={Object.values(board)[0].id}>{Object.values(board)[0].title}</div>;
-    // })
-    // const imagePreview = this.state.imageUrl ? <img src={this.state.imageUrl} alt='pin image preview' /> : null;
-    // const imagePreviewClass = this.state.imageUrl ? 'show' : '';
-   
+  selectListItem(e) {
+    
+  }
 
+  render() {
     return (
       <div className="create-modal-container">
+
         <div className="loader-container">
           <div className="loader"></div>
         </div>
         <h1 className='create-text'>Create Pin</h1>
+
+
         <form onSubmit={this.handleSubmit} className="create-form">
 
           <h2 className="input-label">Title:</h2>
@@ -118,40 +109,52 @@ class CreatePinForm extends React.Component {
             />
           </label>
 
-          <div className='file-input'>
-            <input
-              className='file'
-              type="file"
-              id='file'
-              onChange={this.handleFile}  
-            />
-            <label className='input-button' htmlFor='file'>
-              Select file
-              <p className='file-name'></p>
-            </label>
-          </div>
 
+          <div className='create-bottom'>
 
-          <div className='select-boards-button'>
-            <div className="dropdown">
-              <div className="dropbtn"><i className="fa fa-bars"></i></div>
-              <div className="dropdown-content">
-                {this.props.boards.map(board => 
-                  <div 
-                    onClick={() => this.setState({board_id: board.id})}
-                    key={board.id}>
-                    {board.title}
-                  </div>
-                  )}
-               </div>
-              </div>
-          </div>
+            <div className='create-left'>
+              <div className='file-input'>
+              <input
+                className='file'
+                type="file"
+                id='file'
+                onChange={this.handleFile}  
+              />
+              <label className='input-button' htmlFor='file'>
+                Select file
+                <p className='file-name'></p>
+              </label>
+            </div>
+                
+                  <button className='create-button'>Create</button>
+               
+            </div>
+            <div className='create-right'>
+           
+              {/* <div className="dropdown">
+               
+                <div className="dropdown-content"> */}
+              <div className='board-select-list'>
+                  {this.props.boards.map(board => 
+                    <div
+                    className='board-li'
+                      onClick={() => this.setState({board_id: board.id})}
+                      key={board.id}
+                      // className='board-select-list-item'
+                      >
+                      {board.title}
+                    </div>
+                    )}
+                    </div>
+                {/* </div>
+                </div> */}
+        
 
-          <div className='create-button-container'>
-            <button className='create-button'>Create</button>
-          </div>
-        </form>
+            </div>
+          
       </div>
+    </form>
+     </div>
     );
   }
 }

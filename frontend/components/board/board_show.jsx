@@ -32,7 +32,7 @@ class BoardShow extends React.Component {
       <div className='board-show-container'>
       <div className='pin-index-container'>
         {board.pins.map((pin)=> 
-          <a onClick={() => this.props.openModal(['pinShow', pin.id])} >
+          <a key={pin.id} onClick={() => this.props.openModal(['pinShow', pin.id])} >
           <div className='pin-index-item-container'>
             <div className='pin-index-item-image'>
               <img src={pin.imageUrl} alt={pin.title} />

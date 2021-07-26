@@ -204,7 +204,7 @@ input:focus + label {
 }
 
 .file-input {
-  border: green solid 2px;
+  // border: green solid 2px;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -258,7 +258,7 @@ input:focus + label {
 }
 
 .create-bottom {
-  border: orange solid 3px;
+  // border: orange solid 3px;
  display: flex;
  flex-direction: row;
 }
@@ -276,8 +276,8 @@ flex-direction: column;
   display: flex
 }
 
-.board-select-list {
-        border: teal solid 2px;
+.board-select-list div:focus {
+        // border: teal solid 2px;
 
   color: red;
 }
@@ -289,7 +289,7 @@ flex-direction: column;
 }
 
 .board-select-item:hover {
-  border: pink solid 2px;
+  // border: pink solid 2px;
   color: red;
 }
 
@@ -298,11 +298,36 @@ flex-direction: column;
   color: red;
 }
 
-.board-select-list:active{
+.board-select-list div:hover{
+    color: red;
+
+}
+
+.board-select-list div:active{
     color: red;
 
 }
 
 .board-select-item div:after{
   color: red;
+}
+
+.create-bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.create-left {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding: 4px;
+}
+
+
+.create-right {
+  padding: 4px;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
 }
