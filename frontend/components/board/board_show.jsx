@@ -15,6 +15,15 @@ class BoardShow extends React.Component {
   }
 
 
+  // componentDidUpdate(prevProps) {
+  //   // Typical usage (don't forget to compare props):
+  //   debugger
+  //   if (this.props.pins.length !== prevProps.pins.length) {
+  //     // this.fetchData(this.props.userID);
+  //   }
+  // }
+
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.deleteBoard(this.props.board.id).then(this.props.closeModal)

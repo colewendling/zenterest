@@ -8,7 +8,11 @@ class ProfileBoards extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllBoards();
+    this.props.fetchAllPins();
     this.props.fetchUser(this.props.userId);
+
+
+
     document.getElementById("p-button").style.background = "white";
     document.getElementById("p-button").style.color = "black";
     document.getElementById("b-button").style.background = "black";

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { fetchPin, deletePin } from '../../actions/pin_actions';
+import { fetchPin, deletePin, fetchAllPins } from '../../actions/pin_actions';
 import { fetchUser } from '../../actions/user_actions';
 import { closeModal, openModal } from '../../actions/modal_actions';
 import PinShow from './pin_show';
@@ -14,6 +14,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = dispatch => ({
+  fetchAllPins: () => dispatch(fetchAllPins()),
   deletePin: pinId => dispatch(deletePin(pinId)),
   fetchPin: pinId => dispatch(fetchPin(pinId)),
   fetchUser: userId => dispatch(fetchUser(userId)),
