@@ -185,3 +185,4 @@ board4 = Board.create!({ title: 'String Theory', description: '', author_id: use
   file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_032.gif')
   pin32.image.attach(io: file, filename: 'z_032.gif')
   pin32.save!
+
