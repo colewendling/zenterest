@@ -35,7 +35,9 @@ render() {
           </div>
         </div>
       </div>
-      <img src={window.animation} className="animation" />
+
+      <img src={window.animation} />
+      
     </div>
     );
   }

@@ -8,6 +8,7 @@
   position: relative;
   top: 0px !important;
   width: 100%;
+    
 }
 
 // .board-index-container
@@ -18,7 +19,6 @@
   text-align: left;
   background-color: white;
   border-radius: 12px;
-
 }
 
 .board-index-item-container:hover {
@@ -31,6 +31,10 @@
   vertical-align: middle;
 }
 
+.board-index-spacer {
+  padding-bottom: 200px;
+
+}
 
 .board-index-item-container { 
   background: transparent;

@@ -16,6 +16,7 @@
   justify-content: center;
   background: white;
   min-height: 400px;
+  background-color: #e0e0e0;
 
   width:425px;
   padding: 20px 10px;
@@ -77,7 +78,9 @@
   border-radius: 16px;
   outline: none;
   box-sizing: border-box;
-  border: 3px solid #efefef;
+  // border: 3px solid #efefef;
+   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
 }
 
 .create-input-item input::placeholder {
@@ -112,7 +115,10 @@
   border-radius: 16px;
   outline: none;
   box-sizing: border-box;
-  border: 3px solid #efefef;
+  // border: 3px solid #efefef;
+    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+
 }
 
 .create-input-item-title:hover {
@@ -150,7 +156,7 @@
   border-radius: 25px;
   // margin-top: 25px;
   background: #e60023;
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 7px rgba(126, 126, 126, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,13 +173,24 @@
   display: inline-block;
 }
 
+.board-select-list {
+    border-radius: 20px;
+    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    padding: 18px;
+    // overflow: scroll;
+}
+
+
+
 .board-select-list div{
-   font-family: 'Noto Sans JP', sans-serif;
-  color: rgb(17, 17, 17);
-  padding: 12px 16px;
+   font-family: 'roboto', sans-serif;
+  color: rgb(92, 92, 92);
+  // padding: 12px 16px;
   text-decoration: none;
   display: block;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .board-select-item {
@@ -218,8 +235,8 @@ input:focus + label {
 
 .create-button {
   display: block;
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-top: 12px;
+  margin-bottom: 0px;
   width: 200px;
   height: 50px;
   border-radius: 25px;
@@ -276,11 +293,11 @@ flex-direction: column;
   display: flex
 }
 
-.board-select-list div:focus {
-        // border: teal solid 2px;
+// .board-select-list div:focus {
+//         // border: teal solid 2px;
 
-  color: red;
-}
+//   color: blue;
+// }
 
 .board-select-item {
   border: pink solid 2px;
@@ -298,9 +315,12 @@ flex-direction: column;
   color: red;
 }
 
-.board-select-list div:hover{
-    color: red;
+.red-boy {
+  color: red;
+}
 
+.board-select-list div:focus{
+    color: red;
 }
 
 .board-select-list div:active{
@@ -321,6 +341,7 @@ flex-direction: column;
   display: flex;
   width: 50%;
   flex-direction: column;
+  justify-content: center;
   padding: 4px;
 }
 
@@ -331,3 +352,4 @@ flex-direction: column;
   width: 50%;
   flex-direction: column;
 }
+

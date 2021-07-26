@@ -9,6 +9,7 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
+    
     this.props.fetchUser();
   }
 

@@ -17,6 +17,7 @@ class ProfileBoards extends React.Component {
 
   render() {
     const { user, boards } = this.props;
+
     let userBoardsArray = Object.values(boards).filter(board => {
       return board.author_id === user.id
     })
@@ -26,8 +27,10 @@ class ProfileBoards extends React.Component {
     })
 
     return (
+      <div className='board-index-spacer'>
       <div className='board-index-container'>
         {userBoards.reverse()}
+      </div>
       </div>
     )
   }

@@ -14,6 +14,7 @@ class CreatePinForm extends React.Component {
     this.update = this.update.bind(this);
     this.handleFile = this.handleFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.selectListItem = this.selectListItem.bind(this);
   }
 
   update(field) {
@@ -29,8 +30,14 @@ class CreatePinForm extends React.Component {
     }
   }
 
+
+ toggleClass() {
+  const element = document.getElementById("board-li");
+  element.classList.toggle("red-boy");
+}
+
   componentDidMount() {
-    this.props.fetchUser(this.props.user.id)
+    // this.props.fetchUser(this.props.user.id)
   }
 
   handleFile(e) {
@@ -71,8 +78,9 @@ class CreatePinForm extends React.Component {
     })
   }
 
-  selectListItem(e) {
-    
+  selectListItem(id) {
+    this.setState({ board_id: id});
+    event.target.style.color = "red";
   }
 
   render() {
@@ -134,11 +142,12 @@ class CreatePinForm extends React.Component {
               {/* <div className="dropdown">
                
                 <div className="dropdown-content"> */}
+              <h2 className="input-label">Board:</h2>
               <div className='board-select-list'>
                   {this.props.boards.map(board => 
                     <div
                     className='board-li'
-                      onClick={() => this.setState({board_id: board.id})}
+                      onClick={() => this.selectListItem(board.id)}
                       key={board.id}
                       // className='board-select-list-item'
                       >

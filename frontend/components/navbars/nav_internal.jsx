@@ -20,8 +20,10 @@ class NavInternal extends React.Component {
   return (
     <div className="nav-box">
       <div className="nav-left">
-        <Link to='/home'><img src={window.logoURL} className="nav-icon" /></Link>
-        <button className="black-button" href='/home'>Home</button>
+        <Link to='/users/'><img src={window.logoURL} className="nav-icon" /></Link>
+        <form action='https://wendling.io/'>
+          <button className="black-button" type='submit'>Work</button>
+        </form>
       </div>
       <div className="internal-nav-right">
         <div className="internal-text-link">
