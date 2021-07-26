@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PinIndexItem from './pin_index_item';
-// import Profile from '../profile/profile';
+import Profile from '../profile/profile';
 
 class ProfilePins extends React.Component {
   constructor(props) {
@@ -11,11 +11,16 @@ class ProfilePins extends React.Component {
   componentDidMount() {
     this.props.fetchAllPins();
     this.props.fetchAllBoards();
+    
+    document.getElementById("b-button").style.background = "white";
+    document.getElementById("b-button").style.color = "black";
+    document.getElementById("p-button").style.background = "black";
+    document.getElementById("p-button").style.color = "white";
   }
 
-  capitalize(string) {
-    return string[0].toUpperCase() + string.slice(1)
-  }
+  // capitalize(string) {
+  //   return string[0].toUpperCase() + string.slice(1)
+  // }
 
   render() {
     const user  = this.props.currentUser;
@@ -30,7 +35,7 @@ class ProfilePins extends React.Component {
     // debugger
     return (
       <div className="profile-container">
-        <div className="profile-nav">  
+        {/* <div className="profile-nav">  
 
           <div className="profile-header">
             <div className="user-circle">
@@ -57,8 +62,8 @@ class ProfilePins extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-
+        </div> */}
+        {/* <Profile /> */}
         <div className='pin-index-container'>
           {allPins.reverse()}
         </div>

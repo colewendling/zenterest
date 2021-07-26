@@ -4,9 +4,10 @@ import { closeModal, openModal } from '../../actions/modal_actions';
 import { fetchBoard, deleteBoard, fetchAllBoards} from '../../actions/board_actions';
 import { fetchUser } from '../../actions/user_actions';
 import BoardShow from './board_show';
+// import {openModal } from '../../actions/modal_actions';
+
 
 const mapStateToProps = (state) => {
-  debugger
   return ({
     currentUser: state.entities.users[state.session.currentUser],
     boards: state.entities.boards,
@@ -19,7 +20,6 @@ const mapDispatchToProps = dispatch => ({
   fetchBoard: boardId => dispatch(fetchBoard(boardId)),
   fetchUser: userId => dispatch(fetchUser(userId)),
   fetchAllBoards: () => dispatch(fetchAllBoards()),
-
   openModal: (modal, boardId) => dispatch(openModal(modal, boardId)),
   closeModal: () => dispatch(closeModal()),
 })

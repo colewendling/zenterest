@@ -15,6 +15,7 @@
   text-align: left;
   background-color: white;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .board-index-item-image {
@@ -85,21 +86,107 @@
   border-color: transparent;
 }
 
+.board-show-container {
+display: flex;
+flex-direction: column;
+}
 
 .board-show-title {
+  display: flex;
  color: #333333;
+//  text-align: center;
  font-size: 28px;
  font-weight: 700;
+//  margin-bottom: 20px;
 }
 
 .board-show {
   display: flex;
   font-family: 'Roboto', sans-serif;
-  flex-direction: row;
+  flex-direction: column;
   background: white;
   min-height: 300px;
   min-width:600px;
   height: auto;
   padding: 20px;
   border-radius:36px;
+  align-items: center;
 }
+// .board-delete-button-container {
+//   display: flex;
+//   flex-direction: row-reverse;
+//   align-content: flex-end;
+//   width: 100%;
+// }
+
+// .board-delete-button-container {
+//   display: block;
+//   position: absolute;
+//   align-self: flex-end;
+//   bottom: 500;
+// }
+
+.board-show .pin-index-container {
+width: 100%;
+margin-left: 0px;
+margin-right: 0px;
+}
+
+.board-delete-button {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  margin-right: 10px;
+  padding: 0px;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: none;
+  color:rgba(91, 91, 91, 0.3);
+}
+
+
+//   align-self: flex-end;
+//   display: block;
+//   // justify-self:;
+//   background: transparent;
+//   box-shadow: none;
+//   // position: relative;
+//   right: 60;
+// // align-self: flex-end;
+
+// }
+// .board-delete-button {
+//   align-content: flex-end;
+//   padding: 0px;
+//   background-color: transparent;
+//   font-size: 16px;
+//   cursor: pointer;
+//   color:rgba(91, 91, 91, 0.3);
+//   box-shadow: none;
+//   position: relative;
+//   bottom: -10px;
+//   right: 0px;
+// }
+
+// .board-delete-button button {
+//   display: flex;
+// }
+
+.board-delete-button:hover {
+  color: red;
+}
+
+
+.board-show hr {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  opacity: 40%;
+  // margin-right: 6px;
+  width: 100%;
+}
+
+// .board-show-container .pin-index-container{
+//   min-height: 80%;
+//   min-width: 100%;
+// }

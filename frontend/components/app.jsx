@@ -11,6 +11,7 @@ const App = () => (
 <div> 
   <AuthRoute exact path='/' component={NavSplash} /> 
   <ProtectedRoute path='/' component={NavBar} /> 
+  <ProtectedRoute path='/users/:userId' component={Profile} />
   <Modal />
   <Switch>
     <ProtectedRoute exact path='/users/:userId/boards' component={ProfileBoards} />

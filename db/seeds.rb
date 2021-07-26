@@ -186,6 +186,3 @@ board4 = Board.create!({ title: 'String Theory', description: '', author_id: use
   pin32.image.attach(io: file, filename: 'z_032.gif')
   pin32.save!
 
-
-
-
