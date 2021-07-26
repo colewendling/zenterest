@@ -178,9 +178,13 @@
     box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
     inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
     padding: 18px;
-    // overflow: scroll;
+    height: 50px;
+    overflow-y: scroll;
 }
 
+.board-select-list::-webkit-scrollbar {
+  display: none;
+}
 
 
 .board-select-list div{
