@@ -10,20 +10,6 @@ class Profile extends React.Component {
 
   componentDidMount() {
     this.props.fetchUser();
-    // debugger
-    // if ((window.location.href).includes('boards')) {
-    //   document.getElementById("b-button").style.color = "red";
-      // document.getElementsByClassName("b-button").style.color = "white";
-      // document.getElementsByClassName("p-button").style.background = "white";
-      // document.getElementsByClassName("p-button").style.color = "black";
-      // document.getElementsByClassName("b-button")[0].style.color = "black";
-    // } 
-    // else if ((window.location.href).includes('pins')){
-    //   document.getElementsByClassName("p-button").style.background = "black";
-    //   document.getElementsByClassName("p-button").style.color = "white";
-    //   document.getElementsByClassName("b-button").style.background = "white";
-    //   document.getElementsByClassName("b-button").style.color = "black";
-    // }
   }
 
   
@@ -35,7 +21,6 @@ class Profile extends React.Component {
   render() {
     
     const user = this.props.currentUser;
-    // debugger
     if (!user) return <div>Current User is Null</div>;
     return (
       <div className="profile-nav">

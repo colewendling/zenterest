@@ -26,8 +26,10 @@ class BoardShow extends React.Component {
     const board = this.props.board
     return (
       <div className='board-show'>
+
         <h1 className='board-show-title'>{board.title}</h1>
       <hr />
+      <div className='board-show-container'>
       <div className='pin-index-container'>
         {board.pins.map((pin)=> 
           <a onClick={() => this.props.openModal(['pinShow', pin.id])} >
@@ -39,43 +41,14 @@ class BoardShow extends React.Component {
           </a>
           )}
       </div>
-        {/* <div className='board-delete-button-container'>
-          <button className="board-delete-button" onClick={this.handleSubmit}>Delete</button>
-          <div className="plus-button-container">
-            <div className="dropdown">
-              <button className='dropbtn'><i className="fa fa-plus"></i></button>
-              <div className="dropdown-content">
-                <a onClick={() => this.props.openModal('createPin')}>Create Pin</a>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-{/* 
-        <div className='board-delete-button-container'>
-          <button className="board-delete-button"
-          onClick={this.handleSubmit}
-          >Delete
+        </div>
+     
+          <button className="board-delete-button" onClick={() => {
+            this.props.deleteBoard(board.id)
+            this.props.closeModal()
+            window.location.reload();
+          }}>Delete
           </button>
-        </div> */}
-          
-        {/* <div className='board-show-image'>
-          <img src={board.imageUrl} alt={board.title} />
-        </div> */}
-
-        {/* <div className='board-show-info-container'>
-          <div className='board-delete-button-container'>
-            <button className="board-delete-button" onClick={() => {
-                this.props.deleteBoard(board.id)
-                this.props.closeModal()
-              }}>
-            <i className="far fa-times-circle"></i>
-            </button>
-          </div>
-          <h1 className='board-show-title'>{board.title}</h1>
-          <hr />
-          <p className='board-show-description'>{board.description}</p>
-        </div> */}
       </div>
     );
   }
