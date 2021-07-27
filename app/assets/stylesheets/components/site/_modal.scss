@@ -152,6 +152,19 @@
   background-color: rgba(9, 30, 66, .7);
   color: rgb(255, 255, 255);
   width: 100%;
+   -webkit-animation: bounce .5s infinite alternate;
+  -moz-animation: bounce .5s infinite alternate;
+  animation: bounce .5s infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+  to { -webkit-transform: scale(1.08); }
+}
+@-moz-keyframes bounce {
+  to { -moz-transform: scale(1.08); }
+}
+@keyframes bounce {
+  to { transform: scale(1.08); }
 }
 
 .modal-button:hover {
