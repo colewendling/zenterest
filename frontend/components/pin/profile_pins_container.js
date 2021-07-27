@@ -25,8 +25,6 @@ const mapDispatchToProps = dispatch => ({
   fetchAllBoards: () => dispatch(fetchAllBoards()),
   fetchPin: pinId => dispatch(fetchPin(pinId)),
   openModal: modal => dispatch(openModal(modal)),
-  // requestPin: (pinId) => dispatch(requestPin(pinId)),
-  // getUserBoards: (userId) => dispatch(getUserBoards(userId)),
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProfilePins));

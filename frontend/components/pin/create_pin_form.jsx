@@ -6,7 +6,7 @@ class CreatePinForm extends React.Component {
     this.state = {
       title: '',
       description: '',
-      author_id: 1,
+      author_id: this.props.currentUser.id,
       board_id: 1,
       imageFile: null,
       imageUrl: null,

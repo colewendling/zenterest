@@ -21,14 +21,9 @@ class ProfilePins extends React.Component {
 
   render() {
     const { user, pins } = this.props;
-    // const user  = this.props.currentUser;
-    // if (!user) return <div>Current User is Null</div>;
-    // const {pins}  = this.props;
-// debugger
     let userPinsArray = Object.values(pins).filter(pin => {
       return pin.author_id === user.id
     })
-    
     const userPins = pins.map((pin, idx)=> (
       <PinIndexItem 
       key={idx} 
@@ -37,7 +32,6 @@ class ProfilePins extends React.Component {
       openModal={this.props.openModal}
       />
       ))
-      // debugger
     return (
       <div className="profile-container">
         <div className='pin-index-container'>
