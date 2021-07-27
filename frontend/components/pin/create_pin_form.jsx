@@ -59,7 +59,9 @@ class CreatePinForm extends React.Component {
     formData.append('pin[author_id]', this.state.author_id);
     formData.append('pin[board_id]', this.state.board_id);
     formData.append('pin[image]', this.state.imageFile);
-    document.getElementsByClassName("loader")[0].style.opacity = "90%";
+    document.getElementsByClassName("loader")[0].style.opacity = "70%";
+    document.getElementsByClassName("board-select-list")[0].style.opacity= "10%";
+    document.getElementsByClassName("board-list-arrow")[0].style.opacity = "10%";
     document.getElementsByClassName("create-modal-container")[0].style.background = "grey";
     document.getElementsByClassName("create-input-item")[0].style.opacity = "5%";
     document.getElementsByClassName("create-input-item")[1].style.opacity = "5%";
@@ -83,9 +85,9 @@ class CreatePinForm extends React.Component {
       <div className="create-modal-container">
         <button className='form-modal-close-x' onClick={() => { this.props.closeModal() }}>X</button>
         <svg className="board-list-arrow">
-          <path class="a1" d="M0 0 L30 22 L60 0"></path>
-          <path class="a2" d="M0 20 L30 42 L60 20"></path>
-          <path class="a3" d="M0 40 L30 62 L60 40"></path>
+          <path className="a1" d="M0 0 L30 22 L60 0"></path>
+          <path className="a2" d="M0 20 L30 42 L60 20"></path>
+          <path className="a3" d="M0 40 L30 62 L60 40"></path>
         </svg>
         <div className="loader-container">
           <div className="loader"></div>
