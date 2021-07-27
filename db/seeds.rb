@@ -33,9 +33,9 @@ board1 = Board.create!({ title: 'Phase Shift', description: '', author_id: user1
   pin3.image.attach(io: file, filename: 'z_03.png')
   pin3.save!
 
-  pin4 = Pin.new({ title: 'Pastel Lava', description: 'Rays of pinks extend out from the pastel blue background to make a calming composition.', author_id: user1.id, board_id: board1.id })
-  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_04.jpeg')
-  pin4.image.attach(io: file, filename: 'z_04.jpeg')
+  pin4 = Pin.new({ title: 'Fire Plume', description: 'The flame engulfed phoenix bounces back and forth between the purple walls of its cage.', author_id: user1.id, board_id: board1.id })
+  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_04.gif')
+  pin4.image.attach(io: file, filename: 'z_04.gif')
   pin4.save!
 
   pin5 = Pin.new({ title: 'Phase Shifter', description: 'The stone statue is rendered to glitch and morph into brightly colored variants.', author_id: user1.id, board_id: board1.id })
@@ -43,17 +43,17 @@ board1 = Board.create!({ title: 'Phase Shift', description: '', author_id: user1
   pin5.image.attach(io: file, filename: 'z_05.gif')
   pin5.save!
 
-  pin6 = Pin.new({ title: 'Shiny Floater', description: 'The metalic shape shifts and contorts in space with a rainbow material reflection.', author_id: user1.id, board_id: board1.id })
+  pin6 = Pin.new({ title: 'King Midas', description: 'The desire of gold is not for gold. It is for the means of freedom and benefit. -Ralph Waldo Emerson', author_id: user1.id, board_id: board1.id })
   file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_06.gif')
   pin6.image.attach(io: file, filename: 'z_06.gif')
   pin6.save!
 
-  pin7 = Pin.new({ title: 'String Theory', description: 'When one can no longer observe the microcosmos with human sight, we are left to rely on mathematics to guide us. ', author_id: user1.id, board_id: board1.id })
+  pin7 = Pin.new({ title: 'Acolytes', description: 'Acting as one, the priests march forward into the abyss. They must remain together or their evocation will be broken.', author_id: user1.id, board_id: board1.id })
   file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_07.gif')
   pin7.image.attach(io: file, filename: 'z_07.gif')
   pin7.save!
 
-  pin8 = Pin.new({ title: 'Eternal Shell', description: 'The magic seashell was recovered from the cosmic bay where the sands of time cover the plane.', author_id: user1.id, board_id: board1.id })
+  pin8 = Pin.new({ title: "Eden's Vice", description: "Slithering intently, the serpent travels straight towards it's goal.", author_id: user1.id, board_id: board1.id })
   file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_08.gif')
   pin8.image.attach(io: file, filename: 'z_08.gif')
   pin8.save!
@@ -61,9 +61,9 @@ board1 = Board.create!({ title: 'Phase Shift', description: '', author_id: user1
 #seed-group-2
 board2 = Board.create!({ title: 'John Donne', description: '', author_id: user1.id })
 
-  pin9 = Pin.new({ title: 'Summer Day', description: 'The oil paints sprawl on the canvas, bursting into bright and cheerful colors.', author_id: user1.id, board_id: board2.id })
-  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_09.jpeg')
-  pin9.image.attach(io: file, filename: 'z_09.jpeg')
+  pin9 = Pin.new({ title: 'Introspection', description: 'Every now and then, it is beneficial to look inward and take stock on personal wellness and progression.', author_id: user1.id, board_id: board2.id })
+  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_09.gif')
+  pin9.image.attach(io: file, filename: 'z_09.gif')
   pin9.save!
 
   pin10 = Pin.new({ title: 'Blurred Tinman', description: 'With a pinkish face, the tin soldier stands at attention with his blue officer cap.', author_id: user1.id, board_id: board2.id })
@@ -96,7 +96,7 @@ board2 = Board.create!({ title: 'John Donne', description: '', author_id: user1.
   pin15.image.attach(io: file, filename: 'z_015.gif')
   pin15.save!
 
-  pin16 = Pin.new({ title: 'The Wanderer', description: '"For since the fabric of the universe is most perfect, nothing whatsoever takes place in the universe in which some relation of maximum and minimum does not appear." -Leonhard Euler, De Curvis Elasticis 1744', author_id: user1.id, board_id: board2.id })
+  pin16 = Pin.new({ title: 'The Wanderer', description: '"For since the fabric of the universe is most perfect, nothing whatsoever takes place in the universe in which some relation of maximum and minimum does not appear." -L. Euler', author_id: user1.id, board_id: board2.id })
   file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_016.gif')
   pin16.image.attach(io: file, filename: 'z_016.gif')
   pin16.save!
@@ -119,9 +119,9 @@ board3 = Board.create!({ title: 'Constants and Variables', description: '', auth
   pin19.image.attach(io: file, filename: 'z_019.gif')
   pin19.save!
 
-  pin20 = Pin.new({ title: 'Blue Drone Eye', description: 'Of all automata created by mankind, one might think of drones as one of the more friendly varieties.', author_id: user1.id, board_id: board3.id })
-  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_020.jpeg')
-  pin20.image.attach(io: file, filename: 'z_020.jpeg')
+  pin20 = Pin.new({ title: 'Golden Prism', description: 'Look how it spins! It really must have cost a fortune!', author_id: user1.id, board_id: board3.id })
+  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_020.gif')
+  pin20.image.attach(io: file, filename: 'z_020.gif')
   pin20.save!
 
   pin21 = Pin.new({ title: 'Red Drone Eye', description: 'The brilliant red light shines into a vivid glow against the dark blue background behind it.', author_id: user1.id, board_id: board3.id })
@@ -129,9 +129,9 @@ board3 = Board.create!({ title: 'Constants and Variables', description: '', auth
   pin21.image.attach(io: file, filename: 'z_021.jpeg')
   pin21.save!
 
-  pin22 = Pin.new({ title: 'Violet Manifestation', description: 'The fog that day was bright purple! There had been fog in London before, but this was a first for everyone involved.', author_id: user1.id, board_id: board3.id })
-  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_022.jpeg')
-  pin22.image.attach(io: file, filename: 'z_022.jpeg')
+  pin22 = Pin.new({ title: 'UFO Report', description: 'Airborne clutter perhaps? Natural atmospheric phenomena? Developmental programs? or.. "Other".', author_id: user1.id, board_id: board3.id })
+  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_022.gif')
+  pin22.image.attach(io: file, filename: 'z_022.gif')
   pin22.save!
 
   pin23 = Pin.new({ title: 'Glass Worm', description: 'If you look closely at the belly, one can discern that the creature ate the sans-serif typography. ', author_id: user1.id, board_id: board3.id })
@@ -166,14 +166,14 @@ board4 = Board.create!({ title: 'String Theory', description: '', author_id: use
   pin28.image.attach(io: file, filename: 'z_028.gif')
   pin28.save!
 
-  pin29 = Pin.new({ title: 'Vegetables', description: '"It would seem the universe does not like its peas mixed with its porridge." -R. Lutece, 1909', author_id: user1.id, board_id: board4.id })
-  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_029.jpeg')
-  pin29.image.attach(io: file, filename: 'z_029.jpeg')
+  pin29 = Pin.new({ title: 'The Universal Model', description: '"It would seem the universe does not like its peas mixed with its porridge." -R. Lutece, 1909', author_id: user1.id, board_id: board4.id })
+  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_029.gif')
+  pin29.image.attach(io: file, filename: 'z_029.gif')
   pin29.save!
 
-  pin30 = Pin.new({ title: 'Glowing plume', description: 'A vivid pink light dashes across the violet plane, leaving a stunning tonal contrast', author_id: user1.id, board_id: board4.id })
-  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_030.jpeg')
-  pin30.image.attach(io: file, filename: 'z_030.jpeg')
+  pin30 = Pin.new({ title: 'Gravity Debris', description: 'It is helpful to think of gravity not as another force, but as the entire stage itself.', author_id: user1.id, board_id: board4.id })
+  file = open('https://zenterest-seeds.s3.us-east-2.amazonaws.com/z_030.gif')
+  pin30.image.attach(io: file, filename: 'z_030.gif')
   pin30.save!
 
   pin31 = Pin.new({ title: 'Headache Cure', description: 'The best remedy for a aching head may just be some sunshine and quality time with friends.', author_id: user1.id, board_id: board4.id })

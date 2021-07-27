@@ -38,6 +38,7 @@ class BoardShow extends React.Component {
 
         <h1 className='board-show-title'>{board.title}</h1>
       <hr />
+        <p className='board-show-description'>{board.description}</p>
       <div className='board-show-container'>
       <div className='pin-index-container'>
         {board.pins.map((pin)=> 

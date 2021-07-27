@@ -80,13 +80,13 @@ class CreatePinForm extends React.Component {
 
   selectListItem(id) {
     this.setState({ board_id: id});
-    debugger
-    document.getElementsByClassName("board-select-list").style.color= "blue";
-    // arr.forEach(el => {
-    //   if (el.style.color === "red") {
-    //     el.style.color = ''
-    //   }
-    // })
+    // debugger
+    // // document.getElementsByClassName("board-select-list").style.color= "blue";
+    // // arr.forEach(el => {
+    // //   if (el.style.color === "red") {
+    // //     el.style.color = ''
+    // //   }
+    // // })
 
 
     event.target.style.color = "red";
