@@ -193,3 +193,56 @@
 .grey-button:hover {
   color: #e60023;
 }
+
+@media screen and (max-width:700px){
+ .modal-container { 
+    width: 360px;
+  }
+}
+
+@media screen and (max-width:700px){
+ .create-modal-container { 
+    width: 360px;
+  }
+}
+
+@media screen and (max-width:700px){
+ .create-form{ 
+    width: 360px;
+  }
+  .create-input-item-title{ 
+    width: 360px;
+  }
+  .create-input-item-description{ 
+    width: 360px;
+  }
+}
+
+
+@media screen and (max-width:700px){
+ .user-circle { 
+    height: 60px !important;
+    width: 60px !important;
+  }
+   .user-letter { 
+    font-size: 48px !important;
+    font-weight: 500 !important;
+  }
+}
+
+@media screen and (max-width:700px){
+ .pin-show{ 
+    min-width:360px !important;
+  }
+  .board-show{ 
+    min-width:360px !important;
+  }
+  .pin-index-container{ 
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.pin-show-board-link {
+  margin-bottom: 20px;
+}

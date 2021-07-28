@@ -41,6 +41,17 @@ render() {
         <path className="a3" d="M0 40 L30 62 L60 40"></path>
       </svg>
       <img src={window.animation} />
+      <div className='mobile-links'>
+        <form action='https://wendling.io/' className="link-m">
+          <button className="link" type='submit'>Work</button>
+        </form>
+        <form action='https://github.com/colewendling' className="link-m">
+          <button className="link" type='submit'>Github</button>
+        </form>
+        <form action='https://www.linkedin.com/in/colewendling/' className="link-m">
+          <button className="link" type='submit'>Linkedin</button>
+        </form>
+      </div>
     </div>
     );
   }
