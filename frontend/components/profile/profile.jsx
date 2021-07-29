@@ -33,11 +33,6 @@ class Profile extends React.Component {
         </div>
 
         <div className="profile-btn-container">
-          <Link to={`/users/${this.props.currentUser.id}/boards`}><button id="b-button">Boards</button></Link>
-          <Link to={`/users/${this.props.currentUser.id}/pins`}><button id="p-button" >Pins</button></Link>
-        </div>
-
-        <div className="plus-button-container">
           <div className="dropdown">
             <button className='dropbtn'><i className="fa fa-plus"></i></button>
             <div className="dropdown-content">
@@ -45,7 +40,19 @@ class Profile extends React.Component {
               <a onClick={() => this.props.openModal('createBoard')}>Create Board</a>
             </div>
           </div>
+          <Link to={`/users/${this.props.currentUser.id}/boards`}><button id="b-button">Boards</button></Link>
+          <Link to={`/users/${this.props.currentUser.id}/pins`}><button id="p-button" >Pins</button></Link>
         </div>
+
+        {/* <div className="plus-button-container">
+          <div className="dropdown">
+            <button className='dropbtn'><i className="fa fa-plus"></i></button>
+            <div className="dropdown-content">
+              <a onClick={() => this.props.openModal('createPin')}>Create Pin</a>
+              <a onClick={() => this.props.openModal('createBoard')}>Create Board</a>
+            </div>
+          </div>
+        </div> */}
       </div>
     )
   }

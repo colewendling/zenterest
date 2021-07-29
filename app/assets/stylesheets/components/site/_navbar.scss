@@ -88,10 +88,25 @@
 @media screen and (max-width:700px){
  .nav-right .text-links-box { 
    margin: 0px;
-   padding: 0px;
+   padding: 0px !important;
    width: 0px;
    display:hidden;
    opacity: 0%;
+  }
+  .text-link {
+    width: 0;
+    margin: 0;
+  }
+  .nav-button-box{
+    transform: scale(.85);
+  }
+
+  .nav-right {
+    padding: 0;
+  }
+
+  .text-links-box {
+    width: 0;
   }
 }
 
